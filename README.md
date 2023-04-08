@@ -1,8 +1,6 @@
 # Unity-Animal-Mafia
 Test Repo for Animal Mafia Game Play
 
-# Unity-Game-Demo
-
 ## Contents
 * Farm (Dashboard) View
 * Barn (Inventory) View TBD
