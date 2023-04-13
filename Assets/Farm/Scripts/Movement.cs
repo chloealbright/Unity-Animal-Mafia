@@ -10,6 +10,13 @@ public class Movement : MonoBehaviour
 
     private Vector3 direction;
 
+    public VectorValue startingPosition;
+
+    void Start()
+    {
+        transform.position = startingPosition.initialValue;
+    }
+
     //get input from player
     //apply movement to sprite
     private void Update()
