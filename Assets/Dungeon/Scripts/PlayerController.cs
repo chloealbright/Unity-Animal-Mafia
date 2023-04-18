@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public ContactFilter2D movementFilter;
     public  float collisionOffset = 0.05f;
     public SwordAttack swordAttack; // to get access of sword attack class
-
     Vector2 movementInput; // inputs: 1 for x 1 for y
     Rigidbody2D rb; // on game start, get reference
     SpriteRenderer spriteRenderer; // for animation direction
@@ -21,7 +20,7 @@ public class PlayerController : MonoBehaviour
     // when the script starts this will create an empty list
     // when FixedUpdate runs, castCollisions will populate this list
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-
+    public bool hasMoved = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +60,38 @@ public class PlayerController : MonoBehaviour
                 // swordAttack.attackDirection = SwordAttack.AttackDirection.right; // calls AttackDirection case Right
             }
             //in the case of movementInput == 0, player isn't moving left or right
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            // Move the player
+            transform.position += Vector3.left;
+
+            // Set the hasMoved flag to true
+            hasMoved = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            // Move the player
+            transform.position += Vector3.right;
+
+            // Set the hasMoved flag to true
+            hasMoved = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            // Move the player
+            transform.position += Vector3.up;
+
+            // Set the hasMoved flag to true
+            hasMoved = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            // Move the player
+            transform.position += Vector3.down;
+
+            // Set the hasMoved flag to true
+            hasMoved = true;
         }
          
         
@@ -120,5 +151,4 @@ public class PlayerController : MonoBehaviour
         UnlockMovement(); 
         swordAttack.StopAttack();
     }
-    
 }
