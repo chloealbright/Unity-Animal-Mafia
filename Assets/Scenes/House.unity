@@ -3013,29 +3013,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1925300622 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6491695417398913847, guid: 359800e119467d543aefdfcc3f84457c, type: 3}
-  m_PrefabInstance: {fileID: 9157935644224193193}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1925300623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925300622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 167d66b60b2425b4e99dd5f82e1f430c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneBuildIndex: 0
-  playerPosition: {x: 0.05, y: 0.94}
-  playerStorage: {fileID: 11400000, guid: 78628c455e4fa064999d3c618eaf1a1f, type: 2}
-  fadeInPanel: {fileID: 8446027130642771248, guid: 28b4bd76a02a3f546897fbb68974e381, type: 3}
-  fadeOutPanel: {fileID: 2213603534584262720, guid: be4ddb5bb0b32ac4cb6ec12a0e2cd389, type: 3}
-  fadeWait: 0.45
 --- !u!1 &1967112598
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,6 +3175,30 @@ PrefabInstance:
     - target: {fileID: 616732541486391575, guid: 359800e119467d543aefdfcc3f84457c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113822013625012552, guid: 359800e119467d543aefdfcc3f84457c, type: 3}
+      propertyPath: fadeWait
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113822013625012552, guid: 359800e119467d543aefdfcc3f84457c, type: 3}
+      propertyPath: fadeInPanel
+      value: 
+      objectReference: {fileID: 8446027130642771248, guid: 28b4bd76a02a3f546897fbb68974e381, type: 3}
+    - target: {fileID: 4113822013625012552, guid: 359800e119467d543aefdfcc3f84457c, type: 3}
+      propertyPath: fadeOutPanel
+      value: 
+      objectReference: {fileID: 2213603534584262720, guid: be4ddb5bb0b32ac4cb6ec12a0e2cd389, type: 3}
+    - target: {fileID: 4113822013625012552, guid: 359800e119467d543aefdfcc3f84457c, type: 3}
+      propertyPath: playerStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 78628c455e4fa064999d3c618eaf1a1f, type: 2}
+    - target: {fileID: 4113822013625012552, guid: 359800e119467d543aefdfcc3f84457c, type: 3}
+      propertyPath: playerPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113822013625012552, guid: 359800e119467d543aefdfcc3f84457c, type: 3}
+      propertyPath: playerPosition.y
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 6491695417398913847, guid: 359800e119467d543aefdfcc3f84457c, type: 3}
       propertyPath: m_Name
