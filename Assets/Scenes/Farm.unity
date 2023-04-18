@@ -39031,7 +39031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 1903837084}
-  inventorySize: 10
+  inventorySize: 30
 --- !u!1 &1278048104
 GameObject:
   m_ObjectHideFlags: 0
@@ -44267,6 +44267,10 @@ PrefabInstance:
       propertyPath: title
       value: Carrot Seed
       objectReference: {fileID: 0}
+    - target: {fileID: 9062032115253937777, guid: 51648555699dd4c439138373191650dc, type: 3}
+      propertyPath: image2
+      value: 
+      objectReference: {fileID: -1557587586, guid: b006d4a0344a7404c90cdc2f35f86b83, type: 3}
     - target: {fileID: 9062032115253937777, guid: 51648555699dd4c439138373191650dc, type: 3}
       propertyPath: quantity
       value: 1
