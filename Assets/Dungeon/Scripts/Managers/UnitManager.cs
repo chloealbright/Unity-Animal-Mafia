@@ -45,12 +45,22 @@ public class UnitManager : MonoBehaviour {
 
         GameManager.Instance.ChangeState(GameState.CharactersTurn);
     }
-
+    public void MoveUnit(Tile targetTile)
+{
+    var playerUnit = SelectedCharacter;
+    if (playerUnit == null) return;
+    var currentTile = playerUnit.OccupiedTile;
+    if (targetTile.IsReachable())
+    {
+        currentTile.OccupiedUnit = null;
+        targetTile.SetUnit(playerUnit);
+    }
+}
     private T GetRandomUnit<T>(Type type) where T : BaseUnit {
         return (T)_units.Where(u => u.Type == type).OrderBy(o => Random.value).First().UnitPrefab;
     }
     public void SetSelectedCharacter(BaseCharacter character) {
         SelectedCharacter = character;
-        MenuManager.Instance.ShowSelectedCharacter(character);
+        // MenuManager.Instance.ShowSelectedCharacter(character);
     }
 }

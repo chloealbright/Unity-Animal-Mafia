@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3568675458564293531}
   - component: {fileID: 4452500691118848026}
-  - component: {fileID: 5014527601387877532}
   - component: {fileID: 2605586846332209443}
   - component: {fileID: 8688670518838080895}
   m_Layer: 0
@@ -28,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2847122673497707662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.045, y: 0.242, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 6.25, y: 6.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -89,29 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5014527601387877532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2847122673497707662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b86e888024dad4da0f177a661dba20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  cellSize: 0.16
-  movePoint: {fileID: 5070934677274284417}
-  Collisions:
-    serializedVersion: 2
-    m_Bits: 256
-  animator: {fileID: 0}
-  detectionRadius: 2
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!95 &2605586846332209443
 Animator:
   serializedVersion: 5
@@ -145,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3149106b8b2f494f8060262e6d53458, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: 
+  UnitName: Red_Slime
   OccupiedTile: {fileID: 0}
   Type: 0
 --- !u!1 &3858492113571272679

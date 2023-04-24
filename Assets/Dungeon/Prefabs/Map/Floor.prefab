@@ -16,8 +16,28 @@ PrefabInstance:
       value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 4124227680612813812, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -394926927, guid: 26910c11271894fee860cbd9abfd1d27, type: 3}
+    - target: {fileID: 4124227680612813812, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124227680612813812, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124227680612813812, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124227680612813812, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124227680612813812, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4789913552877730009, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
       propertyPath: m_RootOrder
@@ -63,8 +83,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5672756946916482053, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
+      propertyPath: m_Color.a
+      value: 0.34117648
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5053458441212593440, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
+    - {fileID: -2879053064974644228, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c182b0d39d66d874cb747cf2e17f6109, type: 3}
 --- !u!1 &5501760088396631863 stripped
 GameObject:
@@ -119,10 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8addc196018c4e14190e5a955d2b4fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileName: 
+  TileName: Floor
   _renderer: {fileID: 6847808223592237078}
   _highlight: {fileID: 5501760088396631863}
   _isWalkable: 1
   OccupiedUnit: {fileID: 0}
-  _baseColor: {r: 0.110701, g: 0.06983505, b: 0.20754719, a: 1}
-  _offsetColor: {r: 0.16180135, g: 0.06888571, b: 0.254717, a: 1}
+  _baseColor: {r: 0.36163524, g: 0.31446537, b: 0.4716981, a: 0}
+  _offsetColor: {r: 0.2694644, g: 0.19318855, b: 0.3490566, a: 0}

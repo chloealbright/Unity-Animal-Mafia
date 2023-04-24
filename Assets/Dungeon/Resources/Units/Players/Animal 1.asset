@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Animal 1
   m_EditorClassIdentifier: 
   Type: 0
-  UnitPrefab: {fileID: 0}
+  UnitPrefab: {fileID: -178430999741792148, guid: e36b110df75d90b4da244ec0da1b3b22, type: 3}

@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4218555309401763947}
   - component: {fileID: 6621789350128797883}
-  - component: {fileID: 7422661425360177694}
   - component: {fileID: -178430999741792148}
-  - component: {fileID: -4097361032827238913}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -29,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4153193771967657055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6.25, y: 6.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5046619170328258800}
@@ -76,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1849158689, guid: 84afec7684774f54286d19b9ace4170e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -88,26 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7422661425360177694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153193771967657055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 704193d61c4aa564991824dc9902b32b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  cellSize: 0.16
-  movePoint: {fileID: 5046619170328258800}
-  Collisions:
-    serializedVersion: 2
-    m_Bits: 0
-  animator: {fileID: 0}
-  enemyMovement: {fileID: 0}
 --- !u!114 &-178430999741792148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,22 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377222bd0e659f345824ff3a49eb9428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: 
-  OccupiedTile: {fileID: 0}
-  Type: 0
---- !u!114 &-4097361032827238913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153193771967657055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3149106b8b2f494f8060262e6d53458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnitName: 
+  UnitName: Pig
   OccupiedTile: {fileID: 0}
   Type: 0
 --- !u!1 &8739903507294805917
