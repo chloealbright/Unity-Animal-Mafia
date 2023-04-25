@@ -147,13 +147,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tree_shake_2
+      name: sapling
       rect:
         serializedVersion: 2
-        x: 65
-        y: 3
-        width: 30
-        height: 253
+        x: 64
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,12 +168,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlaceableTree
+      name: grownTree
       rect:
         serializedVersion: 2
-        x: 95
+        x: 96
         y: 128
-        width: 33
+        width: 32
         height: 32
       alignment: 9
       pivot: {x: 0.4877886, y: 0.5284258}
@@ -325,10 +325,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlaceableTree: -42296211
+      grownTree: -42296211
+      sapling: -1776982350
       tree_shake_0: 309938208
       tree_shake_1: 126942550
-      tree_shake_2: -1776982350
       tree_shake_4: 1126533217
       tree_shake_5: -1272567993
       tree_shake_6: 288648960

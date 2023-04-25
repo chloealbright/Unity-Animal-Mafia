@@ -21,6 +21,6 @@ public class TreeCuttable : ToolHit
             go.transform.position = position;
         }
 
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
