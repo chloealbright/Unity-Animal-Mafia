@@ -2579,7 +2579,7 @@ GameObject:
   - component: {fileID: 1123198421}
   - component: {fileID: 1123198420}
   - component: {fileID: 1123198419}
-  - component: {fileID: 1123198418}
+  - component: {fileID: 1123198422}
   m_Layer: 0
   m_Name: To D_Level1A
   m_TagString: Untagged
@@ -2602,24 +2602,6 @@ Transform:
   m_Father: {fileID: 1334230665}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1123198418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1123198416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 167d66b60b2425b4e99dd5f82e1f430c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneBuildIndex: 6
-  playerPosition: {x: -619999, y: 0}
-  playerStorage: {fileID: 11400000, guid: 78628c455e4fa064999d3c618eaf1a1f, type: 2}
-  fadeInPanel: {fileID: 8446027130642771248, guid: 78cbd49f582674691b907645c9ad7fad, type: 3}
-  fadeOutPanel: {fileID: 2213603534584262720, guid: 7d13c533c12034f9a9ad740b1ad13c0f, type: 3}
-  fadeWait: 0
 --- !u!61 &1123198419
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2733,6 +2715,24 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1123198422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123198416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 167d66b60b2425b4e99dd5f82e1f430c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneBuildIndex: 5
+  playerPosition: {x: 2, y: 0}
+  playerStorage: {fileID: 11400000, guid: 0d1d729f158724945b560f63218aec3c, type: 2}
+  fadeInPanel: {fileID: 8446027130642771248, guid: 78cbd49f582674691b907645c9ad7fad, type: 3}
+  fadeOutPanel: {fileID: 2213603534584262720, guid: 7d13c533c12034f9a9ad740b1ad13c0f, type: 3}
+  fadeWait: 0.45
 --- !u!1 &1270764813
 GameObject:
   m_ObjectHideFlags: 3
@@ -4336,7 +4336,7 @@ GameObject:
   - component: {fileID: 1356365142}
   - component: {fileID: 1356365141}
   m_Layer: 0
-  m_Name: To D_Level2
+  m_Name: To BattleRun
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4369,7 +4369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167d66b60b2425b4e99dd5f82e1f430c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 5
+  sceneBuildIndex: 4
   playerPosition: {x: -619999, y: 0}
   playerStorage: {fileID: 11400000, guid: 78628c455e4fa064999d3c618eaf1a1f, type: 2}
   fadeInPanel: {fileID: 8446027130642771248, guid: 78cbd49f582674691b907645c9ad7fad, type: 3}
@@ -4875,6 +4875,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8365544731427515575, guid: 1cfc6c9057b3344aabf5e9dacb7ef226, type: 3}
+      propertyPath: startingPosition
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d1d729f158724945b560f63218aec3c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cfc6c9057b3344aabf5e9dacb7ef226, type: 3}
 --- !u!4 &8331593306399053669 stripped

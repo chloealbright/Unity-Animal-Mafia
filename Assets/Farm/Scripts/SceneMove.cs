@@ -32,7 +32,7 @@ public class SceneMove : MonoBehaviour
         {
             //player entered, so move level
             print("Switching scene to" + sceneBuildIndex);
-            playerStorage.initialValue = playerPosition;
+            //playerStorage.initialValue = playerPosition;
             StartCoroutine(FadeController());
             //SceneManager.LoadScene(sceneBuildIndex);
         }

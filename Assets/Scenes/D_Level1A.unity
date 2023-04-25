@@ -6393,7 +6393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167d66b60b2425b4e99dd5f82e1f430c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 7
+  sceneBuildIndex: 6
   playerPosition: {x: -619999, y: 0}
   playerStorage: {fileID: 11400000, guid: 78628c455e4fa064999d3c618eaf1a1f, type: 2}
   fadeInPanel: {fileID: 8446027130642771248, guid: 78cbd49f582674691b907645c9ad7fad, type: 3}
