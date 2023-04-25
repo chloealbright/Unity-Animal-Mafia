@@ -544,7 +544,6 @@ SpriteAtlas:
   - {fileID: -577717157, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
   - {fileID: 1223361322, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
   - {fileID: -1570778233, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
-  - {fileID: 1887185392, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
   - {fileID: 286012164, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
   - {fileID: 1480261168, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
   - {fileID: 249798250, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
@@ -653,6 +652,7 @@ SpriteAtlas:
   - {fileID: 1978169361, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
   - {fileID: 1203986572, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
   - {fileID: -533275118, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
+  - {fileID: 1887185392, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
   - {fileID: -519497658, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
   - {fileID: 946872843, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
   - {fileID: 374713281, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
@@ -6087,7 +6087,6 @@ SpriteAtlas:
   - tiles2_1414
   - tiles2_151
   - tiles2_769
-  - tiles2_0
   - tiles2_1403
   - tiles2_1413
   - tiles2_150
@@ -6196,6 +6195,7 @@ SpriteAtlas:
   - tiles2_1309
   - tiles2_1341
   - tiles2_1379
+  - PlantedTree
   - tiles2_462
   - tiles2_458
   - tiles2_1388
