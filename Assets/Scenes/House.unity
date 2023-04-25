@@ -3108,7 +3108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   animator: {fileID: 296488515}
-  startingPosition: {fileID: 0}
+  startingPosition: {fileID: 11400000, guid: 78628c455e4fa064999d3c618eaf1a1f, type: 2}
 --- !u!4 &1967112603
 Transform:
   m_ObjectHideFlags: 0
