@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Barn.unity
     guid: 73252116bc3d3bb46a562a5b299c478a
+  - enabled: 1
+    path: Assets/Scenes/Dungeon_Entrance.unity
+    guid: b5525136e221749ed948b37fd3dbd24f
+  - enabled: 1
+    path: Assets/Scenes/D_Level1A.unity
+    guid: 67b291afdad6643ddb9479f1e1b12198
+  - enabled: 1
+    path: Assets/Scenes/D_Level1B.unity
+    guid: fb2eab84249f34ad2839bf5526e1f5e0
+  - enabled: 1
+    path: Assets/Scenes/D_Level2.unity
+    guid: 7095f0e63517c4b1d837f47c32c25c84
   m_configObjects: {}
