@@ -119,6 +119,7 @@ MonoBehaviour:
     maxNormalAngle: 0
   collisionOffset: 0.02
   swordAttack: {fileID: 6402940047685702839}
+  startingPosition: {fileID: 11400000, guid: 0d7e4cd092bf542e18ec3c06be40f028, type: 2}
 --- !u!61 &3501894596508289898
 BoxCollider2D:
   m_ObjectHideFlags: 0
