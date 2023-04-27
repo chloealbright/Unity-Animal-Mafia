@@ -210,7 +210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: seeds_5
+      name: Potato_Seeds
       rect:
         serializedVersion: 2
         x: 80
@@ -294,7 +294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: seeds_9
+      name: Wheat_Seeds
       rect:
         serializedVersion: 2
         x: 32
@@ -893,7 +893,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Carrot_Seeds: 1463263872
+      Potato_Seeds: 834717413
       Pumkin_Seeds: 1252227027
+      Wheat_Seeds: -1840466227
       seeds_1: 1031484025
       seeds_10: 1948311166
       seeds_11: 2111113412
@@ -924,11 +926,9 @@ TextureImporter:
       seeds_35: 1544062539
       seeds_36: 1170788221
       seeds_4: 1095283321
-      seeds_5: 834717413
       seeds_6: 1112370831
       seeds_7: 1808703936
       seeds_8: -96670628
-      seeds_9: -1840466227
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

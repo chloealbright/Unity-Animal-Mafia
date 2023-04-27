@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpDrop: {fileID: 8271278177131741457, guid: c3bed1ada09ca44d58c91405cfa33341, type: 3}
   dropCount: 5
-  spread: 0.7
+  spread: 5
   grownPlant: {fileID: -42296211, guid: 93d52ff9e70ce41deaf3b3f5d81b1579, type: 3}
-  babyPlant: {fileID: 0}
+  babyPlant: {fileID: -1131423206, guid: b006d4a0344a7404c90cdc2f35f86b83, type: 3}
   ttl: 60

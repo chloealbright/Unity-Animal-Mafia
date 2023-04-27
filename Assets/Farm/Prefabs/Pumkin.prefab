@@ -124,9 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c97140be950be4f8f878a8a8f7d3c4d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpDrop: {fileID: 0}
+  pickUpDrop: {fileID: 2328840747175235530, guid: 6e220e81a442747cda56fa75661bdd60, type: 3}
   dropCount: 5
-  spread: 0.7
-  grownPlant: {fileID: 0}
-  babyPlant: {fileID: 0}
+  spread: 5
+  grownPlant: {fileID: 1134847477, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
+  babyPlant: {fileID: -2052135433, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
   ttl: 60

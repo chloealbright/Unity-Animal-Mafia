@@ -756,7 +756,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_31
+      name: Potato_Sapling
       rect:
         serializedVersion: 2
         x: 16
@@ -840,7 +840,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_35
+      name: Potato
       rect:
         serializedVersion: 2
         x: 80
@@ -1344,7 +1344,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_59
+      name: Wheat
       rect:
         serializedVersion: 2
         x: 80
@@ -4220,6 +4220,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Wheat_Sapling
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497855ff40ff24bfea494829483ff445
+      internalID: 2110366674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -4233,10 +4254,14 @@ TextureImporter:
     nameFileIdTable:
       Carrot: -1485270563
       Carrot_Sappling: 491611259
+      Potato: -391980890
+      Potato_Sapling: -1380769294
       Pumkin: 1134847477
       Pumkin_Sapling: -2052135433
       Tomato: 1865717953
       Tomato_Sapling: -116078899
+      Wheat: -1364008951
+      Wheat_Sapling: 2110366674
       crops_0: -1665275283
       crops_10: 401628576
       crops_100: -1345284471
@@ -4354,11 +4379,9 @@ TextureImporter:
       crops_29: -1097242337
       crops_3: -1818673420
       crops_30: -1776500085
-      crops_31: -1380769294
       crops_32: 254079343
       crops_33: 263256194
       crops_34: 1662129586
-      crops_35: -391980890
       crops_36: 1880517132
       crops_37: -1205068942
       crops_38: -1662311854
@@ -4383,7 +4406,6 @@ TextureImporter:
       crops_56: 1285047194
       crops_57: 1868403268
       crops_58: 574301477
-      crops_59: -1364008951
       crops_6: 1734792861
       crops_60: 1914251697
       crops_61: 2043365203
