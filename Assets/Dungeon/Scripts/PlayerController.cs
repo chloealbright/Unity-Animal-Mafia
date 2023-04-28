@@ -22,12 +22,14 @@ public class PlayerController : MonoBehaviour
     // when FixedUpdate runs, castCollisions will populate this list
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
+    public Dungeon_VectorValue startingPosition;// for player position during scene transitions
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        transform.position = startingPosition.initialValue;
         
     }
 
