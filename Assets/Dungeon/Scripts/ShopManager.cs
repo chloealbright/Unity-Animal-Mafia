@@ -21,7 +21,26 @@ public class ShopManager : MonoBehaviour
         //CheckPurchaseable();
     }
 
-    void Update(){ // function is called once per frame
+    //user pressing S to open shop
+    public void Update() // function is called once per frame
+    {
+        // if (Input.GetKeyDown(KeyCode.S))
+        // {
+        //     if (inventoryUI.isActiveAndEnabled == false)
+        //     {
+        //         inventoryUI.Show();
+        //         foreach (var item in inventoryData.GetCurrentInventoryState())
+        //         {
+        //             inventoryUI.UpdateData(item.Key,
+        //                 item.Value.item.ItemImage,
+        //                 item.Value.quantity);
+        //         }
+        //     }
+        //     else
+        //     {
+        //         inventoryUI.Hide();
+        //     }
+        // }
 
     }
 }
