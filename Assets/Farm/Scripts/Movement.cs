@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-
+        
         direction = new Vector3(horizontal, vertical);
 
         AnimateMovement(direction);
