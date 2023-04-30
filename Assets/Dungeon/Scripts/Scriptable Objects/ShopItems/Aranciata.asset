@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1e99eb5fdbc24515a5ade4cfc9c05fc, type: 3}
-  m_Name: Red_Potion
+  m_Name: Aranciata
   m_EditorClassIdentifier: 
-  title: Blood Potion
-  description: The blood of your enemies
+  title: Aranciata
+  description: Packed with Vitamin C to Strengthen your character
   cost: 700
+  itemImage: {fileID: -317531563, guid: 382eb2ed5fee04c12b228c2338999f0e, type: 3}
+  isStackable: 1
+  MaxStackSize: 1

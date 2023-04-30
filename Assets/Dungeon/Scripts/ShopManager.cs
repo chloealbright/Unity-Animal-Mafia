@@ -9,17 +9,28 @@ public class ShopManager : MonoBehaviour
 {
     public int gold;
     public TMP_Text goldUI;
+    public ShopItemSO[] shopItemsSO;
+    public ShopTemplate[] shopPanels; //Title-Description-Cost, references script
+    public GameObject[] shopPanelsGO; // references GameObject
+
+    
 
     void Start(){
+        for(int i =0; i< shopItemsSO.Length; i++){
+            shopPanelsGO[i].SetActive(true);
+        }
         goldUI.text = "Gold: " + gold.ToString();
 
+        LoadPanels();
     }
 
     public void AddGold(){
-        gold++;
-        goldUI.text = "Gold" + gold.ToString();
+        gold+=100;
+        goldUI.text = "Gold: " + gold.ToString();
         //CheckPurchaseable();
     }
+
+    
 
     //user pressing S to open shop
     public void Update() // function is called once per frame
@@ -42,5 +53,16 @@ public class ShopManager : MonoBehaviour
         //     }
         // }
 
+    }
+
+    public void LoadPanels(){
+        for(int i=0; i<shopItemsSO.Length; i++){
+            
+            shopPanels[i].titleTxt.text = shopItemsSO[i].title;
+            shopPanels[i].itemImage.sprite = shopItemsSO[i].itemImage;
+            //shopPanels[i].itemImage = shopItemsSO[i].itemImage;
+            shopPanels[i].descriptionTxt.text = shopItemsSO[i].description;
+            shopPanels[i].costTxt.text = shopItemsSO[i].cost.ToString() + " Gold";
+        }
     }
 }

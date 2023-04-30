@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Blue_Potion
   m_EditorClassIdentifier: 
   title: Blueberry Potion
-  description: It's like Gatorade for gangsters
+  description: It's like Gatorade for gangsters. Fuel your HP.
   cost: 500
+  itemImage: {fileID: 857967094, guid: 26910c11271894fee860cbd9abfd1d27, type: 3}
+  isStackable: 1
+  MaxStackSize: 1
