@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e99eb5fdbc24515a5ade4cfc9c05fc, type: 3}
+  m_Name: Healing_Flower
+  m_EditorClassIdentifier: 
+  title: Healing Flower
+  description: This will prolong your player's strength in battle
+  cost: 700
+  itemImage: {fileID: -1754725428, guid: b006d4a0344a7404c90cdc2f35f86b83, type: 3}
+  isStackable: 1
+  MaxStackSize: 1
