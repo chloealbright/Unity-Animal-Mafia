@@ -323,7 +323,7 @@ RectTransform:
   - {fileID: 1359761233}
   - {fileID: 88615856}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -480,27 +480,6 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
---- !u!1 &638122401 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 866447425544546407, guid: 1cfc6c9057b3344aabf5e9dacb7ef226, type: 3}
-  m_PrefabInstance: {fileID: 1654824641}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &638122402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638122401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62bf2db219f4d49118accc5c43cb932e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shopUI: {fileID: 5300150368259832786}
-  shopData: {fileID: 11400000, guid: 94723e367274b4d1c8a58bd7296d0da0, type: 2}
-  mouseFollower: {fileID: 0}
-  player: {fileID: 1654824647}
 --- !u!1 &1243492813
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +526,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1243492817
 MonoBehaviour:
@@ -744,6 +723,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359761232}
   m_CullTransparentMesh: 1
+--- !u!1 &1412856747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1412856749}
+  - component: {fileID: 1412856748}
+  m_Layer: 0
+  m_Name: ShopController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1412856748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412856747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62bf2db219f4d49118accc5c43cb932e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopUI: {fileID: 5300150368259832786}
+  shopData: {fileID: 11400000, guid: 94723e367274b4d1c8a58bd7296d0da0, type: 2}
+  mouseFollower: {fileID: 0}
+--- !u!4 &1412856749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412856747}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 368.8263, y: 227.26494, z: -9.831612}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1654824641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -757,7 +783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4808946841037184655, guid: 1cfc6c9057b3344aabf5e9dacb7ef226, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4808946841037184655, guid: 1cfc6c9057b3344aabf5e9dacb7ef226, type: 3}
       propertyPath: m_LocalPosition.x
@@ -806,17 +832,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4808946841037184655, guid: 1cfc6c9057b3344aabf5e9dacb7ef226, type: 3}
   m_PrefabInstance: {fileID: 1654824641}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1654824647 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8365544731427515575, guid: 1cfc6c9057b3344aabf5e9dacb7ef226, type: 3}
-  m_PrefabInstance: {fileID: 1654824641}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638122401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 684b2e419d2304e429cc45728cdd665d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2022002879
 GameObject:
   m_ObjectHideFlags: 0

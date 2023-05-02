@@ -21,8 +21,12 @@ namespace ShopCont.UI{
         public RectTransform contentPanel;
         public ShopTemplate shopTemplate;
 
+        //private ShopMouseFollower MouseFollower;
+
+
 
         public void Awake(){
+            //MouseFollower.Toggle(false)
             for(int i =0; i< shopItemsSO.Length; i++){
                 shopPanelsGO[i].SetActive(true);
             }
@@ -32,13 +36,18 @@ namespace ShopCont.UI{
         }
 
 
+
         public void AddGold(){
+            //MouseFollower.Toggle(true)
+            Debug.Log("Generate Gold");
             gold+=100;
             goldUI.text = "Gold: " + gold.ToString();
             CheckPurchaseable();
         }
 
         public void CheckPurchaseable(){
+            //MouseFollower.Toggle(true);
+            Debug.Log("shopContent.activeInHierarchy");
             for(int i=0; i< shopItemsSO.Length; i++){
                 if(gold >= shopItemsSO[i].cost)
                     purchaseBtn[i].interactable = true;
@@ -47,12 +56,20 @@ namespace ShopCont.UI{
             }
         }
 
+        public void PurchasItem(int btnNo){
+            if(gold >= shopItemsSO[btnNo].cost){
+                gold = gold - shopItemsSO[btnNo].cost;
+                goldUI.text = "Gold: "+ gold.ToString();
+                //Next task: Unlock item to set to inventory 
+                CheckPurchaseable();
+            }
+        }
+
         public void LoadPanels(){
             for(int i=0; i<shopItemsSO.Length; i++){
                 
                 shopPanels[i].titleTxt.text = shopItemsSO[i].title;
-                shopPanels[i].itemImage.sprite = shopItemsSO[i].itemImage;
-                //shopPanels[i].itemImage = shopItemsSO[i].itemImage;
+                shopPanels[i].itemImage.sprite = shopItemsSO[i].itemImage; //set panel's item img of sprite to SO image
                 shopPanels[i].descriptionTxt.text = shopItemsSO[i].description;
                 shopPanels[i].costTxt.text = shopItemsSO[i].cost.ToString() + " Gold";
             }

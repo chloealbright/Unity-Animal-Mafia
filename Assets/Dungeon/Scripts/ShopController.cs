@@ -13,14 +13,12 @@ public class ShopController : MonoBehaviour
 
     public ShopManager shopUI; 
     public ShopItemSO shopData;
-    public ShopMouseFollower mouseFollower;
     // public bool isOpen= false;
-    public PlayerController player;
-    
+    public GameObject player;
 
     public void Start(){
-        player = GetComponent<PlayerController>();
-        player.gameObject.SetActive(true);
+        player = GameObject.FindWithTag("Player");
+        // player.gameObject.SetActive(true);
         shopUI.gameObject.SetActive(false);
     }
 
@@ -30,9 +28,11 @@ public class ShopController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
+            player.SetActive(!player.activeSelf);
+            // player.gameObject.SetActive(!player.gameObject.activeSelf);
             //if Shop is loaded when P is pressed then hide it, & vice versa
-            mouseFollower.gameObject.SetActive(!mouseFollower.gameObject.activeSelf);
-            player.gameObject.SetActive(!player.gameObject.activeSelf);
+            //mouseFollower.Toggle(!mouseFollower);
+            // player.gameObject.SetActive(!player.gameObject.activeSelf);
     
         }
 
