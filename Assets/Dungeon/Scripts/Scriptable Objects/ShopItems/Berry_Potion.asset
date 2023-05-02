@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1e99eb5fdbc24515a5ade4cfc9c05fc, type: 3}
-  m_Name: Blueberry_Potion
+  m_Name: Berry_Potion
   m_EditorClassIdentifier: 
-  title: Blueberry Potion
+  title: Berry Potion
   description: It's like Gatorade for gangsters. Fuel your HP.
   cost: 500
   itemImage: {fileID: 857967094, guid: 26910c11271894fee860cbd9abfd1d27, type: 3}
