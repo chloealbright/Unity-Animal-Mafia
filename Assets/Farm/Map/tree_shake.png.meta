@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tree_shake_0
+      name: Sapling
       rect:
         serializedVersion: 2
-        x: 1
-        y: 3
-        width: 30
-        height: 253
+        x: 0
+        y: 160
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlaceableTree
+      name: GrownTree
       rect:
         serializedVersion: 2
         x: 95
@@ -325,8 +325,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlaceableTree: -42296211
-      tree_shake_0: 309938208
+      GrownTree: -42296211
+      Sapling: 309938208
       tree_shake_1: 126942550
       tree_shake_2: -1776982350
       tree_shake_4: 1126533217

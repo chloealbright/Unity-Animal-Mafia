@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6489174928373459714
+--- !u!1 &4081756167306790748
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6489174928373459713}
-  - component: {fileID: 6489174928373459712}
-  - component: {fileID: 6489174928373459715}
-  - component: {fileID: 6489174928373459774}
+  - component: {fileID: 5211538926643645429}
+  - component: {fileID: 2701125203346869979}
+  - component: {fileID: 9152329779274637255}
+  - component: {fileID: 3983186477508239450}
   m_Layer: 0
-  m_Name: PlaceableTree
+  m_Name: Carrot_Plant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6489174928373459713
+--- !u!4 &5211538926643645429
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6489174928373459714}
+  m_GameObject: {fileID: 4081756167306790748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.13, y: 11.98, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 20, y: 16.99, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6489174928373459712
+--- !u!212 &2701125203346869979
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6489174928373459714}
+  m_GameObject: {fileID: 4081756167306790748}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -75,58 +75,58 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -42296211, guid: 93d52ff9e70ce41deaf3b3f5d81b1579, type: 3}
+  m_Sprite: {fileID: -1485270563, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.0625, y: 2}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6489174928373459715
+--- !u!61 &9152329779274637255
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6489174928373459714}
+  m_GameObject: {fileID: 4081756167306790748}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025186062, y: -0.056851387}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4877886, y: 0.5284258}
-    oldSize: {x: 2.0625, y: 2}
-    newSize: {x: 2.0625, y: 2}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0625, y: 2}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6489174928373459774
+--- !u!114 &3983186477508239450
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6489174928373459714}
+  m_GameObject: {fileID: 4081756167306790748}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c97140be950be4f8f878a8a8f7d3c4d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpDrop: {fileID: 8271278177131741457, guid: c3bed1ada09ca44d58c91405cfa33341, type: 3}
+  pickUpDrop: {fileID: 0}
   dropCount: 5
   spread: 5
-  grownPlant: {fileID: -42296211, guid: 93d52ff9e70ce41deaf3b3f5d81b1579, type: 3}
-  babyPlant: {fileID: -1131423206, guid: b006d4a0344a7404c90cdc2f35f86b83, type: 3}
+  grownPlant: {fileID: -1485270563, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
+  babyPlant: {fileID: 491611259, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
   ttl: 60
