@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6489174928373459713}
   - component: {fileID: 6489174928373459712}
   - component: {fileID: 6489174928373459715}
-  - component: {fileID: 6489174928373459774}
+  - component: {fileID: 8580541498460319802}
   m_Layer: 0
-  m_Name: PlaceableTree
+  m_Name: Adult_Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6489174928373459714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.13, y: 11.98, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025186062, y: -0.056851387}
+  m_Offset: {x: 0.07323468, y: -0.65445614}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.4877886, y: 0.5284258}
@@ -110,9 +110,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0625, y: 2}
+  m_Size: {x: 0.7171385, y: 0.8047905}
   m_EdgeRadius: 0
---- !u!114 &6489174928373459774
+--- !u!114 &8580541498460319802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,12 +121,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6489174928373459714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c97140be950be4f8f878a8a8f7d3c4d1, type: 3}
+  m_Script: {fileID: 11500000, guid: d9878020d31624ed097881b68ea3a459, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpDrop: {fileID: 8271278177131741457, guid: c3bed1ada09ca44d58c91405cfa33341, type: 3}
+  pickUpDrop: {fileID: 4558936316178220397, guid: e7381577a0bd9452ab62dd2b81983de9, type: 3}
   dropCount: 5
-  spread: 5
+  spread: 0.7
   grownPlant: {fileID: -42296211, guid: 93d52ff9e70ce41deaf3b3f5d81b1579, type: 3}
-  babyPlant: {fileID: -1131423206, guid: b006d4a0344a7404c90cdc2f35f86b83, type: 3}
+  babyPlant: {fileID: 491611259, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
   ttl: 60

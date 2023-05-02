@@ -9,6 +9,8 @@ public class PickUpItem : MonoBehaviour
     [SerializeField] float pickUpDistance = 1.5f;
     [SerializeField] float ttl = 10f; //time to leave
 
+    float grace_period = 1.5f;
+
     private void Awake()
     {
         player = GameManager.instance.player.transform; 
@@ -16,26 +18,33 @@ public class PickUpItem : MonoBehaviour
 
     private void Update()
     {
-        ttl -= Time.deltaTime;
-        if(ttl < 0)
+        if(grace_period > 0)
         {
-            Destroy(gameObject);
+            grace_period -= Time.deltaTime;
         }
-
-        float distance = Vector3.Distance(transform.position, player.position);
-        if(distance > pickUpDistance)
+        else
         {
-            return;
-        }
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            player.position,
-            speed * Time.deltaTime
-            );
+            ttl -= Time.deltaTime;
+            if(ttl < 0)
+            {
+                Destroy(gameObject);
+            }
 
-        if(distance < 0.1f)
-        {
-            Destroy(gameObject);
+            float distance = Vector3.Distance(transform.position, player.position);
+            if(distance > pickUpDistance)
+            {
+                return;
+            }
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                player.position,
+                speed * Time.deltaTime
+                );
+
+            if(distance < 0.1f)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
