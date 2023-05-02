@@ -1,0 +1,56 @@
+[33m71f520a3[m[33m ([m[1;36mHEAD -> [m[1;32mprocedural-generation[m[33m, [m[1;31morigin/shop-feature[m[33m, [m[1;32mshop-feature[m[33m)[m HEAD@{0}: checkout: moving from shop-feature to procedural-generation
+[33m71f520a3[m[33m ([m[1;36mHEAD -> [m[1;32mprocedural-generation[m[33m, [m[1;31morigin/shop-feature[m[33m, [m[1;32mshop-feature[m[33m)[m HEAD@{1}: checkout: moving from InvSysScenes to shop-feature
+[33mb06a6bd2[m[33m ([m[1;31morigin/InvSysScenes[m[33m, [m[1;32mInvSysScenes[m[33m)[m HEAD@{2}: checkout: moving from map-generation to InvSysScenes
+[33m1c766fe5[m[33m ([m[1;31morigin/map-generation[m[33m, [m[1;32mmap-generation[m[33m)[m HEAD@{3}: commit: Format
+[33mb2affe4b[m HEAD@{4}: commit: Made a map generation with walls surrounding it and player/ enemy movement
+[33m239af977[m HEAD@{5}: checkout: moving from TreePlayerInteraction to map-generation
+[33md7f167a4[m[33m ([m[1;31morigin/TreePlayerInteraction[m[33m, [m[1;32mTreePlayerInteraction[m[33m)[m HEAD@{6}: reset: moving to HEAD
+[33md7f167a4[m[33m ([m[1;31morigin/TreePlayerInteraction[m[33m, [m[1;32mTreePlayerInteraction[m[33m)[m HEAD@{7}: reset: moving to HEAD
+[33md7f167a4[m[33m ([m[1;31morigin/TreePlayerInteraction[m[33m, [m[1;32mTreePlayerInteraction[m[33m)[m HEAD@{8}: pull: Fast-forward
+[33m14d0cd04[m HEAD@{9}: checkout: moving from map-generation to TreePlayerInteraction
+[33m239af977[m HEAD@{10}: commit: Fixed Player Movement, still issue on enemy movement
+[33m18a3117e[m HEAD@{11}: checkout: moving from EnemyAbilities-DungeonGen to map-generation
+[33m313d9ca9[m[33m ([m[1;32mEnemyAbilities-DungeonGen[m[33m)[m HEAD@{12}: commit: Changes some files
+[33mc2139d81[m[33m ([m[1;31morigin/EnemyAbilities-DungeonGen[m[33m)[m HEAD@{13}: reset: moving to HEAD
+[33mc2139d81[m[33m ([m[1;31morigin/EnemyAbilities-DungeonGen[m[33m)[m HEAD@{14}: pull: Fast-forward
+[33ma48a48f6[m HEAD@{15}: checkout: moving from map-generation to EnemyAbilities-DungeonGen
+[33m18a3117e[m HEAD@{16}: commit: Similar to previous branch
+[33mcb12f672[m HEAD@{17}: reset: moving to HEAD
+[33mcb12f672[m HEAD@{18}: checkout: moving from TreePlayerInteraction to map-generation
+[33m14d0cd04[m HEAD@{19}: checkout: moving from TreePlayerInteraction to TreePlayerInteraction
+[33m14d0cd04[m HEAD@{20}: pull: Fast-forward
+[33mcb12f672[m HEAD@{21}: checkout: moving from map-generation to TreePlayerInteraction
+[33mcb12f672[m HEAD@{22}: reset: moving to HEAD
+[33mcb12f672[m HEAD@{23}: checkout: moving from TreePlayerInteraction to map-generation
+[33mcb12f672[m HEAD@{24}: checkout: moving from treeFeaturre to TreePlayerInteraction
+[33mf12e0e4d[m[33m ([m[1;32mtreeFeaturre[m[33m)[m HEAD@{25}: checkout: moving from restore-dungeon to treeFeaturre
+[33m6e81f800[m[33m ([m[1;32mrestore-dungeon[m[33m)[m HEAD@{26}: reset: moving to HEAD
+[33m6e81f800[m[33m ([m[1;32mrestore-dungeon[m[33m)[m HEAD@{27}: checkout: moving from EnemyAbilities-DungeonGen to restore-dungeon
+[33ma48a48f6[m HEAD@{28}: reset: moving to HEAD
+[33ma48a48f6[m HEAD@{29}: reset: moving to a48a48f6
+[33mc2139d81[m[33m ([m[1;31morigin/EnemyAbilities-DungeonGen[m[33m)[m HEAD@{30}: commit (merge): Deleted changes to solve conflict
+[33md54301ac[m HEAD@{31}: commit: Change name
+[33mbb5393ba[m HEAD@{32}: commit: Player movement
+[33ma48a48f6[m HEAD@{33}: reset: moving to a48a48f6
+[33ma48a48f6[m HEAD@{34}: reset: moving to a48a48f6
+[33mf12e0e4d[m[33m ([m[1;32mtreeFeaturre[m[33m)[m HEAD@{35}: reset: moving to HEAD@{1}
+[33ma48a48f6[m HEAD@{36}: reset: moving to a48a48f6
+[33mf12e0e4d[m[33m ([m[1;32mtreeFeaturre[m[33m)[m HEAD@{37}: reset: moving to HEAD@{1}
+[33ma48a48f6[m HEAD@{38}: reset: moving to HEAD@{1}
+[33mf12e0e4d[m[33m ([m[1;32mtreeFeaturre[m[33m)[m HEAD@{39}: reset: moving to origin/master
+[33ma48a48f6[m HEAD@{40}: checkout: moving from treeFeaturre to EnemyAbilities-DungeonGen
+[33mf12e0e4d[m[33m ([m[1;32mtreeFeaturre[m[33m)[m HEAD@{41}: reset: moving to origin/master
+[33m23b0e08f[m[33m ([m[1;31morigin/treeFeaturre[m[33m)[m HEAD@{42}: reset: moving to HEAD
+[33m23b0e08f[m[33m ([m[1;31morigin/treeFeaturre[m[33m)[m HEAD@{43}: reset: moving to HEAD
+[33m23b0e08f[m[33m ([m[1;31morigin/treeFeaturre[m[33m)[m HEAD@{44}: reset: moving to HEAD
+[33m23b0e08f[m[33m ([m[1;31morigin/treeFeaturre[m[33m)[m HEAD@{45}: reset: moving to HEAD
+[33m23b0e08f[m[33m ([m[1;31morigin/treeFeaturre[m[33m)[m HEAD@{46}: checkout: moving from EnemyAbilities-DungeonGen to treeFeaturre
+[33ma48a48f6[m HEAD@{47}: commit: Added features to generate map
+[33m9b82a215[m HEAD@{48}: checkout: moving from master to EnemyAbilities-DungeonGen
+[33mfb7acd30[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{49}: reset: moving to HEAD
+[33mfb7acd30[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{50}: pull: Fast-forward
+[33m97110867[m HEAD@{51}: checkout: moving from moveScripts to master
+[33mbd7a40c4[m[33m ([m[1;32mmoveScripts[m[33m)[m HEAD@{52}: checkout: moving from EnemyAbilities-DungeonGen to moveScripts
+[33m9b82a215[m HEAD@{53}: commit: Added enemy movement and map generation
+[33m97110867[m HEAD@{54}: checkout: moving from master to EnemyAbilities-DungeonGen
+[33m97110867[m HEAD@{55}: clone: from https://github.com/chloealbright/Unity-Animal-Mafia.git

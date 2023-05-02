@@ -7,10 +7,12 @@ public abstract class Tile : MonoBehaviour {
     [SerializeField] protected SpriteRenderer _renderer;
     [SerializeField] private GameObject _highlight;
     [SerializeField] private bool _isWalkable;
+    [SerializeField] private bool _isExitable;
     public int GridX { get; private set; }
     public int GridY { get; private set; }
     public BaseUnit OccupiedUnit;
     public bool Walkable => _isWalkable && OccupiedUnit == null;
+    public bool Exitable => _isExitable && OccupiedUnit == null;
 
     void Start() {
     }
@@ -19,41 +21,39 @@ public abstract class Tile : MonoBehaviour {
         GridX = x;
         GridY = y;
     }
-public List<Tile> GetNeighboringTiles(Tile currentTile)
-{
-    List<Tile> neighbors = new List<Tile>();
-    // Check top neighbor
-    // Check top neighbor
-var topNeighbor = GridManager.Instance.GetTileAtPosition(new Vector2((int)currentTile.GridX, (int)currentTile.GridY + 1));
-if (topNeighbor != null && topNeighbor.Walkable)
-{
-    neighbors.Add(topNeighbor);
-}
+    public List<Tile> GetNeighboringTiles(Tile currentTile)
+    {
+        List<Tile> neighbors = new List<Tile>();
+        // Check top neighbor
+        // Check top neighbor
+    var topNeighbor = GridManager.Instance.GetTileAtPosition(new Vector2((int)currentTile.GridX, (int)currentTile.GridY + 1));
+    if (topNeighbor != null && topNeighbor.Walkable)
+    {
+        neighbors.Add(topNeighbor);
+    }
 
-// Check bottom neighbor
-var bottomNeighbor = GridManager.Instance.GetTileAtPosition(new Vector2((int)currentTile.GridX, (int)currentTile.GridY - 1));
-if (bottomNeighbor != null && bottomNeighbor.Walkable)
-{
-    neighbors.Add(bottomNeighbor);
-}
+    // Check bottom neighbor
+    var bottomNeighbor = GridManager.Instance.GetTileAtPosition(new Vector2((int)currentTile.GridX, (int)currentTile.GridY - 1));
+    if (bottomNeighbor != null && bottomNeighbor.Walkable)
+    {
+        neighbors.Add(bottomNeighbor);
+    }
 
-// Check left neighbor
-var leftNeighbor = GridManager.Instance.GetTileAtPosition(new Vector2((int)currentTile.GridX - 1, (int)currentTile.GridY));
-if (leftNeighbor != null && leftNeighbor.Walkable)
-{
-    neighbors.Add(leftNeighbor);
-}
+    // Check left neighbor
+    var leftNeighbor = GridManager.Instance.GetTileAtPosition(new Vector2((int)currentTile.GridX - 1, (int)currentTile.GridY));
+    if (leftNeighbor != null && leftNeighbor.Walkable)
+    {
+        neighbors.Add(leftNeighbor);
+    }
 
-// Check right neighbor
-var rightNeighbor = GridManager.Instance.GetTileAtPosition(new Vector2((int)currentTile.GridX + 1, (int)currentTile.GridY));
-if (rightNeighbor != null && rightNeighbor.Walkable)
-{
-    neighbors.Add(rightNeighbor);
-}
-
-
-    return neighbors;
-}
+    // Check right neighbor
+    var rightNeighbor = GridManager.Instance.GetTileAtPosition(new Vector2((int)currentTile.GridX + 1, (int)currentTile.GridY));
+    if (rightNeighbor != null && rightNeighbor.Walkable)
+    {
+        neighbors.Add(rightNeighbor);
+    }
+        return neighbors;
+    }
 
 
     void OnMouseEnter()
@@ -80,10 +80,13 @@ void OnMouseDown() {
     }
     else {
         if (UnitManager.Instance.SelectedHero != null) {
-            // Check if the clicked tile is adjacent to the selected hero's tile
             var selectedHeroTile = UnitManager.Instance.SelectedHero.OccupiedTile;
             var clickedTile = this;
-            if (selectedHeroTile != clickedTile && GetDistance(selectedHeroTile, clickedTile) < 2 && _isWalkable) {
+            if (selectedHeroTile != clickedTile && _isWalkable && _isExitable)
+            {
+                GameManager.Instance.ChangeState(GameState.GenerateGrid);
+            }
+            else if (selectedHeroTile != clickedTile && GetDistance(selectedHeroTile, clickedTile) < 2 && _isWalkable) {
                 SetUnit(UnitManager.Instance.SelectedHero);
                 GameManager.Instance.ChangeState(GameState.EnemiesTurn);
             }
