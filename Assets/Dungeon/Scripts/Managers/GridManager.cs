@@ -9,7 +9,7 @@ public class GridManager : MonoBehaviour {
     public static GridManager Instance;
     [SerializeField] private int _width, _height;
 
-    [SerializeField] private Tile _floorTile, _wallTile;
+    [SerializeField] private Tile _floorTile, _wallTile, _exitTile;
 
     [SerializeField] private Transform _cam;
 
@@ -24,6 +24,7 @@ public class GridManager : MonoBehaviour {
     public void GenerateGrid()
     {
     _tiles = new Dictionary<Vector2, Tile>();
+    bool exitTileGenerated = false;
     for (int x = 0; x < _width; x++)
     {
         for (int y = 0; y < _height; y++)
@@ -39,6 +40,11 @@ public class GridManager : MonoBehaviour {
                 if (Random.Range(0, 6) == 3)
                 {
                     spawnedTile = _wallTile;
+                }
+                else if (!exitTileGenerated && Random.Range(0, 100) == 0)
+                {
+                    spawnedTile = _exitTile;
+                    exitTileGenerated = true;
                 }
             }
 
