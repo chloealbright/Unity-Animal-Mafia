@@ -21,8 +21,8 @@ public class GridManager : MonoBehaviour {
         Instance = this;
     }
 
-public void GenerateGrid()
-{
+    public void GenerateGrid()
+    {
     _tiles = new Dictionary<Vector2, Tile>();
     for (int x = 0; x < _width; x++)
     {
@@ -30,14 +30,12 @@ public void GenerateGrid()
         {
             Tile spawnedTile = _floorTile;
 
-            // If tile is on the edge, spawn a wall tile
             if (x == 0 || y == 0 || x == _width - 1 || y == _height - 1)
             {
                 spawnedTile = _wallTile;
             }
             else
             {
-                // Randomly spawn wall tiles in the inner layer
                 if (Random.Range(0, 6) == 3)
                 {
                     spawnedTile = _wallTile;
@@ -52,13 +50,9 @@ public void GenerateGrid()
             _tiles[new Vector2(x, y)] = tileObject;
         }
     }
-
-
-
     _cam.transform.position = new Vector3((float)_width / 2 - 0.5f, (float)_height / 2 - 0.5f, -10);
-
     GameManager.Instance.ChangeState(GameState.SpawnHeroes);
-}
+    }
     
     public Tile GetHeroSpawnTile() {
         return _tiles.Where(t => t.Key.x < _width / 2 && t.Value.Walkable).OrderBy(t => Random.value).First().Value;
