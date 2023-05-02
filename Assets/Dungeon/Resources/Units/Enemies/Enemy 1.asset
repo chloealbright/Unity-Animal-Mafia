@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d21267e70dae9242865214557b4293e, type: 3}
-  m_Name: Hero 1
+  m_Name: Enemy 1
   m_EditorClassIdentifier: 
-  Faction: 0
-  UnitPrefab: {fileID: 0}
+  Faction: 1
+  UnitPrefab: {fileID: 4422188099555743161, guid: 33ef1f2f94bf9174f88645b6f33e2d8e, type: 3}

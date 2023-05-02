@@ -55,8 +55,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6047754515132034036, guid: f81fe81690cccc8458bfa290bdc01a94, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f81fe81690cccc8458bfa290bdc01a94, type: 3}
+--- !u!1 &1238187307897335538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6047754515132034036, guid: f81fe81690cccc8458bfa290bdc01a94, type: 3}
+  m_PrefabInstance: {fileID: 4810720144649848070}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7647372803993155094 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2946464076803683088, guid: f81fe81690cccc8458bfa290bdc01a94, type: 3}
@@ -76,7 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TileName: 
   _renderer: {fileID: 7918241096863239273}
-  _highlight: {fileID: 7768904205692872367, guid: 6bcb5051f21d6de4daf981e599ed344d, type: 3}
+  _highlight: {fileID: 1238187307897335538}
   _isWalkable: 1
   OccupiedUnit: {fileID: 0}
   _baseColor: {r: 1, g: 0, b: 0, a: 1}
