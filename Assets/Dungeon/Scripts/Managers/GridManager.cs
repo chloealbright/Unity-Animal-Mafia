@@ -59,7 +59,7 @@ public void GenerateGrid()
 
     GameManager.Instance.ChangeState(GameState.SpawnHeroes);
 }
-
+    
     public Tile GetHeroSpawnTile() {
         return _tiles.Where(t => t.Key.x < _width / 2 && t.Value.Walkable).OrderBy(t => Random.value).First().Value;
     }
