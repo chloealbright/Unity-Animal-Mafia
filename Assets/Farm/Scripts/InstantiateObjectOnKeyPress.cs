@@ -39,7 +39,7 @@ public class InstantiateObjectOnKeyPress : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I)) //player pressed the interaction button
+        if (Input.GetKeyDown(KeyCode.P)) //player pressed the interaction button
         {
             //check for the player location in order to allow for the player to plant the correct plant
 
