@@ -10,13 +10,27 @@ public class TreeCuttable : ToolHit
 
     [SerializeField] Sprite grownPlant;
     [SerializeField] Sprite babyPlant;
-    [SerializeField] float ttl = 60f; //time to leave, 1 min for tree to regrow
+
+    [SerializeField] private float ttl_min = 0f; //minimum time for the plant to regrow
+    [SerializeField] private float ttl_max = 0f; //maximum time for the plant to regrow
+
+    private float plant_regrow_time; //regrow time of each plant
+
+    [SerializeField] private float time_to_sprout;
 
     private SpriteRenderer rend;
 
+   
+    private void GenerateRandomNumber()
+    {
+        plant_regrow_time = Random.Range(ttl_min, ttl_max + 1);
+    }
+
     private void Start()
     {
+        GenerateRandomNumber();
         rend = GetComponent<SpriteRenderer>(); //get the value of the current sprite, idk im just assuming
+        time_to_sprout = plant_regrow_time;
     }
 
     public override void Hit()
@@ -39,15 +53,16 @@ public class TreeCuttable : ToolHit
     {
         if (dropCount == 0)
         {
-            ttl -= Time.deltaTime; //start deprecating time
+            plant_regrow_time -= Time.deltaTime; //start deprecating time
+            time_to_sprout = plant_regrow_time;
 
             rend.sprite = babyPlant;
 
-            if (ttl < 0)
+            if (plant_regrow_time < 0)
             {
                 rend.sprite = grownPlant;
                 dropCount = 5; //reset the ammount of objects within the tree
-                ttl = 60; //1 min for tree to regrow
+                plant_regrow_time = 60; //1 min for tree to regrow
             }
         }
     }
