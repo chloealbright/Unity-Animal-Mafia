@@ -48735,6 +48735,10 @@ PrefabInstance:
       propertyPath: initialItems.Array.data[29].quantity
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 644933177752311172, guid: 2c8e43b8dcd789340a774304bbdfd25d, type: 3}
+      propertyPath: m_Name
+      value: Chicken
+      objectReference: {fileID: 0}
     - target: {fileID: 3076423553355845020, guid: 2c8e43b8dcd789340a774304bbdfd25d, type: 3}
       propertyPath: m_RootOrder
       value: 2
