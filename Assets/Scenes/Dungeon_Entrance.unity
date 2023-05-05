@@ -5568,6 +5568,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6850154822478461487, guid: d6c3fb7264d134d3ba02b86e60209202, type: 3}
+      propertyPath: collisionOffset
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 8914759276114100405, guid: d6c3fb7264d134d3ba02b86e60209202, type: 3}
       propertyPath: m_Name
       value: chicken_player

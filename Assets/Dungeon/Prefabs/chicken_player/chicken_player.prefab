@@ -288,5 +288,5 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  collisionOffset: 0.05
+  collisionOffset: 0.02
   startingPosition: {fileID: 11400000, guid: 93bb3f79cb2934be38b0ad7eacb13699, type: 2}
