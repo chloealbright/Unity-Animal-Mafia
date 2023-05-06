@@ -35,7 +35,7 @@ public class TreeCuttable : ToolHit
 
     public override void Hit()
     {
-        while(dropCount > 0)
+        while(dropCount > 0 && plant_regrow_time <= 0)      //here
         {
             dropCount -= 1;
             Vector3 position = transform.position;
@@ -51,7 +51,7 @@ public class TreeCuttable : ToolHit
 
     private void Update()
     {
-        if (dropCount == 0)
+        if (dropCount != 0)
         {
             plant_regrow_time -= Time.deltaTime; //start deprecating time
             time_to_sprout = plant_regrow_time;
