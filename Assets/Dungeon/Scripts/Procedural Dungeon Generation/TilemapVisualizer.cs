@@ -98,6 +98,13 @@ public class TilemapVisualizer : MonoBehaviour
     }
     public void Clear()
     {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemies");
+        GameObject exit = GameObject.FindWithTag("Exit");
+        foreach (GameObject enemy in enemies)
+        {
+            DestroyImmediate(enemy);
+        }
+        DestroyImmediate(exit);
         floorTilemap.ClearAllTiles();
         wallTilemap.ClearAllTiles();
     }
