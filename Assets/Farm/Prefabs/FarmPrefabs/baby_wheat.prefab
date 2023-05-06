@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8696361715539198982}
   - component: {fileID: 6519117343388409544}
   - component: {fileID: 7752014099642259661}
+  - component: {fileID: -5977524193540200272}
   m_Layer: 0
   m_Name: baby_wheat
   m_TagString: Untagged
@@ -132,3 +133,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22484493, y: 0.13872772}
   m_EdgeRadius: 0
+--- !u!114 &-5977524193540200272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516433054380129022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8541af71b72e4584968f864f4c7e5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

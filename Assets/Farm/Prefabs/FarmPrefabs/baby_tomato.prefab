@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1238176475983169439}
   - component: {fileID: -3290126644020526052}
   - component: {fileID: -8608077358121728901}
+  - component: {fileID: 728007344650372412}
   m_Layer: 0
   m_Name: baby_tomato
   m_TagString: Untagged
@@ -132,3 +133,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22904587, y: 0.21224242}
   m_EdgeRadius: 0
+--- !u!114 &728007344650372412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6245414421422298151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8541af71b72e4584968f864f4c7e5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
