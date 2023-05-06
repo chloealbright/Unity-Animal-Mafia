@@ -9,6 +9,7 @@ public class InstantiateObjectOnKeyPress : MonoBehaviour
     [SerializeField] GameObject Potato_Prefab;
     [SerializeField] GameObject Tomato_Prefab;
     [SerializeField] GameObject Pumkin_Prefab;
+    [SerializeField] GameObject Wheat_Prefab;
 
     //passing the player as an object to obtain it's location
     [SerializeField] Transform PlayerTransform; // The transform of the player GameObject
@@ -36,6 +37,12 @@ public class InstantiateObjectOnKeyPress : MonoBehaviour
     [SerializeField] float pumkin_patch_x_max;
     [SerializeField] float pumkin_patch_y_min;
     [SerializeField] float pumkin_patch_y_max;
+
+    //range for the area of the pumkin patch;
+    [SerializeField] float wheat_patch_x_min;
+    [SerializeField] float wheat_patch_x_max;
+    [SerializeField] float wheat_patch_y_min;
+    [SerializeField] float wheat_patch_y_max;
 
     void Update()
     {
@@ -71,6 +78,13 @@ public class InstantiateObjectOnKeyPress : MonoBehaviour
                 Vector3 spawnPosition = PlayerTransform.position + (PlayerTransform.forward);
 
                 Instantiate(Pumkin_Prefab, spawnPosition, Quaternion.identity);
+            }
+            else if(PlayerTransform.position.x <= wheat_patch_x_max && PlayerTransform.position.x >= wheat_patch_x_min &&
+                    PlayerTransform.position.y <= wheat_patch_y_max && PlayerTransform.position.y >= wheat_patch_y_min)
+            {
+                Vector3 spawnPosition = PlayerTransform.position + (PlayerTransform.forward);
+
+                Instantiate(Wheat_Prefab, spawnPosition, Quaternion.identity);
             }
         }
     }
