@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     Vector2 movementInput; // inputs: 1 for x 1 for y
     Rigidbody2D rb; // on game start, get reference
-    SpriteRenderer spriteRenderer; // for animation direction
+    public SpriteRenderer spriteRenderer; // for animation direction
     Animator animator; 
     bool canMove = true; 
 
@@ -22,12 +22,14 @@ public class PlayerController : MonoBehaviour
     // when FixedUpdate runs, castCollisions will populate this list
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
 
+    public Dungeon_VectorValue startingPosition;// for player position during scene transitions
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        transform.position = startingPosition.initialValue;
         
     }
 
