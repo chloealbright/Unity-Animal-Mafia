@@ -15,5 +15,6 @@ MonoBehaviour:
   <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 20
   <Name>k__BackingField: Wheat
-  <Description>k__BackingField: Whinny Wheat
-  <ItemImage>k__BackingField: {fileID: 186584441, guid: db0bbae00363a4c04afd328c0c110dc5, type: 3}
+  <Description>k__BackingField: Yummy Wheat
+  <ItemImage>k__BackingField: {fileID: -166624230, guid: b006d4a0344a7404c90cdc2f35f86b83, type: 3}
+  <Cost>k__BackingField: 10
