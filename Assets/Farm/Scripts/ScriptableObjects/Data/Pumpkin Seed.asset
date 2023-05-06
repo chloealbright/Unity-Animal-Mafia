@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbecb5eabde039429af6793a8163858, type: 3}
+  m_Name: Pumpkin Seed
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 0
+  <MaxStackSize>k__BackingField: 20
+  <Name>k__BackingField: Pumpkin Seed
+  <Description>k__BackingField: Yummy pumpkins
+  <ItemImage>k__BackingField: {fileID: -1563264412, guid: b006d4a0344a7404c90cdc2f35f86b83, type: 3}
+  <Cost>k__BackingField: 20

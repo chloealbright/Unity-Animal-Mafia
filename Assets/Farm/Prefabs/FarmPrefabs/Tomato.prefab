@@ -129,4 +129,5 @@ MonoBehaviour:
   spread: 5
   grownPlant: {fileID: 1865717953, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
   babyPlant: {fileID: -116078899, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
-  ttl: 45
+  ttl_min: 45
+  ttl_max: 75

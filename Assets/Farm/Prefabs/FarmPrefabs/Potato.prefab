@@ -103,7 +103,8 @@ MonoBehaviour:
   spread: 5
   grownPlant: {fileID: -391980890, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
   babyPlant: {fileID: -1380769294, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
-  ttl: 45
+  ttl_min: 45
+  ttl_max: 75
 --- !u!61 &8462048078618369613
 BoxCollider2D:
   m_ObjectHideFlags: 0

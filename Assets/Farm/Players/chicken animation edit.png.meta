@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 43b7c6be1da8f16439baee5d7b2a20b6
+guid: ca75876c6b196aa45ae8b6d2fc159ba3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,17 +101,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cow_baby animation_0
+      name: chicken animation edit_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 84
-        width: 21
-        height: 21
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dc64d85f5219fc4cb405aa116db816c
-      internalID: -691396762
+      spriteID: 486cba1a833a6a94f956c3ada0b1fde7
+      internalID: 1268363565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_1
+      name: chicken animation edit_1
       rect:
         serializedVersion: 2
-        x: 21
-        y: 84
-        width: 21
-        height: 21
+        x: 16
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 531a2dd8c377c7a4da60fc5ca5a8759b
-      internalID: 850523374
+      spriteID: 9cac5e9e3230a4340ade74e8ef6d418e
+      internalID: -1623212584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_2
+      name: chicken animation edit_2
       rect:
         serializedVersion: 2
-        x: 42
-        y: 84
-        width: 21
-        height: 21
+        x: 32
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d96039e642371743abed1d823c385c8
-      internalID: 249837364
+      spriteID: 3f374d23fe62f4840b48951f91ebfb4f
+      internalID: 1195260497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_3
+      name: chicken animation edit_3
       rect:
         serializedVersion: 2
-        x: 63
-        y: 84
-        width: 21
-        height: 21
+        x: 48
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,104 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32bb02700f16dc84f963674489a74f91
-      internalID: -1536741924
+      spriteID: ab88cdaf5f675864db5a03957b55016e
+      internalID: -654009575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 63
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a041a7955e4812b44b99c26e27989bfd
-      internalID: 1141327665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cow_baby animation_5
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 63
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a3c9375ed3d34a4bb90d3940b49d124
-      internalID: -919567531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cow_baby animation_6
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 63
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79573799a58c75e49ae821d780f485ac
-      internalID: -1408589172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cow_baby animation_7
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 63
-        width: 21
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7820935149c31774a8747fbec1a2900d
-      internalID: 604531049
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cow_baby animation_8
+      name: chicken animation edit_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 42
-        width: 21
-        height: 21
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba35b032136e93741abefbb6216ccad6
-      internalID: 1401848169
+      spriteID: 0328c2c4b86ecb04489ce76b2a2641f9
+      internalID: 480583005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_9
+      name: chicken animation edit_5
       rect:
         serializedVersion: 2
-        x: 21
-        y: 42
-        width: 21
-        height: 21
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adf00e739b9c06749bb686233527cf97
-      internalID: -918528819
+      spriteID: ee590352d32ed4e4a93121226672fb04
+      internalID: 1968138327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_10
+      name: chicken animation edit_6
       rect:
         serializedVersion: 2
-        x: 42
-        y: 42
-        width: 21
-        height: 21
+        x: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 489c48ac223ff554fb89552736e781ff
-      internalID: 807545678
+      spriteID: fcf986fbac314714384284669a039d15
+      internalID: -2130648809
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_11
+      name: chicken animation edit_7
       rect:
         serializedVersion: 2
-        x: 63
-        y: 42
-        width: 21
-        height: 21
+        x: 48
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,20 +278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a865d18bb2c2210438d220f7fd85973f
-      internalID: -423695167
+      spriteID: fcf58c98900f79144a6c8f71fd09bccd
+      internalID: 1135004465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_12
+      name: chicken animation edit_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 21
-        width: 21
-        height: 21
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c0026a08f0613f48a199cff27aeed64
-      internalID: 262465599
+      spriteID: a677aa6004e0f5f44a51a76ee1c80f8c
+      internalID: 1046322840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_13
+      name: chicken animation edit_9
       rect:
         serializedVersion: 2
-        x: 21
-        y: 21
-        width: 21
-        height: 21
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,20 +320,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23a819809e7ebc549b1871e23c3874e1
-      internalID: -1422064667
+      spriteID: a71d71b52170e9b48b527c55722547f6
+      internalID: -2081326561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_14
+      name: chicken animation edit_10
       rect:
         serializedVersion: 2
-        x: 42
-        y: 21
-        width: 21
-        height: 21
+        x: 32
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -413,20 +341,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f0e8afa12ce2bf4188183167d088828
-      internalID: -688014320
+      spriteID: 49beeccfb4afc2c46bb836404c35d2aa
+      internalID: -736274571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_15
+      name: chicken animation edit_11
       rect:
         serializedVersion: 2
-        x: 63
-        y: 21
-        width: 21
-        height: 21
+        x: 48
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,20 +362,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23e7c3afba20563489a9de55239f91ae
-      internalID: -312556669
+      spriteID: 3665cc87c1c230d46a3acb06700b5010
+      internalID: 604638754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_16
+      name: chicken animation edit_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9028bb58cdba5fc4793476d8a1fca374
+      internalID: -562203648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chicken animation edit_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e93138a191a6240a4266de99d490ae
+      internalID: -116428965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chicken animation edit_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7958ce0693c0b894c8abfd4382886d8e
+      internalID: -1747103226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chicken animation edit_15
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59dfd9e279550264ca3f1a9220db01b1
+      internalID: -1190775816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chicken animation edit_16
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 21
-        height: 21
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,20 +467,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01e5577459cf71c4e9a3ef1b9dad92a3
-      internalID: 1696650058
+      spriteID: 93d6318b9b550054e9c8b6582dd939d5
+      internalID: -2061821736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_17
+      name: chicken animation edit_17
       rect:
         serializedVersion: 2
-        x: 21
+        x: 16
         y: 0
-        width: 21
-        height: 21
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,20 +488,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97dca3e8b2163a242bce7e98570f7778
-      internalID: -687949375
+      spriteID: 7563eba8531e1884297eb466b6d82edb
+      internalID: 1074398127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_18
+      name: chicken animation edit_18
       rect:
         serializedVersion: 2
-        x: 42
+        x: 32
         y: 0
-        width: 21
-        height: 21
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -497,20 +509,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2e8abcd840ad9c4fbcc09b7b9b3b179
-      internalID: 1808316804
+      spriteID: 7f42ab0b9b2ec0d45ad60e67091cb04e
+      internalID: 630594291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cow_baby animation_19
+      name: chicken animation edit_19
       rect:
         serializedVersion: 2
-        x: 63
+        x: 48
         y: 0
-        width: 21
-        height: 21
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -518,8 +530,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd416d6ec49a70e4e9668ebf40e5655c
-      internalID: -54850799
+      spriteID: bb356edc7a63ac3459fce058e9670bb7
+      internalID: 568031767
       vertices: []
       indices: 
       edges: []
@@ -535,26 +547,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      cow_baby animation_0: -691396762
-      cow_baby animation_1: 850523374
-      cow_baby animation_10: 807545678
-      cow_baby animation_11: -423695167
-      cow_baby animation_12: 262465599
-      cow_baby animation_13: -1422064667
-      cow_baby animation_14: -688014320
-      cow_baby animation_15: -312556669
-      cow_baby animation_16: 1696650058
-      cow_baby animation_17: -687949375
-      cow_baby animation_18: 1808316804
-      cow_baby animation_19: -54850799
-      cow_baby animation_2: 249837364
-      cow_baby animation_3: -1536741924
-      cow_baby animation_4: 1141327665
-      cow_baby animation_5: -919567531
-      cow_baby animation_6: -1408589172
-      cow_baby animation_7: 604531049
-      cow_baby animation_8: 1401848169
-      cow_baby animation_9: -918528819
+      chicken animation edit_0: 1268363565
+      chicken animation edit_1: -1623212584
+      chicken animation edit_10: -736274571
+      chicken animation edit_11: 604638754
+      chicken animation edit_12: -562203648
+      chicken animation edit_13: -116428965
+      chicken animation edit_14: -1747103226
+      chicken animation edit_15: -1190775816
+      chicken animation edit_16: -2061821736
+      chicken animation edit_17: 1074398127
+      chicken animation edit_18: 630594291
+      chicken animation edit_19: 568031767
+      chicken animation edit_2: 1195260497
+      chicken animation edit_3: -654009575
+      chicken animation edit_4: 480583005
+      chicken animation edit_5: 1968138327
+      chicken animation edit_6: -2130648809
+      chicken animation edit_7: 1135004465
+      chicken animation edit_8: 1046322840
+      chicken animation edit_9: -2081326561
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

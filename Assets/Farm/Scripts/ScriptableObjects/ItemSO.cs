@@ -26,6 +26,9 @@ namespace InventoryCont.Model
 
         [field: SerializeField]
         public Sprite ItemImage { get; set; }
+
+        [field: SerializeField]
+        public int Cost { get; set; }
     }
 }
 
