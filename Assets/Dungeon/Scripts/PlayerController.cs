@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     Vector2 movementInput; // inputs: 1 for x 1 for y
     Rigidbody2D rb; // on game start, get reference
-    SpriteRenderer spriteRenderer; // for animation direction
+    public SpriteRenderer spriteRenderer; // for animation direction
     Animator animator; 
     bool canMove = true; 
 

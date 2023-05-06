@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_2
+      name: baby_carrot
       rect:
         serializedVersion: 2
         x: 32
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_6
+      name: adult_carrot
       rect:
         serializedVersion: 2
         x: 96
@@ -684,7 +684,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_27
+      name: baby_tomato
       rect:
         serializedVersion: 2
         x: 32
@@ -768,7 +768,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_31
+      name: adult_tomato
       rect:
         serializedVersion: 2
         x: 96
@@ -1734,7 +1734,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_77
+      name: baby_pumpkin
       rect:
         serializedVersion: 2
         x: 32
@@ -1818,7 +1818,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_81
+      name: adult_pumpkin
       rect:
         serializedVersion: 2
         x: 96
@@ -2784,7 +2784,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_127
+      name: baby_potato
       rect:
         serializedVersion: 2
         x: 32
@@ -2868,7 +2868,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_131
+      name: adult_potato
       rect:
         serializedVersion: 2
         x: 96
@@ -4884,7 +4884,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_227
+      name: baby_wheat
       rect:
         serializedVersion: 2
         x: 32
@@ -4968,7 +4968,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crops_all_231
+      name: adult_wheat
       rect:
         serializedVersion: 2
         x: 96
@@ -17369,6 +17369,16 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Tree_Sapling: -1131423206
+      adult_carrot: -664707223
+      adult_potato: 986348597
+      adult_pumpkin: 219768743
+      adult_tomato: -285482196
+      adult_wheat: -166624230
+      baby_carrot: -1760556780
+      baby_potato: -1654558986
+      baby_pumpkin: -1195030139
+      baby_tomato: 993264838
+      baby_wheat: 2127384956
       crops_all_0: 734806211
       crops_all_1: -1552879266
       crops_all_10: 925144383
@@ -17401,12 +17411,10 @@ TextureImporter:
       crops_all_124: 246001420
       crops_all_125: 1660594350
       crops_all_126: 2005211603
-      crops_all_127: -1654558986
       crops_all_128: 1442386906
       crops_all_129: -1680984035
       crops_all_13: -262630914
       crops_all_130: 370584961
-      crops_all_131: 986348597
       crops_all_132: -162389258
       crops_all_133: -1817725057
       crops_all_134: 1392005088
@@ -17481,7 +17489,6 @@ TextureImporter:
       crops_all_197: 783685543
       crops_all_198: 1458130836
       crops_all_199: 1517551364
-      crops_all_2: -1760556780
       crops_all_20: -1631428753
       crops_all_200: -1389769174
       crops_all_201: 284815136
@@ -17512,12 +17519,10 @@ TextureImporter:
       crops_all_224: 1809868145
       crops_all_225: -1963115115
       crops_all_226: 311495430
-      crops_all_227: 2127384956
       crops_all_228: -683190260
       crops_all_229: 757630472
       crops_all_23: -1265869638
       crops_all_230: -228371952
-      crops_all_231: -166624230
       crops_all_232: 793892644
       crops_all_233: -1122721497
       crops_all_234: -1756178990
@@ -17559,7 +17564,6 @@ TextureImporter:
       crops_all_267: 456511663
       crops_all_268: -1846766604
       crops_all_269: -1362037458
-      crops_all_27: 993264838
       crops_all_270: 327118443
       crops_all_271: 1680113476
       crops_all_272: 2092208635
@@ -17603,7 +17607,6 @@ TextureImporter:
       crops_all_307: -1983453077
       crops_all_308: 1113203006
       crops_all_309: -1158788609
-      crops_all_31: -285482196
       crops_all_310: 827275398
       crops_all_311: 1619295276
       crops_all_312: 1682783346
@@ -17924,7 +17927,6 @@ TextureImporter:
       crops_all_597: 1408822008
       crops_all_598: 1127564020
       crops_all_599: -923573923
-      crops_all_6: -664707223
       crops_all_60: -1979160042
       crops_all_600: 328477973
       crops_all_601: -1107670816
@@ -18113,7 +18115,6 @@ TextureImporter:
       crops_all_767: -1632047117
       crops_all_768: 1723942797
       crops_all_769: -1921721504
-      crops_all_77: -1195030139
       crops_all_770: 1447688359
       crops_all_771: -1054741088
       crops_all_772: -818004709
@@ -18158,7 +18159,6 @@ TextureImporter:
       crops_all_807: -141957563
       crops_all_808: -124930292
       crops_all_809: 1766658579
-      crops_all_81: 219768743
       crops_all_810: -1561133628
       crops_all_811: 265288698
       crops_all_812: 937296893
