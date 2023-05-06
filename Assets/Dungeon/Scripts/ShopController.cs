@@ -5,7 +5,6 @@ using UnityEngine;
 // using ShopCont.Model;
 using ShopCont.UI;
 using UnityEngine.Events;
-using InventoryCont.Model;
 
 // Control Shop pop up menu for player
 //namespace ShopCont{
@@ -13,7 +12,7 @@ public class ShopController : MonoBehaviour
 {
 
     public ShopManager shopUI; 
-    public ItemSO shopData;
+    public ShopItemSO shopData;
     // public bool isOpen= false;
     public GameObject player;
 
