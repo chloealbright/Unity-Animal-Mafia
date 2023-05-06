@@ -289,4 +289,4 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   collisionOffset: 0.02
-  startingPosition: {fileID: 11400000, guid: 93bb3f79cb2934be38b0ad7eacb13699, type: 2}
+  startingPosition: {fileID: 11400000, guid: 0d7e4cd092bf542e18ec3c06be40f028, type: 2}

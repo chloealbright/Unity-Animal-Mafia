@@ -273,6 +273,16 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1209144794, guid: 2c8e43b8dcd789340a774304bbdfd25d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2c8e43b8dcd789340a774304bbdfd25d, type: 3}
+--- !u!1 &532523199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3076423553355845021, guid: 2c8e43b8dcd789340a774304bbdfd25d, type: 3}
+  m_PrefabInstance: {fileID: 532523198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &532523200 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3076423553355845020, guid: 2c8e43b8dcd789340a774304bbdfd25d, type: 3}
+  m_PrefabInstance: {fileID: 532523198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &686024757
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,8 +397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopUI: {fileID: 913558620}
-  shopData: {fileID: 0}
-  player: {fileID: 0}
+  shopData: {fileID: 11400000, guid: 6185fe50d6900734589a30d947b30b13, type: 2}
+  player: {fileID: 532523199}
 --- !u!4 &757987473
 Transform:
   m_ObjectHideFlags: 0
@@ -1683,7 +1693,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
+  m_LookAt: {fileID: 532523200}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
