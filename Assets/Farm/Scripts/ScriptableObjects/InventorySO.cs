@@ -11,7 +11,7 @@ namespace InventoryCont.Model
     public class InventorySO : ScriptableObject
     {
         [SerializeField]
-        private List<InventoryItemStruct> inventoryItemStructs;
+        public List<InventoryItemStruct> inventoryItemStructs;
 
         [field: SerializeField]
         public int Size { get; private set; } = 10;
