@@ -12,9 +12,11 @@ public class Movement : MonoBehaviour
 
     public VectorValue startingPosition;
 
+    public bool canMove;
     void Start()
     {
         transform.position = startingPosition.initialValue;
+        canMove = true;
     }
 
     //get input from player
@@ -42,7 +44,7 @@ public class Movement : MonoBehaviour
         if(animator != null)
         {
             //check if the sprite is moving (direction vector x and y would be 0 if we dont receive an input we are not moving)
-            if(direction.magnitude > 0)
+            if(direction.magnitude > 0 && canMove)
             {
                 animator.SetBool("isMoving", true);
                 animator.SetFloat("horizontal", direction.x);
