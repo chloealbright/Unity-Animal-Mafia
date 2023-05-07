@@ -31,6 +31,7 @@ public class NPC : MonoBehaviour
             {
                 zeroText();
                 contButton.SetActive(false);
+                StopAllCoroutines();
             }
             else
             {
@@ -54,7 +55,7 @@ public class NPC : MonoBehaviour
 
     IEnumerator Typing()
     {
-        foreach(char letter in dialogue[index].ToCharArray())
+        foreach (char letter in dialogue[index].ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
