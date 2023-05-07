@@ -40,10 +40,17 @@ public class InventoryChecker : MonoBehaviour
             if (inventoryData.inventoryItemStructs[pos].item != null &&
                 inventoryData.inventoryItemStructs[pos].item.Name == name)
             {
-                current_Quantity = inventoryData.inventoryItemStructs[pos].quantity;
+
                 Debug.Log("current Quantity: " + current_Quantity);
-                inventoryData.inventoryItemStructs[pos].ChangeQuantity(current_Quantity - quan);
-                Debug.Log("current Quantity: " + inventoryData.inventoryItemStructs[pos].quantity);
+
+                current_Quantity = inventoryData.inventoryItemStructs[pos].quantity;
+
+                inventoryData.inventoryItemStructs[pos] = inventoryData.inventoryItemStructs[pos].ChangeQuantity(
+                    current_Quantity - 1);
+                Debug.Log("current Quantity: " + current_Quantity);
+
+                
+                //Debug.Log("current Quantity: " + inventoryData.inventoryItemStructs[pos].quantity);
 
             }
         }
