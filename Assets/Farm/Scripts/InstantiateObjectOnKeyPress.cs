@@ -60,10 +60,15 @@ public class InstantiateObjectOnKeyPress : MonoBehaviour
 
         for (int pos = 0; pos < inventory_Size; pos++)
         {
-            string item_Name = (inventoryData.inventoryItemStructs[pos].item.Name);
+            //make sure we are not looking at something that is null
+            if (inventoryData.inventoryItemStructs[pos].item != null)
+            {
+                string item_Name = (inventoryData.inventoryItemStructs[pos].item.Name);
 
-            if (item_Name == item_name)
-                return true;
+
+                if (item_Name == item_name)
+                    return true;
+            }
         }
         return false;
     }
