@@ -138,7 +138,7 @@ namespace InventoryCont.Model
             InformAboutChange();
         }
 
-        private void InformAboutChange()
+        public void InformAboutChange()
         {
             //check if something is assigned
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
@@ -160,6 +160,12 @@ namespace InventoryCont.Model
                 item = this.item,
                 quantity = newQuantity,
             };
+        }
+
+        //shermol added
+        public InventoryItemStruct DeleteItem()
+        {
+            return new InventoryItemStruct();
         }
 
         public static InventoryItemStruct GetEmptyItem() => new InventoryItemStruct

@@ -40,18 +40,28 @@ public class InventoryChecker : MonoBehaviour
             if (inventoryData.inventoryItemStructs[pos].item != null &&
                 inventoryData.inventoryItemStructs[pos].item.Name == name)
             {
-
-                Debug.Log("current Quantity: " + current_Quantity);
+                //Debug.Log("current Quantity: " + current_Quantity);
+                //depricate quantity by 1
 
                 current_Quantity = inventoryData.inventoryItemStructs[pos].quantity;
 
-                inventoryData.inventoryItemStructs[pos] = inventoryData.inventoryItemStructs[pos].ChangeQuantity(
-                    current_Quantity - 1);
-                Debug.Log("current Quantity: " + current_Quantity);
+                //Debug.Log("Quantity before pressing M: " + current_Quantity);
 
-                
+                inventoryData.inventoryItemStructs[pos] =
+                    inventoryData.inventoryItemStructs[pos].ChangeQuantity(current_Quantity - 1);
+
+                current_Quantity = inventoryData.inventoryItemStructs[pos].quantity;
+
+                //Debug.Log("Quantity after pressing M: " + current_Quantity);
+
                 //Debug.Log("current Quantity: " + inventoryData.inventoryItemStructs[pos].quantity);
-
+                //if that current quantity is less than 0 we want to remove item
+                if (current_Quantity <= 0)
+                {
+                    inventoryData.inventoryItemStructs[pos].DeleteItem();
+                    inventoryData.InformAboutChange();
+                    Debug.Log("here");
+                }
             }
         }
         return current_Quantity;
