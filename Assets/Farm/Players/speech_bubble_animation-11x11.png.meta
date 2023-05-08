@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a734c2c0629f9344a1449ec4735db2a
+guid: c8237aa23b7fef0448784ed05931ccc8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -117,169 +117,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: inventory_chopped_desc_bg
+      name: speech_bubble_animation-11x11_0
       rect:
         serializedVersion: 2
-        x: 305
-        y: 226
-        width: 77
-        height: 77
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 2, z: 2, w: 2}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4a6817efa172c244a3f714a6b86d96d
-      internalID: -2085170405
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: inventory_chopped_content_1
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 182
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 2, z: 2, w: 2}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92bfca4408b486b4db6c7f245396e1a6
-      internalID: -1616640503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: inventory_chopped_content_0
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 153
-        width: 18
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 2, z: 2, w: 2}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8452ce09945d414a94a31f4e84c1bd2
-      internalID: -632795377
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: inventory_chopped_desc
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 147
-        width: 56
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 3, z: 3, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2453ecfe6613c54dbfddb9f3dd1a878
-      internalID: 176447992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chest_btn
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba41d7954b0a4aa48992bf59d5aa506f
-      internalID: 188133062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: close_btn
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 128
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 1, z: 2, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ca58876af52afb4f8b11eae55818a5d
-      internalID: 876793125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: profile_bg
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 84
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c55344b0b2376e44c85184fa5f9414b0
-      internalID: -819434338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: panel
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 217
-        width: 6
-        height: 80
+        x: 11
+        y: 0
+        width: 11
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 1, y: 1, z: 1, w: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddd4b49a16becd34294abbece62edc22
-      internalID: -1475051508
+      spriteID: 80419c08638ba824bae2617495c7d5e8
+      internalID: -984381360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speech_bubble_animation-11x11_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd830501d13d704e8ed56b01790436f
+      internalID: 707698220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speech_bubble_animation-11x11_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9196d3d0796204190b28c19ede6b20
+      internalID: -1910952575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speech_bubble_animation-11x11_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9be374a69cfb142beb6e1cfd7bd095
+      internalID: -1609115639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speech_bubble_animation-11x11_4
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7442093f67862743a2b660b14d48254
+      internalID: 580863263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speech_bubble_animation-11x11_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40efcd70e993c904ea64dab38bc010c4
+      internalID: 1234605092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speech_bubble_animation-11x11_6
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8aa46b2d1a08f47bfb6044ad6f2a80
+      internalID: -1619768850
       vertices: []
       indices: 
       edges: []
@@ -295,15 +274,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      chest_btn: 188133062
-      close_btn: 876793125
-      inventory_chopped_content_0: -632795377
-      inventory_chopped_content_1: -1616640503
-      inventory_chopped_desc: 176447992
-      inventory_chopped_desc_bg: -2085170405
-      panel: -1475051508
-      panel_edge: 1199803852
-      profile_bg: -819434338
+      speech_bubble_animation-11x11_0: -984381360
+      speech_bubble_animation-11x11_1: 707698220
+      speech_bubble_animation-11x11_2: -1910952575
+      speech_bubble_animation-11x11_3: -1609115639
+      speech_bubble_animation-11x11_4: 580863263
+      speech_bubble_animation-11x11_5: 1234605092
+      speech_bubble_animation-11x11_6: -1619768850
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
