@@ -16,14 +16,19 @@ public class NPC : MonoBehaviour
     public bool playerIsClose;
 
     public GameObject bubble;
+    public GameObject instruction;
     void Update()
     {
         if (!dialoguePanel.activeInHierarchy && playerIsClose)
         {
+            instruction.SetActive(true);
             bubble.SetActive(true);
         }
         else
+        {
+            instruction.SetActive(false);
             bubble.SetActive(false);
+        }
         if (Input.GetKeyUp(KeyCode.E) && playerIsClose)
         {
             bubble.SetActive(false);

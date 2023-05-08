@@ -27584,6 +27584,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8593b6997fba6f45a4add3c58ede649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &683534618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 683534618, guid: 4bcf0b87a9aaec646ade394e47d84a32, type: 3}
+  m_PrefabInstance: {fileID: 940590077026965243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &707304251
 GameObject:
   m_ObjectHideFlags: 0
@@ -49578,6 +49583,10 @@ PrefabInstance:
       propertyPath: contButton
       value: 
       objectReference: {fileID: 250451240}
+    - target: {fileID: 8982718339206179829, guid: a98595c001285a44fb77895cacdcfb27, type: 3}
+      propertyPath: instruction
+      value: 
+      objectReference: {fileID: 683534618}
     - target: {fileID: 8982718339206179829, guid: a98595c001285a44fb77895cacdcfb27, type: 3}
       propertyPath: dialogueText
       value: 
