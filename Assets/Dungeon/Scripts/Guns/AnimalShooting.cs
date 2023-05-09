@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimalShooting : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
     public Transform firePoint;
     public GameObject bulletPrefab;
 
@@ -22,5 +23,6 @@ public class AnimalShooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * Quaternion.Euler(0f, 0f, 180f));
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(-firePoint.up * bulletForce, ForceMode2D.Impulse);
+        audioSource.Play();
     }
 }
