@@ -1649,6 +1649,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1916565323}
     m_Modifications:
+    - target: {fileID: 1064947777915415608, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064947778358800272, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064947778377802800, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064947778424861781, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064947778991359666, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064947779480144814, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064947779670113377, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5300150367982714145, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

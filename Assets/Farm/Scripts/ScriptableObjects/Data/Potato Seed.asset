@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Potato Seed
   m_EditorClassIdentifier: 
   <IsStackable>k__BackingField: 1
-  <MaxStackSize>k__BackingField: 1
+  <MaxStackSize>k__BackingField: 20
   <Name>k__BackingField: Potato Seed
   <Description>k__BackingField: Pick me, I'm a potato
   <ItemImage>k__BackingField: {fileID: 1660594350, guid: b006d4a0344a7404c90cdc2f35f86b83, type: 3}

@@ -66,7 +66,9 @@ namespace ShopCont.UI{
 
         public void PurchaseItem(int btnNo){
             if(gold >= shopItemsSO[btnNo].Cost){
-                gold = gold - shopItemsSO[btnNo].Cost;
+                Debug.Log("Purchase item: " + shopItemsSO[btnNo].Name + " Cost: "+  shopItemsSO[btnNo].Cost);
+                
+                gold -= shopItemsSO[btnNo].Cost;
                 goldUI.text = "Gold: "+ gold.ToString();
                 CheckPurchaseable();
                 //Next task: Unlock item to set to inventory 
