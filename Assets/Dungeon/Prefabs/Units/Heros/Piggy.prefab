@@ -193,7 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8353911b8f84445ad9654777331ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
   firePoint: {fileID: 5723030790295365441}
   bulletPrefab: {fileID: 5051724278231121863, guid: 974e6183ebfbe464d8247a323e59b412, type: 3}
   bulletForce: 20
