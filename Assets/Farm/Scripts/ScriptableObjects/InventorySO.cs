@@ -11,7 +11,7 @@ namespace InventoryCont.Model
     public class InventorySO : ScriptableObject
     {
         [SerializeField]
-        private List<InventoryItemStruct> inventoryItemStructs;
+        public List<InventoryItemStruct> inventoryItemStructs;
 
         [field: SerializeField]
         public int Size { get; private set; } = 10;
@@ -48,56 +48,6 @@ namespace InventoryCont.Model
             
         }
 
-        public int ContainsItem(ItemSO item){//GoldShop.cs check if item is in inventory
-            int hasItem = 1;
-            for (int i = 0; i < inventoryItemStructs.Count; i++){
-                if (inventoryItemStructs[i].item.Name == item.Name){
-                    hasItem = 0;
-                    return hasItem;
-                }
-            }
-            return hasItem;
-        }
-
-        public int RemoveItem(ItemSO item, int quantity){//GoldShop.cs remove item in inventory
-            //if item is not stackable, it will add to inventory in the next empty slot
-            if(item.IsStackable == false)
-            {
-                for (int i = 0; i < inventoryItemStructs.Count; i++)
-                {
-                    if (inventoryItemStructs[i].item.ID == item.ID){
-                        inventoryItemStructs[i] = inventoryItemStructs[i].ChangeQuantity(inventoryItemStructs[i].quantity - quantity);
-                        Debug.Log("RemoveItem " + inventoryItemStructs[i].item.Name);
-                        quantity --;
-                        InformAboutChange();
-                        return 0;
-                    }
-                }
-            }
-            quantity = RemoveStackableItem(item, quantity);
-            InformAboutChange();
-            return quantity;
-
-        }
-
-        private int RemoveStackableItem(ItemSO item, int quantity)//GoldShop.cs remove item in inventory
-        {
-            for (int i = 0; i < inventoryItemStructs.Count; i++)
-            {
-                if (inventoryItemStructs[i].isEmpty)//some slots may be empty
-                    continue;
-                if (inventoryItemStructs[i].item.ID == item.ID) //if it has the same item ID
-                {
-                    inventoryItemStructs[i] = inventoryItemStructs[i].ChangeQuantity(inventoryItemStructs[i].quantity - quantity);
-                    Debug.Log("Remove StackableItem " + inventoryItemStructs[i].item.Name);
-                    quantity --;
-                    InformAboutChange();
-                    return 0;
-                     
-                }
-            }
-            return quantity;
-        }
 
         //adds item to first available slot
         private int AddItemToFirstFreeSlot(ItemSO item, int quantity)
@@ -193,6 +143,13 @@ namespace InventoryCont.Model
         {
             //check if something is assigned
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
+        }
+
+        public void DeleteItem(int position)
+        {
+            InformAboutChange();
+            inventoryItemStructs[position] = InventoryItemStruct.GetEmptyItem();
+            InformAboutChange();
         }
     }
 
