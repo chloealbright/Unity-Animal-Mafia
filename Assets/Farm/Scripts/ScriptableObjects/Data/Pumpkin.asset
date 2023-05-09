@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbecb5eabde039429af6793a8163858, type: 3}
   m_Name: Pumpkin
   m_EditorClassIdentifier: 
-  <IsStackable>k__BackingField: 0
+  <IsStackable>k__BackingField: 1
   <MaxStackSize>k__BackingField: 20
   <Name>k__BackingField: Pumpkin
   <Description>k__BackingField: Don't be a pumpkin head

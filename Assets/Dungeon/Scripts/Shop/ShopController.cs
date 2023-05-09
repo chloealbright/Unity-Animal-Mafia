@@ -14,15 +14,18 @@ public class ShopController : MonoBehaviour
 {
 
     public ShopManager shopUI; 
+    public GoldShop goldShopUI;
     public ItemSO shopData;
-    // public bool isOpen= false;
+    //public bool canInteract = false;
     public GameObject player;
 
     public void Start(){
         player = GameObject.FindWithTag("Player");
         // player.gameObject.SetActive(true);
         shopUI.gameObject.SetActive(false);
+        goldShopUI.gameObject.SetActive(false);
     }
+
 
     //user pressing P to open shop
     // public void Update() // function is called once per frame
@@ -40,19 +43,17 @@ public class ShopController : MonoBehaviour
 
     // }
 
-    // private void onCollisionEnter2D(Collider2D collider){
-    //     if(collider.gameObject.tag == "Player"){
-    //         shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
-    //         //player.SetActive(!player.activeSelf);
-    //     } 
-    // }
+    public void BuySeeds(){
+        shopUI.gameObject.SetActive(true);
+        goldShopUI.gameObject.SetActive(false);
+            
+    }
+    public void SellCrops(){
+        goldShopUI.gameObject.SetActive(true);
+        shopUI.gameObject.SetActive(false);
+    }
 
-    // private void onCollisionExit2D(Collider2D collider){
-    //     if(collider.gameObject.tag == "Player"){
-    //         shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
-    //         //player.SetActive(!player.activeSelf);
-    //     } 
-    // }
+
 
 
     private void OnTriggerEnter2D(Collider2D collider)
@@ -60,13 +61,8 @@ public class ShopController : MonoBehaviour
         if(collider.gameObject.tag == "Player"){
             shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
             //player.SetActive(!player.activeSelf);
+            //canInteract = true;
         } 
-        // IShopCustomer shopCustomer = collider.GetComponent<IShopCustomer>();
-        // if(shopCustomer != null){
-        //     shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
-        //     player.SetActive(!player.activeSelf);
-        //     //shopUI.Show(shopCustomer);
-        // }
         
     }
 
@@ -76,12 +72,7 @@ public class ShopController : MonoBehaviour
             shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
             //player.SetActive(!player.activeSelf);
         } 
-        // IShopCustomer shopCustomer = collider.GetComponent<IShopCustomer>();
-        // if(shopCustomer != null){
-        //     //shopUI.Hide();
-        //     shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
-        //     player.SetActive(!player.activeSelf);
-        // } 
+    
     }
 
 

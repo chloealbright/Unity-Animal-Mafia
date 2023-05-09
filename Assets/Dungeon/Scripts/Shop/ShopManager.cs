@@ -25,8 +25,10 @@ namespace ShopCont.UI{
 
         [SerializeField]
         private InventorySO inventoryData;
-        private ItemSO boughtItem;
-
+        public ShopController shopController;
+        
+        
+        
         //private ShopMouseFollower MouseFollower;
 
 
@@ -62,6 +64,7 @@ namespace ShopCont.UI{
             }
         }
 
+
         public void PurchaseItem(int btnNo){
             if(gold >= shopItemsSO[btnNo].Cost){
                 gold = gold - shopItemsSO[btnNo].Cost;
@@ -74,6 +77,15 @@ namespace ShopCont.UI{
                 
             }
         }
+
+        public void SellCrops(){
+            shopController.SellCrops();
+        }
+        // public void SellCrops(){
+        //     goldShopUI.gameObject.SetActive(true);
+        //     ShopUI.gameObject.SetActive(false);
+        // }
+
 
         public void LoadPanels(){
             for(int i=0; i<shopItemsSO.Length; i++){   

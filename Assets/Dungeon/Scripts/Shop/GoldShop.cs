@@ -1,74 +1,103 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.EventSystems;
 using InventoryCont.Model;
+using ShopCont.UI;
 
-//namespace GoldShopCont.UI{//
-public class GoldShop : MonoBehaviour
-{
-    public int gold;
-    //public TMP_Text goldUI; // gold amount
-    public ItemSO[] shopItemsSO; // Prefab shopItems
-    public ShopTemplate[] shopPanels; // Title-Description-Cost, references script
-    public GameObject[] shopPanelsGO; // references GameObject
-    //public Button[] purchaseBtn; // check if purchaseable
-    public RectTransform contentPanel;
-    public ShopTemplate shopTemplate;
+namespace ShopCont.UI{//
+    public class GoldShop : MonoBehaviour
+    {
+        [SerializeField]
+        private InventorySO inventoryData;
 
-    //private ShopMouseFollower MouseFollower;
+        public ShopManager shopUI;
+        public ItemSO[] sellItemsSO; 
+        public ShopTemplate[] sellPanels; // Title-Description-Cost, references script
+        public GameObject[] sellPanelsGO; // references GameObject
+        public Button[] sellBtn; // check if purchaseable
+        public RectTransform contentPanel;
+        public ShopTemplate sellTemplate;
+        public TMP_Text goldUI; // gold amount
+        public int gold;
+        
+        public ShopController shopController;
+        
+        
 
+        
 
-
-    // public void Awake(){
-    //     //MouseFollower.Toggle(false)
-    //     for(int i =0; i< shopItemsSO.Length; i++){
-    //         shopPanelsGO[i].SetActive(true);
-    //     }
-    //     goldUI.text = "Gold: " + gold.ToString();
-    //     LoadPanels();
-    //     CheckPurchaseable();
-    // }
-
+        //private sellMouseFollower MouseFollower;
 
 
-    // public void AddGold(){
-    //     //MouseFollower.Toggle(true)
-    //     Debug.Log("Generate Gold");
-    //     gold+=100;
-    //     goldUI.text = "Gold: " + gold.ToString();
-    //     CheckPurchaseable();
-    // }
 
-    // public void CheckPurchaseable(){
-    //     //MouseFollower.Toggle(true);
-    //     Debug.Log("shopContent.activeInHierarchy");
-    //     for(int i=0; i< shopItemsSO.Length; i++){
-    //         if(gold >= shopItemsSO[i].cost)
-    //             purchaseBtn[i].interactable = true;
-    //         else
-    //             purchaseBtn[i].interactable = false;
-    //     }
-    // }
+        public void Awake(){
+            //MouseFollower.Toggle(false)
+            for(int i =0; i< sellItemsSO.Length; i++){
+                sellPanelsGO[i].SetActive(true);
+            }
+            goldUI.text = "Gold: " + gold.ToString();
+            LoadPanels();
+            CheckSellable();
+        }
 
-    // public void PurchaseItem(int btnNo){
-    //     if(gold >= shopItemsSO[btnNo].cost){
-    //         gold = gold - shopItemsSO[btnNo].cost;
-    //         goldUI.text = "Gold: "+ gold.ToString();
-    //         //Next task: Unlock item to set to inventory 
-    //         CheckPurchaseable();
-    //     }
-    // }
 
-    
 
-    // public void LoadPanels(){
-    //     for(int i=0; i<shopItemsSO.Length; i++){
-            
-    //         shopPanels[i].titleTxt.text = shopItemsSO[i].title;
-    //         shopPanels[i].itemImage.sprite = shopItemsSO[i].itemImage; //set panel's item img of sprite to SO image
-    //         shopPanels[i].descriptionTxt.text = shopItemsSO[i].description;
-    //         shopPanels[i].costTxt.text = shopItemsSO[i].cost.ToString() + " Gold";
-    //     }
-    // }
+        public void AddGold(){
+            //MouseFollower.Toggle(true)
+            Debug.Log("Generate Gold");
+            gold+=20;
+            goldUI.text = "Gold: " + gold.ToString();
+            CheckSellable();
+        }
+
+        public void CheckSellable(){
+            Debug.Log("sellContent.activeInHierarchy");
+            for(int i=0; i< sellItemsSO.Length; i++){
+                if(inventoryData.ContainsItem(sellItemsSO[i]))
+                    sellBtn[i].interactable = true;
+                else
+                    sellBtn[i].interactable = false;
+            }
+        }
+
+        public void SellItem(int btnNo){
+            int ItemsLeft;
+            if(inventoryData.ContainsItem(sellItemsSO[btnNo])){
+                Debug.Log("Sell item: " + sellItemsSO[btnNo].Name);
+                ItemsLeft = inventoryData.RemoveItem(sellItemsSO[btnNo], 1);
+
+                if(ItemsLeft == 0){
+                    gold += sellItemsSO[btnNo].Cost;
+                    goldUI.text = "Gold: "+ gold.ToString();
+                    CheckSellable();
+                }
+            }            
+        }
+
+        public void BuySeeds(){
+            shopController.BuySeeds();
+        }
+
+        // public void BuySeeds(){
+        //     ShopUI.gameObject.SetActive(true);
+        //     goldShopUI.gameObject.SetActive(false);
+                
+        // }
+
+        
+
+
+        public void LoadPanels(){
+            for(int i=0; i<sellItemsSO.Length; i++){   
+                sellPanels[i].titleTxt.text = sellItemsSO[i].Name;
+                sellPanels[i].itemImage.sprite = sellItemsSO[i].ItemImage; //set panel's item img of sprite to SO image
+                sellPanels[i].descriptionTxt.text = sellItemsSO[i].Description;
+                sellPanels[i].costTxt.text = sellItemsSO[i].Cost.ToString() + " Gold";
+
+            }
+        }
+    }
 }
-//}//
