@@ -386,16 +386,11 @@ MonoBehaviour:
   gold: 0
   goldUI: {fileID: 5300150367942485056}
   shopItemsSO:
-  - {fileID: 11400000, guid: 94723e367274b4d1c8a58bd7296d0da0, type: 2}
-  - {fileID: 11400000, guid: e66f27f813eae4b13937787396d32b02, type: 2}
-  - {fileID: 11400000, guid: 5f25addd5a2ac4a83916bf15a0462859, type: 2}
-  - {fileID: 11400000, guid: ebd21a9e87da74040a76329aa94ff825, type: 2}
-  - {fileID: 11400000, guid: 8ebeecefa281b404aacdf62c0b54897e, type: 2}
-  - {fileID: 11400000, guid: 5496123b5e92648c980dff11336bbde8, type: 2}
-  - {fileID: 11400000, guid: 0ab96866f3800496ca1668bd4be7e74a, type: 2}
-  - {fileID: 11400000, guid: c1e0ca8c4c9f7468baf3c38bdee9ae5c, type: 2}
-  - {fileID: 11400000, guid: 1ae81e7d62a084cb6aafcd6680057aa7, type: 2}
-  - {fileID: 11400000, guid: bf6e2518ef29641b0ad7106ceace4a81, type: 2}
+  - {fileID: 11400000, guid: d5d004d3a226544f8abb7481de45f679, type: 2}
+  - {fileID: 11400000, guid: 6185fe50d6900734589a30d947b30b13, type: 2}
+  - {fileID: 11400000, guid: bf6f4c2e24dd349429edb27990fa3058, type: 2}
+  - {fileID: 11400000, guid: 577478ff2b57c1341b93b937b5f56922, type: 2}
+  - {fileID: 11400000, guid: e73f201f4268b402ab7e2245478fc42c, type: 2}
   shopPanels:
   - {fileID: 4086740670058427429}
   - {fileID: 4086740670205019508}
@@ -440,6 +435,7 @@ MonoBehaviour:
   - {fileID: 1064947778538573649}
   contentPanel: {fileID: 5300150367872932081}
   shopTemplate: {fileID: 8159095707055421337, guid: 4badfd6ad18e0448b8fbae7104bec7fd, type: 3}
+  inventoryData: {fileID: 11400000, guid: 7386e9b60c791ba4a88edb44ded05451, type: 2}
 --- !u!1 &5300150368066480344
 GameObject:
   m_ObjectHideFlags: 0
