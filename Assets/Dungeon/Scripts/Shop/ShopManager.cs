@@ -23,6 +23,11 @@ namespace ShopCont.UI{
         public RectTransform contentPanel;
         public ShopTemplate shopTemplate;
 
+        [SerializeField]
+        private InventorySO inventoryData;
+        //public ShopController shopController;
+        public GoldShop goldShopUI;
+        
         //private ShopMouseFollower MouseFollower;
 
 
@@ -58,22 +63,38 @@ namespace ShopCont.UI{
             }
         }
 
-        public void PurchasItem(int btnNo){
+
+        public void PurchaseItem(int btnNo){
             if(gold >= shopItemsSO[btnNo].Cost){
-                gold = gold - shopItemsSO[btnNo].Cost;
+                Debug.Log("Purchase item: " + shopItemsSO[btnNo].Name + " Cost: "+  shopItemsSO[btnNo].Cost);
+                
+                gold -= shopItemsSO[btnNo].Cost;
                 goldUI.text = "Gold: "+ gold.ToString();
-                //Next task: Unlock item to set to inventory 
                 CheckPurchaseable();
+                //Next task: Unlock item to set to inventory 
+                Debug.Log("Purchase item: " + shopItemsSO[btnNo].Name);
+            
+                inventoryData.AddItem(shopItemsSO[btnNo], 1);
+                
             }
         }
 
+        // public void SellCrops(){
+        //     shopController.SellCrops();
+        // }
+        public void SellCrops(){
+            goldShopUI.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
+
+
         public void LoadPanels(){
-            for(int i=0; i<shopItemsSO.Length; i++){
-                
+            for(int i=0; i<shopItemsSO.Length; i++){   
                 shopPanels[i].titleTxt.text = shopItemsSO[i].Name;
                 shopPanels[i].itemImage.sprite = shopItemsSO[i].ItemImage; //set panel's item img of sprite to SO image
                 shopPanels[i].descriptionTxt.text = shopItemsSO[i].Description;
                 shopPanels[i].costTxt.text = shopItemsSO[i].Cost.ToString() + " Gold";
+
             }
         }
     }

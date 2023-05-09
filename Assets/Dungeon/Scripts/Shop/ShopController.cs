@@ -6,6 +6,7 @@ using UnityEngine;
 using ShopCont.UI;
 using UnityEngine.Events;
 using InventoryCont.Model;
+using UnityEngine.UI;
 
 // Control Shop pop up menu for player
 //namespace ShopCont{
@@ -13,15 +14,18 @@ public class ShopController : MonoBehaviour
 {
 
     public ShopManager shopUI; 
+    public GoldShop goldShopUI;
     public ItemSO shopData;
-    // public bool isOpen= false;
+    //public bool canInteract = false;
     public GameObject player;
 
     public void Start(){
         player = GameObject.FindWithTag("Player");
         // player.gameObject.SetActive(true);
         shopUI.gameObject.SetActive(false);
+        goldShopUI.gameObject.SetActive(false);
     }
+
 
     //user pressing P to open shop
     public void Update() // function is called once per frame
@@ -37,6 +41,39 @@ public class ShopController : MonoBehaviour
     
         }
 
+    }
+
+    public void BuySeeds(){
+        // shopUI.gameObject.SetActive(true);
+        // goldShopUI.gameObject.SetActive(false);
+            
+    }
+    public void SellCrops(){
+        // goldShopUI.gameObject.SetActive(true);
+        // shopUI.gameObject.SetActive(false);
+    }
+
+
+
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.gameObject.tag == "Player"){
+            shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
+            //player.SetActive(!player.activeSelf);
+            //canInteract = true;
+        } 
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+        if(collider.gameObject.tag == "Player"){
+            shopUI.gameObject.SetActive(false);
+            goldShopUI.gameObject.SetActive(false);
+            //player.SetActive(!player.activeSelf);
+        } 
+    
     }
 
 

@@ -209,7 +209,7 @@ PrefabInstance:
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: playerStorage
       value: 
-      objectReference: {fileID: 11400000, guid: 93bb3f79cb2934be38b0ad7eacb13699, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d7e4cd092bf542e18ec3c06be40f028, type: 2}
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: sceneBuildIndex
       value: 5
@@ -310,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: playerStorage
       value: 
-      objectReference: {fileID: 11400000, guid: 93bb3f79cb2934be38b0ad7eacb13699, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d7e4cd092bf542e18ec3c06be40f028, type: 2}
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: sceneBuildIndex
       value: 7

@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: playerStorage
       value: 
-      objectReference: {fileID: 11400000, guid: 93bb3f79cb2934be38b0ad7eacb13699, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d7e4cd092bf542e18ec3c06be40f028, type: 2}
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: sceneBuildIndex
       value: 5
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopUI: {fileID: 1697374934}
-  shopData: {fileID: 11400000, guid: 94723e367274b4d1c8a58bd7296d0da0, type: 2}
+  shopData: {fileID: 0}
   player: {fileID: 9194660146000854844}
 --- !u!4 &306157668
 Transform:
@@ -490,7 +490,7 @@ PrefabInstance:
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: playerStorage
       value: 
-      objectReference: {fileID: 11400000, guid: 93bb3f79cb2934be38b0ad7eacb13699, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d7e4cd092bf542e18ec3c06be40f028, type: 2}
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: sceneBuildIndex
       value: 8
@@ -4381,7 +4381,7 @@ PrefabInstance:
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: playerStorage
       value: 
-      objectReference: {fileID: 11400000, guid: 93bb3f79cb2934be38b0ad7eacb13699, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d7e4cd092bf542e18ec3c06be40f028, type: 2}
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: playerPosition.x
       value: -3
