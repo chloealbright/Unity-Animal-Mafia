@@ -88,8 +88,6 @@ namespace ShopCont.UI{//
         // }
 
         
-
-
         public void LoadPanels(){
             for(int i=0; i<sellItemsSO.Length; i++){   
                 sellPanels[i].titleTxt.text = sellItemsSO[i].Name;

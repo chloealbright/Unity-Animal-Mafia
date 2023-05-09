@@ -27,8 +27,6 @@ namespace ShopCont.UI{
         private InventorySO inventoryData;
         public ShopController shopController;
         
-        
-        
         //private ShopMouseFollower MouseFollower;
 
 

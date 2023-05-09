@@ -1169,7 +1169,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3316134cb55d64249a3905e000166a64, type: 2}
   - {fileID: 11400000, guid: c36407750f9f94da79f5e92cff202ca3, type: 2}
   - {fileID: 11400000, guid: d4ecd06575076460795119a3340841f8, type: 2}
-  - {fileID: 11400000, guid: 736753bee0b6740bb973a790e05e4e1d, type: 2}
+  - {fileID: 11400000, guid: d4ecd06575076460795119a3340841f8, type: 2}
   sellPanels:
   - {fileID: 6045514523745981609}
   - {fileID: 8438332645668607697}
