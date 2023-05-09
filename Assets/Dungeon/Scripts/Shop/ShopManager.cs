@@ -25,7 +25,8 @@ namespace ShopCont.UI{
 
         [SerializeField]
         private InventorySO inventoryData;
-        public ShopController shopController;
+        //public ShopController shopController;
+        public GoldShop goldShopUI;
         
         //private ShopMouseFollower MouseFollower;
 
@@ -76,13 +77,13 @@ namespace ShopCont.UI{
             }
         }
 
-        public void SellCrops(){
-            shopController.SellCrops();
-        }
         // public void SellCrops(){
-        //     goldShopUI.gameObject.SetActive(true);
-        //     ShopUI.gameObject.SetActive(false);
+        //     shopController.SellCrops();
         // }
+        public void SellCrops(){
+            goldShopUI.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
 
 
         public void LoadPanels(){

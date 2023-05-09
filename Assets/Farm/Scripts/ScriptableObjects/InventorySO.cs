@@ -48,11 +48,11 @@ namespace InventoryCont.Model
             
         }
 
-        public bool ContainsItem(ItemSO item){//GoldShop.cs check if item is in inventory
-            bool hasItem = false;
+        public int ContainsItem(ItemSO item){//GoldShop.cs check if item is in inventory
+            int hasItem = 1;
             for (int i = 0; i < inventoryItemStructs.Count; i++){
                 if (inventoryItemStructs[i].item.Name == item.Name){
-                    hasItem = true;
+                    hasItem = 0;
                     return hasItem;
                 }
             }

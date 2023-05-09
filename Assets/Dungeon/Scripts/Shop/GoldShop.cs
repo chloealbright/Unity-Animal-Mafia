@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using InventoryCont.Model;
-using ShopCont.UI;
+
 
 namespace ShopCont.UI{//
     public class GoldShop : MonoBehaviour
@@ -23,7 +23,9 @@ namespace ShopCont.UI{//
         public TMP_Text goldUI; // gold amount
         public int gold;
         
-        public ShopController shopController;
+        //public ShopController shopController;
+
+        InventorySO inventoryItem;
         
         
 
@@ -56,7 +58,7 @@ namespace ShopCont.UI{//
         public void CheckSellable(){
             Debug.Log("sellContent.activeInHierarchy");
             for(int i=0; i< sellItemsSO.Length; i++){
-                if(inventoryData.ContainsItem(sellItemsSO[i]))
+                if(inventoryData.ContainsItem(sellItemsSO[i])==0)
                     sellBtn[i].interactable = true;
                 else
                     sellBtn[i].interactable = false;
@@ -65,7 +67,7 @@ namespace ShopCont.UI{//
 
         public void SellItem(int btnNo){
             int ItemsLeft;
-            if(inventoryData.ContainsItem(sellItemsSO[btnNo])){
+            if(inventoryData.ContainsItem(sellItemsSO[btnNo])==0){
                 Debug.Log("Sell item: " + sellItemsSO[btnNo].Name);
                 ItemsLeft = inventoryData.RemoveItem(sellItemsSO[btnNo], 1);
 
@@ -77,15 +79,15 @@ namespace ShopCont.UI{//
             }            
         }
 
-        public void BuySeeds(){
-            shopController.BuySeeds();
-        }
-
         // public void BuySeeds(){
-        //     ShopUI.gameObject.SetActive(true);
-        //     goldShopUI.gameObject.SetActive(false);
-                
+        //     shopController.BuySeeds();
         // }
+
+        public void BuySeeds(){
+            shopUI.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+                
+        }
 
         
         public void LoadPanels(){

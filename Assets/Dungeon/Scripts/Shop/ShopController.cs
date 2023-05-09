@@ -28,29 +28,29 @@ public class ShopController : MonoBehaviour
 
 
     //user pressing P to open shop
-    // public void Update() // function is called once per frame
-    // {
-    //     if (Input.GetKeyDown(KeyCode.P))
-    //     {
-    //         shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
-    //         player.SetActive(!player.activeSelf);
-    //         // player.gameObject.SetActive(!player.gameObject.activeSelf);
-    //         //if Shop is loaded when P is pressed then hide it, & vice versa
-    //         //mouseFollower.Toggle(!mouseFollower);
-    //         // player.gameObject.SetActive(!player.gameObject.activeSelf);
+    public void Update() // function is called once per frame
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
+            player.SetActive(!player.activeSelf);
+            // player.gameObject.SetActive(!player.gameObject.activeSelf);
+            //if Shop is loaded when P is pressed then hide it, & vice versa
+            //mouseFollower.Toggle(!mouseFollower);
+            // player.gameObject.SetActive(!player.gameObject.activeSelf);
     
-    //     }
+        }
 
-    // }
+    }
 
     public void BuySeeds(){
-        shopUI.gameObject.SetActive(true);
-        goldShopUI.gameObject.SetActive(false);
+        // shopUI.gameObject.SetActive(true);
+        // goldShopUI.gameObject.SetActive(false);
             
     }
     public void SellCrops(){
-        goldShopUI.gameObject.SetActive(true);
-        shopUI.gameObject.SetActive(false);
+        // goldShopUI.gameObject.SetActive(true);
+        // shopUI.gameObject.SetActive(false);
     }
 
 
@@ -69,7 +69,8 @@ public class ShopController : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collider)
     {
         if(collider.gameObject.tag == "Player"){
-            shopUI.gameObject.SetActive(!shopUI.gameObject.activeSelf);
+            shopUI.gameObject.SetActive(false);
+            goldShopUI.gameObject.SetActive(false);
             //player.SetActive(!player.activeSelf);
         } 
     
