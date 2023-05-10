@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Farm Inventory
   m_EditorClassIdentifier: 
   inventoryItemStructs:
-  - quantity: 3
-    item: {fileID: 11400000, guid: bf6f4c2e24dd349429edb27990fa3058, type: 2}
+  - quantity: 0
+    item: {fileID: 0}
   - quantity: 0
     item: {fileID: 0}
   - quantity: 0
