@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: playerStorage
       value: 
-      objectReference: {fileID: 11400000, guid: 93bb3f79cb2934be38b0ad7eacb13699, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d7e4cd092bf542e18ec3c06be40f028, type: 2}
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: sceneBuildIndex
       value: 5
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopUI: {fileID: 1697374934}
-  shopData: {fileID: 11400000, guid: 94723e367274b4d1c8a58bd7296d0da0, type: 2}
+  shopData: {fileID: 0}
   player: {fileID: 9194660146000854844}
 --- !u!4 &306157668
 Transform:
@@ -490,7 +490,7 @@ PrefabInstance:
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: playerStorage
       value: 
-      objectReference: {fileID: 11400000, guid: 93bb3f79cb2934be38b0ad7eacb13699, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d7e4cd092bf542e18ec3c06be40f028, type: 2}
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: sceneBuildIndex
       value: 8
@@ -523,7 +523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &815173689
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4381,7 +4381,7 @@ PrefabInstance:
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: playerStorage
       value: 
-      objectReference: {fileID: 11400000, guid: 93bb3f79cb2934be38b0ad7eacb13699, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d7e4cd092bf542e18ec3c06be40f028, type: 2}
     - target: {fileID: 8881790362575291686, guid: d62eede40c56943019098e1ed7c4dbcf, type: 3}
       propertyPath: playerPosition.x
       value: -3
@@ -5317,23 +5317,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5300150368080241302, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5300150368080241302, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5300150368080241302, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 4334.6357
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5300150368080241302, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2534.7124
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5300150368705353106, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: m_ScrollSensitivity
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300150368705353109, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300150368705353109, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_FillCenter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300150368705353109, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5300150368811474348, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5346,6 +5358,30 @@ PrefabInstance:
     - target: {fileID: 5300150368811474348, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ShopCont.UI.ShopManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300150368811474349, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 284.9629
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300150368811474349, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 48.317
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300150368811474351, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f1bef256efce14545ac3c46647138d8a, type: 3}
+    - target: {fileID: 5300150368811474351, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300150368811474351, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_FillCenter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300150368811474351, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5300150368811474351, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: m_RaycastPadding.w
@@ -5362,6 +5398,10 @@ PrefabInstance:
     - target: {fileID: 5300150368811474351, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: m_RaycastPadding.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300150368890450417, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8024226852703472303, guid: 9bd3ce4254e2144ada4ca97d53010a80, type: 3}
       propertyPath: shopParent
@@ -5567,10 +5607,6 @@ PrefabInstance:
     - target: {fileID: 4898499788015025857, guid: d6c3fb7264d134d3ba02b86e60209202, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6850154822478461487, guid: d6c3fb7264d134d3ba02b86e60209202, type: 3}
-      propertyPath: collisionOffset
-      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 8914759276114100405, guid: d6c3fb7264d134d3ba02b86e60209202, type: 3}
       propertyPath: m_Name

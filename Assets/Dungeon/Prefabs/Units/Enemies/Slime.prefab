@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2122862312780014104}
   - component: {fileID: 6364647002437902250}
-  - component: {fileID: 4422188099555743161}
+  - component: {fileID: -1326366555265177083}
+  - component: {fileID: -5014410215444579438}
   m_Layer: 0
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4422188099555743161
+--- !u!114 &-1326366555265177083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,9 +95,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1125738474421296676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fe0bb105c4c7b64784c1e322845e1bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e1cca810a233b44bb2c10bb8991f94f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitName: 
-  OccupiedTile: {fileID: 0}
-  Faction: 1
+  movementSpeed: 2
+  minMoveTime: 1
+  maxMoveTime: 3
+--- !u!61 &-5014410215444579438
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125738474421296676}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
