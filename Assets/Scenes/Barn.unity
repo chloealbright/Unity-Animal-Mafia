@@ -123,6 +123,79 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &4562745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8144409463422601441, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_Name
+      value: Potato
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601442, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601443, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: <InventoryItem>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 3316134cb55d64249a3905e000166a64, type: 2}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1642809111, guid: db0bbae00363a4c04afd328c0c110dc5, type: 3}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
 --- !u!1 &14736873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,7 +1961,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8144409463422601441, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
       propertyPath: m_Name
-      value: Item (2)
+      value: Pumpkin
       objectReference: {fileID: 0}
     - target: {fileID: 8144409463422601442, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
       propertyPath: m_PlayOnAwake
@@ -1898,6 +1971,14 @@ PrefabInstance:
       propertyPath: <InventoryItem>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: c36407750f9f94da79f5e92cff202ca3, type: 2}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2020651669, guid: db0bbae00363a4c04afd328c0c110dc5, type: 3}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -3924,11 +4005,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8144409463422601441, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
       propertyPath: m_Name
-      value: Item
+      value: CarrotSeed
       objectReference: {fileID: 0}
     - target: {fileID: 8144409463422601442, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 734806211, guid: b006d4a0344a7404c90cdc2f35f86b83, type: 3}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
       propertyPath: m_RootOrder
@@ -4614,7 +4711,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8144409463422601441, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
       propertyPath: m_Name
-      value: Item (1)
+      value: TomatoSeed
       objectReference: {fileID: 0}
     - target: {fileID: 8144409463422601442, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
       propertyPath: m_PlayOnAwake
@@ -4624,6 +4721,22 @@ PrefabInstance:
       propertyPath: <InventoryItem>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 577478ff2b57c1341b93b937b5f56922, type: 2}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1557587586, guid: b006d4a0344a7404c90cdc2f35f86b83, type: 3}
+    - target: {fileID: 8144409463422601453, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8144409463422601454, guid: 9aa8f338e9677ad49aa2ac0543e6f248, type: 3}
       propertyPath: m_RootOrder
       value: 9

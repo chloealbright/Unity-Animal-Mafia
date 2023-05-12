@@ -27498,9 +27498,8 @@ GameObject:
   - component: {fileID: 547201268}
   - component: {fileID: 547201267}
   - component: {fileID: 547201266}
-  - component: {fileID: 547201269}
   m_Layer: 0
-  m_Name: EventSystem
+  m_Name: Event System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27556,18 +27555,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &547201269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547201265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8593b6997fba6f45a4add3c58ede649, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &707304251
 GameObject:
   m_ObjectHideFlags: 0
