@@ -26,67 +26,22 @@ public class Item : MonoBehaviour
     public void DestroyItem()
     {
         GetComponent<Collider2D>().enabled = false;
-        //StartCoroutine(AnimateItemPickup());
+        StartCoroutine(AnimateItemPickup());
     }
 
-    //private IEnumerator AnimateItemPickup()
-    //{
-    //    audioSource.Play();
-    //    Vector3 startScale = transform.localScale;
-    //    Vector3 endScale = Vector3.zero;
-    //    float currentTime = 0;
-    //    while (currentTime < duration)
-    //    {
-    //        currentTime += Time.deltaTime;
-    //        transform.localScale =
-    //            Vector3.Lerp(startScale, endScale, currentTime / duration);
-    //        yield return null;
-    //    }
-    //    Destroy(gameObject);
-    //}
-
-    Transform player;
-    [SerializeField] float speed = 5f;
-    [SerializeField] float pickUpDistance = 1.5f;
-    [SerializeField] float ttl = 10f; //time to leave
-
-    float grace_period = 1.5f;
-
-    private void Awake()
+    private IEnumerator AnimateItemPickup()
     {
-        player = playerManager.instance.player.transform;
-    }
-
-    private void Update()
-    {
-        if (grace_period > 0)
+        audioSource.Play();
+        Vector3 startScale = transform.localScale;
+        Vector3 endScale = Vector3.zero;
+        float currentTime = 0;
+        while (currentTime < duration)
         {
-            grace_period -= Time.deltaTime;
+            currentTime += Time.deltaTime;
+            transform.localScale =
+                Vector3.Lerp(startScale, endScale, currentTime / duration);
+            yield return null;
         }
-        else
-        {
-            ttl -= Time.deltaTime;
-            if (ttl < 0)
-            {
-                audioSource.Play();
-                Destroy(gameObject);
-            }
-
-            float distance = Vector3.Distance(transform.position, player.position);
-            if (distance > pickUpDistance)
-            {
-                return;
-            }
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                player.position,
-                speed * Time.deltaTime
-                );
-
-            if (distance < 0.1f)
-            {
-                Destroy(gameObject);
-            }
-        }
+        Destroy(gameObject);
     }
 }

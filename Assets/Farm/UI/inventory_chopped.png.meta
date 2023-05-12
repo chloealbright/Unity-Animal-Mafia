@@ -230,7 +230,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 2, y: 1, z: 2, w: 3}
       outline: []
       physicsShape: []
@@ -238,48 +238,6 @@ TextureImporter:
       bones: []
       spriteID: 5ca58876af52afb4f8b11eae55818a5d
       internalID: 876793125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: profile_bg
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 84
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c55344b0b2376e44c85184fa5f9414b0
-      internalID: -819434338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: panel
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 217
-        width: 6
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 1, y: 1, z: 1, w: 1}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddd4b49a16becd34294abbece62edc22
-      internalID: -1475051508
       vertices: []
       indices: 
       edges: []
@@ -301,9 +259,6 @@ TextureImporter:
       inventory_chopped_content_1: -1616640503
       inventory_chopped_desc: 176447992
       inventory_chopped_desc_bg: -2085170405
-      panel: -1475051508
-      panel_edge: 1199803852
-      profile_bg: -819434338
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using InventoryCont.UI;
 using UnityEngine;
 
 namespace InventoryCont.Model
@@ -31,11 +30,11 @@ namespace InventoryCont.Model
         public int AddItem(ItemSO item, int quantity)
         {
             //if item is not stackable, it will add to inventory in the next empty slot
-            if (item.IsStackable == false)
+            if(item.IsStackable == false)
             {
                 for (int i = 0; i < inventoryItemStructs.Count; i++)
                 {
-                    while (quantity > 0 && IsInventoryFull() == false)
+                    while(quantity > 0 && IsInventoryFull() == false)
                     {
                         quantity -= AddItemToFirstFreeSlot(item, 1);
                     }
@@ -46,59 +45,9 @@ namespace InventoryCont.Model
             quantity = AddStackableItem(item, quantity);
             InformAboutChange();
             return quantity;
-
+            
         }
 
-        public int ContainsItem(ItemSO item){//GoldShop.cs check if item is in inventory
-            int hasItem = 1;
-            for (int i = 0; i < inventoryItemStructs.Count; i++){
-                if (inventoryItemStructs[i].item.Name == item.Name){
-                    hasItem = 0;
-                    return hasItem;
-                }
-            }
-            return hasItem;
-        }
-
-        public int RemoveItem(ItemSO item, int quantity){//GoldShop.cs remove item in inventory
-            //if item is not stackable, it will add to inventory in the next empty slot
-            if(item.IsStackable == false)
-            {
-                for (int i = 0; i < inventoryItemStructs.Count; i++)
-                {
-                    if (inventoryItemStructs[i].item.ID == item.ID){
-                        inventoryItemStructs[i] = inventoryItemStructs[i].ChangeQuantity(inventoryItemStructs[i].quantity - quantity);
-                        Debug.Log("RemoveItem " + inventoryItemStructs[i].item.Name);
-                        quantity --;
-                        InformAboutChange();
-                        return 0;
-                    }
-                }
-            }
-            quantity = RemoveStackableItem(item, quantity);
-            InformAboutChange();
-            return quantity;
-
-        }
-
-        private int RemoveStackableItem(ItemSO item, int quantity)//GoldShop.cs remove item in inventory
-        {
-            for (int i = 0; i < inventoryItemStructs.Count; i++)
-            {
-                if (inventoryItemStructs[i].isEmpty)//some slots may be empty
-                    continue;
-                if (inventoryItemStructs[i].item.ID == item.ID) //if it has the same item ID
-                {
-                    inventoryItemStructs[i] = inventoryItemStructs[i].ChangeQuantity(inventoryItemStructs[i].quantity - quantity);
-                    Debug.Log("Remove StackableItem " + inventoryItemStructs[i].item.Name);
-                    quantity --;
-                    InformAboutChange();
-                    return 0;
-                     
-                }
-            }
-            return quantity;
-        }
 
         //adds item to first available slot
         private int AddItemToFirstFreeSlot(ItemSO item, int quantity)
@@ -108,7 +57,7 @@ namespace InventoryCont.Model
                 item = item,
                 quantity = quantity
             };
-            for (int i = 0; i < inventoryItemStructs.Count; i++)
+            for(int i = 0;i < inventoryItemStructs.Count; i++)
             {
                 if (inventoryItemStructs[i].isEmpty)
                 {
@@ -150,7 +99,7 @@ namespace InventoryCont.Model
                     }
                 }
             }
-            while (quantity > 0 && IsInventoryFull() == false)
+            while(quantity > 0 && IsInventoryFull() == false)
             {
                 int newQuantity = Mathf.Clamp(quantity, 0, item.MaxStackSize);
                 quantity -= newQuantity;
@@ -190,19 +139,18 @@ namespace InventoryCont.Model
             InformAboutChange();
         }
 
-        public void InformAboutChange()
+        private void InformAboutChange()
         {
             //check if something is assigned
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
         }
 
-        //shermol added
         public void DeleteItem(int position)
         {
+            InformAboutChange();
             inventoryItemStructs[position] = InventoryItemStruct.GetEmptyItem();
             InformAboutChange();
         }
-
     }
 
     //using struct so that it is easier to modify, in this case it is easier to modify the quantity value

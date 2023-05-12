@@ -35,41 +35,35 @@ public class TreeCuttable : ToolHit
 
     public override void Hit()
     {
-        while(dropCount >= 0 && (plant_regrow_time <= 0)) //checks if the object has items to drop and rend.sprite == grownPlant
+        while(dropCount > 0)
         {
             dropCount -= 1;
             Vector3 position = transform.position;
             position.x += spread * UnityEngine.Random.value / 2;
             position.y += spread * UnityEngine.Random.value / 2;
-            
+
             GameObject go = Instantiate(pickUpDrop);
             go.transform.position = position;
-
-            if (dropCount == 0)
-                Destroy(gameObject);
         }
+
+        //Destroy(gameObject);
     }
 
     private void Update()
     {
-        if (plant_regrow_time > 0)
+        if (dropCount == 0)
         {
             plant_regrow_time -= Time.deltaTime; //start deprecating time
-            time_to_sprout = plant_regrow_time; //checks the time left for plant to regrow
+            time_to_sprout = plant_regrow_time;
 
             rend.sprite = babyPlant;
-        }
 
-        if(plant_regrow_time < 0)
-        {
-            plant_regrow_time = 0;
-        }
-
-        if (plant_regrow_time == 0)
-        {
-            rend.sprite = grownPlant;
-            //dropCount = 5; //reset the ammount of objects within the tree
-            //plant_regrow_time = 60; //1 min for tree to regrow
+            if (plant_regrow_time < 0)
+            {
+                rend.sprite = grownPlant;
+                dropCount = 5; //reset the ammount of objects within the tree
+                plant_regrow_time = 60; //1 min for tree to regrow
+            }
         }
     }
 }
