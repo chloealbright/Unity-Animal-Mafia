@@ -20,6 +20,7 @@ namespace ShopCont.UI{//
         public Button[] sellBtn; // check if purchaseable
         public RectTransform contentPanel;
         public ShopTemplate sellTemplate;
+        public BalancePage playerBalance;
         public TMP_Text goldUI; // gold amount
         public int gold;
         
@@ -40,6 +41,7 @@ namespace ShopCont.UI{//
             for(int i =0; i< sellItemsSO.Length; i++){
                 sellPanelsGO[i].SetActive(true);
             }
+            gold = playerBalance.gold;
             goldUI.text = "Gold: " + gold.ToString();
             LoadPanels();
             CheckSellable();
@@ -47,10 +49,11 @@ namespace ShopCont.UI{//
 
 
 
-        public void AddGold(){
+        public void GenerateGold(){
             //MouseFollower.Toggle(true)
             Debug.Log("Generate Gold");
-            gold+=20;
+            //gold+=20;
+            gold = playerBalance.gold;
             goldUI.text = "Gold: " + gold.ToString();
             CheckSellable();
         }
@@ -72,7 +75,9 @@ namespace ShopCont.UI{//
                 ItemsLeft = RemoveItem(sellItemsSO[btnNo].Name, 1);
 
                 if(ItemsLeft == 0){
-                    gold += sellItemsSO[btnNo].Cost;
+                    playerBalance.Purchase(sellItemsSO[btnNo].Cost);
+                    gold = playerBalance.gold;
+                    // gold += sellItemsSO[btnNo].Cost;
                     goldUI.text = "Gold: "+ gold.ToString();
                     CheckSellable();
                 }

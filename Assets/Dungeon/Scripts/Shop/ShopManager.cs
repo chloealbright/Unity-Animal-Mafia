@@ -14,6 +14,7 @@ using InventoryCont.Model;
 namespace ShopCont.UI{
     public class ShopManager : MonoBehaviour
     {
+        public BalancePage playerBalance;
         public int gold;
         public TMP_Text goldUI; // gold amount
         public ItemSO[] shopItemsSO; // Prefab shopItems. CHANGED INSTANTIATION FROM ShopItemSO[]
@@ -37,6 +38,7 @@ namespace ShopCont.UI{
             for(int i =0; i< shopItemsSO.Length; i++){
                 shopPanelsGO[i].SetActive(true);
             }
+            gold = playerBalance.gold;
             goldUI.text = "Gold: " + gold.ToString();
             LoadPanels();
             CheckPurchaseable();
@@ -44,10 +46,11 @@ namespace ShopCont.UI{
 
 
 
-        public void AddGold(){
+        public void GenerateGold(){
             //MouseFollower.Toggle(true)
             Debug.Log("Generate Gold");
-            gold+=20;
+            //gold+=20;
+            gold = playerBalance.gold;
             goldUI.text = "Gold: " + gold.ToString();
             CheckPurchaseable();
         }
@@ -55,6 +58,7 @@ namespace ShopCont.UI{
         public void CheckPurchaseable(){
             //MouseFollower.Toggle(true);
             Debug.Log("shopContent.activeInHierarchy");
+            gold = playerBalance.gold;
             for(int i=0; i< shopItemsSO.Length; i++){
                 if(gold >= shopItemsSO[i].Cost)
                     purchaseBtn[i].interactable = true;
@@ -65,10 +69,14 @@ namespace ShopCont.UI{
 
 
         public void PurchaseItem(int btnNo){
+            gold = playerBalance.gold;
             if(gold >= shopItemsSO[btnNo].Cost){
                 Debug.Log("Purchase item: " + shopItemsSO[btnNo].Name + " Cost: "+  shopItemsSO[btnNo].Cost);
                 
-                gold -= shopItemsSO[btnNo].Cost;
+                playerBalance.Purchase(shopItemsSO[btnNo].Cost);
+                gold = playerBalance.gold;
+                //gold -= shopItemsSO[btnNo].Cost;
+
                 goldUI.text = "Gold: "+ gold.ToString();
                 CheckPurchaseable();
                 //Next task: Unlock item to set to inventory 
