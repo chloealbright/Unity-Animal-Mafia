@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 19746346}
   - component: {fileID: 19746345}
   m_Layer: 0
-  m_Name: Cow
+  m_Name: Chicken
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,7 +151,7 @@ Animator:
   m_GameObject: {fileID: 19746344}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c1c27e646b9beaf419cf0bc4574b58f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: cc32f8d7cc60548ebaf35cc6404e410c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -203,7 +203,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1512456617, guid: c0bab3563837b5446b04b6a06d032e1e, type: 3}
+  m_Sprite: {fileID: 1268363565, guid: ca75876c6b196aa45ae8b6d2fc159ba3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -32227,7 +32227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385d80e0b9172c149ba99dc291fd10ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 6
   animator: {fileID: 19746345}
   startingPosition: {fileID: 11400000, guid: 78628c455e4fa064999d3c618eaf1a1f, type: 2}
 --- !u!4 &1150583849
