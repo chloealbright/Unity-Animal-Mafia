@@ -13,7 +13,6 @@ public class TilemapVisualizer : MonoBehaviour
 
     private void Start()
     {
-        // Instantiate the hero prefab at the hero spawn position
         Instantiate(heroPrefab, new Vector3(heroSpawnPosition.x, heroSpawnPosition.y, 0), Quaternion.identity);
     }
     public void PaintFloorTiles(IEnumerable<Vector2Int> floorPositions)
@@ -102,9 +101,9 @@ public class TilemapVisualizer : MonoBehaviour
         GameObject exit = GameObject.FindWithTag("Exit");
         foreach (GameObject enemy in enemies)
         {
-            DestroyImmediate(enemy);
+            Destroy(enemy);
         }
-        DestroyImmediate(exit);
+        Destroy(exit);
         floorTilemap.ClearAllTiles();
         wallTilemap.ClearAllTiles();
     }
