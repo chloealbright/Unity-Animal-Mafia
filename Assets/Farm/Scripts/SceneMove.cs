@@ -31,9 +31,13 @@ public class SceneMove : MonoBehaviour
         if (other.tag == "Player" && !other.isTrigger)
         {
             //player entered, so move level
-            print("Switching scene to" + sceneBuildIndex);
+            Movement moveScript = other.GetComponent<Movement>();
+            moveScript.canMove = false;
+
             playerStorage.initialValue = playerPosition;
             StartCoroutine(FadeController());
+
+            moveScript.canMove = true;
             //SceneManager.LoadScene(sceneBuildIndex);
         }
     }

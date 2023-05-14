@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
 
     public VectorValue startingPosition;
 
+    public bool canMove;
+
     void Start()
     {
         transform.position = startingPosition.initialValue;
