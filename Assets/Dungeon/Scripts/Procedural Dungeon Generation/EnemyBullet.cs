@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     public GameObject hitEffect;
 
@@ -10,13 +10,13 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 5f);
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Enemies"))
         {
-            GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 5f);
-            Destroy(gameObject);
+            return;
         }
         else
         {
