@@ -63,7 +63,6 @@ namespace ShopCont.UI{
             }
         }
 
-<<<<<<< Updated upstream:Assets/Dungeon/Scripts/Shop/ShopManager.cs
 
         public void PurchaseItem(int btnNo){
             if(gold >= shopItemsSO[btnNo].Cost){
@@ -86,15 +85,6 @@ namespace ShopCont.UI{
         public void SellCrops(){
             goldShopUI.gameObject.SetActive(true);
             gameObject.SetActive(false);
-=======
-        public void PurchasItem(int btnNo){
-            if(gold >= shopItemsSO[btnNo].Cost){
-                gold = gold - shopItemsSO[btnNo].Cost;
-                goldUI.text = "Gold: "+ gold.ToString();
-                //Next task: Unlock item to set to inventory 
-                CheckPurchaseable();
-            }
->>>>>>> Stashed changes:Assets/Dungeon/Scripts/ShopManager.cs
         }
 
 
@@ -104,10 +94,7 @@ namespace ShopCont.UI{
                 shopPanels[i].itemImage.sprite = shopItemsSO[i].ItemImage; //set panel's item img of sprite to SO image
                 shopPanels[i].descriptionTxt.text = shopItemsSO[i].Description;
                 shopPanels[i].costTxt.text = shopItemsSO[i].Cost.ToString() + " Gold";
-<<<<<<< Updated upstream:Assets/Dungeon/Scripts/Shop/ShopManager.cs
 
-=======
->>>>>>> Stashed changes:Assets/Dungeon/Scripts/ShopManager.cs
             }
         }
     }
