@@ -16,6 +16,8 @@ namespace InventoryCont
         [SerializeField]
         private InventorySO inventoryData;
 
+        public GameObject balancePanel;
+
         public List<InventoryItemStruct> initialItems = new List<InventoryItemStruct>();
 
         private void Start()
@@ -99,10 +101,12 @@ namespace InventoryCont
                             item.Value.item.ItemImage,
                             item.Value.quantity);
                     }
+                    balancePanel.SetActive(true);
                 }
                 else
                 {
                     inventoryUI.Hide();
+                    balancePanel.SetActive(false);
                 }
             }
 
