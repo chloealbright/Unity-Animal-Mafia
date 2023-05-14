@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Item : MonoBehaviour
 {
     [field: SerializeField]
@@ -18,10 +19,27 @@ public class Item : MonoBehaviour
     [SerializeField]
     private float duration = 0.3f;
 
+    private GameObject[] items;
+    
     private void Start()
     {
+        items = GameObject.FindGameObjectsWithTag("Item");
         GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
     }
+
+
+    
+
+    //void OnEnable() => collectedItems = new List<Item>();
+    /*
+    void On Awake() => itemCollection.Changed += updateData();
+    void On Destroy() => itemCollection.Changed -= updateData();
+    void On enable scene change update the collected items
+    void OnEnable() => updateData();
+    void onn Validate() => data = GetComponent<SpriteRenderer>().sprite; 
+
+    */
+    
 
     public void DestroyItem()
     {
