@@ -60,6 +60,48 @@ public class Item : MonoBehaviour
                 Vector3.Lerp(startScale, endScale, currentTime / duration);
             yield return null;
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        // REFERENCE foreach(GameObject item in items){
+        // item.SetActive(true);
+        // Item resetItem = item.GetComponent<Item>();
+        // resetItem.Quantity = 1;
+        // resetItem.GetComponent<Collider2D>().enabled = true;
     }
+
+    public void ResetItems(GameObject[] items){ 
+        foreach(GameObject item in items){
+            item.SetActive(true);
+            Item resetItem = item.GetComponent<Item>();
+            resetItem.Quantity = 1;
+            resetItem.GetComponent<Collider2D>().enabled = true;
+        }
+    }
+
+    
+
+
+
+    // public void ResetItems(GameObject[] items)
+    //  { 
+
+    //     // foreach(GameObject item in items){
+    //     //     item.SetActive(true);
+    //     //     item.Quantity = 1;
+    //     //     //GetComponent<Collider2D>().enabled = true;
+    //     // }
+
+    //     for(int i = 0; i < items.Length; i++){
+    //         //Item quantity = new Item();
+    //         items[i].gameObject.SetActive(true);
+    //         Item resetItem = items[i].GetComponent<Item>();
+    //         resetItem.Quantity=1;
+    //         resetItem.GetComponent<Collider2D>().enabled = true;
+    //         // Item reset = item[i].GetComponent<Item>();
+    //         // if (itemComponent != null){
+    //         //     itemComponent.Quantity = 1;
+    //         // }
+    //         //may need to set collider to active
+    //     }
+        
+    //  }
 }

@@ -34,9 +34,9 @@ public class DontDestroy : MonoBehaviour
     void OnSceneUnloaded(Scene scene)
     {
         // // If the current scene is not the original scene, remove the game object from the scene
-        // if (scene.buildIndex != originalScene.buildIndex)
-        // {
-        //     SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
-        // }
+        if (scene.buildIndex != originalScene.buildIndex)
+        {
+            SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
+        }
     }
 }

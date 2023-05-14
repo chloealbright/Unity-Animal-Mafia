@@ -6,7 +6,14 @@ using UnityEditor;
 [InitializeOnLoad]
 public class PlayModeHandler : MonoBehaviour
 {
-    private GameObject[] item;
+    GameObject[] items;
+    Item itemsToReset;
+
+    private void Start(){
+        items = GameObject.FindGameObjectsWithTag("Item");
+
+    }
+    
     // static PlayModeHandler(){
     //     EditorApplication.PlayModeStateChange += StateChange; 
     // }
@@ -25,40 +32,13 @@ public class PlayModeHandler : MonoBehaviour
     //     }
     // }
 
-    private void Start(){
-        item = GameObject.FindGameObjectsWithTag("Item");
-    }
-
     private void Update(){
-        if (!EditorApplication.isPlaying && EditorApplication.isPlayingOrWillChangePlaymode)
+        if (EditorApplication.isPlaying && EditorApplication.isPlayingOrWillChangePlaymode) //&& EditorApplication.isPlayingOrWillChangePlaymode
         {
             // Game is about to exit play mode
-            ResetItems();
+
+            itemsToReset.ResetItems(items);
         }
     }
-
-    
-     private void ResetItems()
-     { 
-
-        // foreach(GameObject item in items){
-        //     item.SetActive(true);
-        //     item.Quantity = 1;
-        //     //GetComponent<Collider2D>().enabled = true;
-        // }
-
-        for(int i = 0; i < item.Length; i++){
-            //Item quantity = new Item();
-            item[i].gameObject.SetActive(true);
-            Item quantity = item[i].GetComponent<Item>();
-            quantity.Quantity=1;
-            // Item reset = item[i].GetComponent<Item>();
-            // if (itemComponent != null){
-            //     itemComponent.Quantity = 1;
-            // }
-            //may need to set collider to active
-        }
-        
-     }
 
 }

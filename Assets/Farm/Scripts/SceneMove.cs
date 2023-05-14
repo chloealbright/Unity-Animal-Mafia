@@ -11,6 +11,7 @@ public class SceneMove : MonoBehaviour
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
     public float fadeWait;
+    public bool triggered = false;
 
     private void Awake()
     {
@@ -33,9 +34,11 @@ public class SceneMove : MonoBehaviour
             //player entered, so move level
             print("Switching scene to" + sceneBuildIndex);
             playerStorage.initialValue = playerPosition;
+            triggered = true;
             StartCoroutine(FadeController());
             //SceneManager.LoadScene(sceneBuildIndex);
         }
+
     }
 
     public IEnumerator FadeController()
