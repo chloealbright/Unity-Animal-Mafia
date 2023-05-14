@@ -19,7 +19,6 @@ namespace InventoryCont
         public GameObject player;
         public List<InventoryItemStruct> initialItems = new List<InventoryItemStruct>();
 
-        public bool UIShown;
         private void Start()
         {
             PrepareUI();

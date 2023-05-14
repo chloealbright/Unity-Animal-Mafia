@@ -36,7 +36,6 @@ public class Movement : MonoBehaviour
     {
         //move the player
         //this.transform.position += direction * speed * Time.deltaTime;
-
         if(DialogueManager.GetInstance().dialogueIsPlaying)
         {
             this.transform.position += direction * 0 * Time.deltaTime;
