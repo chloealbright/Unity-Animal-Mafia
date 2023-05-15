@@ -15,12 +15,17 @@ public class EnemyMovement : MonoBehaviour
     private int currentHealth;
     private bool isMoving = false;
 
+    private ScoreManager scoreManager;
+
     private void Start()
     {
         moveTime = UnityEngine.Random.Range(minMoveTime, maxMoveTime);
         timer = moveTime;
         currentHealth = health;
+
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
+
     private void Update()
     {
         timer -= Time.deltaTime;
@@ -32,20 +37,41 @@ public class EnemyMovement : MonoBehaviour
             Vector3 moveDirection = Vector3.Normalize(directionToPlayer);
             Vector3 targetPosition = player.transform.position + moveDirection * (range * 0.75f);
 
-            if (!isMoving)
+        
+            if (!IsOutsidePlayableArea(targetPosition))
             {
-                StartCoroutine(MoveToPosition(targetPosition));
+                if (!isMoving)
+                {
+                    StartCoroutine(MoveToPosition(targetPosition));
+                }
             }
         }
         else
         {
             Vector2 randomDirection = UnityEngine.Random.insideUnitCircle.normalized;
             Vector3 targetPosition = transform.position + new Vector3(randomDirection.x, randomDirection.y, 0);
-            if (!isMoving)
+
+            if (!IsOutsidePlayableArea(targetPosition))
             {
-                StartCoroutine(MoveToPosition(targetPosition));
+                if (!isMoving)
+                {
+                    StartCoroutine(MoveToPosition(targetPosition));
+                }
             }
         }
+    }
+
+    private bool IsOutsidePlayableArea(Vector3 position)
+    {
+        Collider2D[] colliders = Physics2D.OverlapPointAll(position);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Wall"))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private IEnumerator MoveToPosition(Vector3 targetPosition)
@@ -53,7 +79,7 @@ public class EnemyMovement : MonoBehaviour
         isMoving = true;
         while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
         {
-            RaycastHit2D hit = Physics2D.Linecast(transform.position, targetPosition, LayerMask.GetMask("Tilemap"));
+            RaycastHit2D hit = Physics2D.Linecast(transform.position, targetPosition, LayerMask.GetMask("Wall"));
 
             if (hit.collider != null)
             {
@@ -74,6 +100,11 @@ public class EnemyMovement : MonoBehaviour
         {
             TakeDamage(1);
         }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+        {
+            Vector3 oppositeDirection = Vector3.Reflect(transform.position - collision.transform.position, collision.contacts[0].normal);
+            StartCoroutine(MoveToPosition(transform.position + oppositeDirection));
+        }
     }
 
     private void TakeDamage(int damageAmount)
@@ -81,7 +112,9 @@ public class EnemyMovement : MonoBehaviour
         currentHealth -= damageAmount;
         if (currentHealth <= 0)
         {
+            Debug.Log(scoreManager);
             Die();
+            scoreManager.AddScore(10);
         }
     }
 
