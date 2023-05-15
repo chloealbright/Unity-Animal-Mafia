@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon.unity
     guid: 77d23464452693c479790b2a19006c98
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 0fbc437b036374f49a7e7b4ed6bde06e
   m_configObjects: {}
