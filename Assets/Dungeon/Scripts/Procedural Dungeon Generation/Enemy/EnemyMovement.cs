@@ -15,7 +15,6 @@ public class EnemyMovement : MonoBehaviour
     private int currentHealth;
     private bool isMoving = false;
 
-    // Reference to the score manager
     private ScoreManager scoreManager;
 
     private void Start()
@@ -38,7 +37,7 @@ public class EnemyMovement : MonoBehaviour
             Vector3 moveDirection = Vector3.Normalize(directionToPlayer);
             Vector3 targetPosition = player.transform.position + moveDirection * (range * 0.75f);
 
-            // Check if the target position is within the playable area
+        
             if (!IsOutsidePlayableArea(targetPosition))
             {
                 if (!isMoving)
@@ -52,7 +51,6 @@ public class EnemyMovement : MonoBehaviour
             Vector2 randomDirection = UnityEngine.Random.insideUnitCircle.normalized;
             Vector3 targetPosition = transform.position + new Vector3(randomDirection.x, randomDirection.y, 0);
 
-            // Check if the target position is within the playable area
             if (!IsOutsidePlayableArea(targetPosition))
             {
                 if (!isMoving)

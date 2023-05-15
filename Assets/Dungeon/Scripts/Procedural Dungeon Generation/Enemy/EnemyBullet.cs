@@ -15,13 +15,11 @@ public class EnemyBullet : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         direction = (player.position - transform.position).normalized;
 
-        // Set the collision layer of the bullet
         gameObject.layer = LayerMask.NameToLayer("EnemyBullet");
     }
 
     private void Update()
     {
-        // Move the bullet towards the player's position
         transform.position += direction * movementSpeed * Time.deltaTime;
     }
 
