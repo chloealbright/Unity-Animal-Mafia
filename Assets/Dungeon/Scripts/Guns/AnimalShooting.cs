@@ -37,16 +37,14 @@ public class AnimalShooting : MonoBehaviour
         if (canShoot && Input.GetButtonDown("Fire1"))
         {
             Shoot();
-            ammoBar.fillAmount = remainingBullets / maxBullets;
-            ammoText.text = remainingBullets.ToString() + "/" + maxBullets.ToString();
         }
         
         if (canReload && Input.GetKeyDown(KeyCode.R))
         {
             Reload();
-            ammoBar.fillAmount = remainingBullets / maxBullets;
-            ammoText.text = remainingBullets.ToString() + "/" + maxBullets.ToString();
         }
+        ammoBar.fillAmount = remainingBullets / maxBullets;
+        ammoText.text = remainingBullets.ToString() + "/" + maxBullets.ToString();
     }
 
     void Shoot()
