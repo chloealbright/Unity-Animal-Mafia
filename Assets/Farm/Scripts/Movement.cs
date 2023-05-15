@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
 
     public VectorValue startingPosition;
 
+    public bool canMove;
+
     void Start()
     {
         transform.position = startingPosition.initialValue;
@@ -33,7 +35,15 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         //move the player
-        this.transform.position += direction * speed * Time.deltaTime;
+        //this.transform.position += direction * speed * Time.deltaTime;
+        if(DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            this.transform.position += direction * 0 * Time.deltaTime;
+        }
+        else
+        {
+            this.transform.position += direction * speed * Time.deltaTime;
+        }
     }
 
     //this function handles talking with the animator
