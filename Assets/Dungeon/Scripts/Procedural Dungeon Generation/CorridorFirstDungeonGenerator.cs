@@ -16,6 +16,11 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     {
         CorridorFirstGeneration();
     }
+    private void Start()
+    {
+        tilemapVisualizer.Clear();
+        CorridorFirstGeneration();
+    }
 
     public void CorridorFirstGeneration()
     {

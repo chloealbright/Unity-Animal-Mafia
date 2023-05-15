@@ -44,9 +44,9 @@ GameObject:
   - component: {fileID: 8860077095076203279}
   - component: {fileID: 8131687434764514693}
   - component: {fileID: 4399098253254971627}
-  - component: {fileID: 8414069286551707835}
   - component: {fileID: 8196563080251191251}
   - component: {fileID: 173123570770147508}
+  - component: {fileID: -2892109940635326835}
   m_Layer: 0
   m_Name: Piggy
   m_TagString: Player
@@ -197,27 +197,8 @@ MonoBehaviour:
   firePoint: {fileID: 5723030790295365441}
   bulletPrefab: {fileID: 5051724278231121863, guid: 974e6183ebfbe464d8247a323e59b412, type: 3}
   bulletForce: 20
---- !u!50 &8414069286551707835
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3193090204154038438}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  maxBullets: 6
+  shootCooldown: 2
 --- !u!61 &8196563080251191251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -257,3 +238,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 50
+--- !u!50 &-2892109940635326835
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193090204154038438}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
