@@ -14,8 +14,6 @@ public class EnemyBullet : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         direction = (player.position - transform.position).normalized;
-
-        gameObject.layer = LayerMask.NameToLayer("EnemyBullet");
     }
 
     private void Update()
