@@ -16,11 +16,13 @@ public class ScoreManager : MonoBehaviour
     {
         score += scoreToAdd;
         Debug.Log(score);
+        PlayerPrefs.SetInt("ScoreValue", score);
         UpdateScoreText();
     }
 
     private void UpdateScoreText()
     {
+        score = PlayerPrefs.GetInt("ScoreValue");
         scoreText.text = "Score: " + score.ToString();
     }
 }
