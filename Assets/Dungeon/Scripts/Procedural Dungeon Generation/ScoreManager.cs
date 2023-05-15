@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
     public int score = 0;
-    public Text scoreText;
+    public TMP_Text scoreText;
 
     private void Start()
     {
@@ -15,11 +16,13 @@ public class ScoreManager : MonoBehaviour
     {
         score += scoreToAdd;
         Debug.Log(score);
+        PlayerPrefs.SetInt("ScoreValue", score);
         UpdateScoreText();
     }
 
     private void UpdateScoreText()
     {
+        score = PlayerPrefs.GetInt("ScoreValue");
         scoreText.text = "Score: " + score.ToString();
     }
 }

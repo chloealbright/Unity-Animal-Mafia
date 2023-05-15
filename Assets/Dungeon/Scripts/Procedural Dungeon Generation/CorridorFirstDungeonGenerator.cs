@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 {
@@ -12,14 +13,30 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     [SerializeField] private int maxEnemiesPerRoom = 3;
     [SerializeField] private float enemySpawnRadius = 2f;
     [SerializeField] private GameObject exitPrefab;
+
+    public GameObject fadeInPanel;
+    public float fadeWait;
+
     protected override void RunProceduralGeneration()
     {
         CorridorFirstGeneration();
     }
     private void Start()
     {
+        PlayerPrefs.SetInt("ScoreValue", 0);
+        StartCoroutine(FadeController());
         tilemapVisualizer.Clear();
         CorridorFirstGeneration();
+    }
+
+    public IEnumerator FadeController()
+    {
+        if (fadeInPanel != null)
+        {
+            GameObject panel = Instantiate(fadeInPanel, Vector3.zero, Quaternion.identity) as GameObject;
+            Destroy(panel, 1);
+        }
+        yield return new WaitForSeconds(fadeWait);
     }
 
     public void CorridorFirstGeneration()
