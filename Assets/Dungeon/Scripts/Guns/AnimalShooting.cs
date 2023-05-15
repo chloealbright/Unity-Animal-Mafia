@@ -18,8 +18,9 @@ public class AnimalShooting : MonoBehaviour
     private bool canReload = true;
 
     public Image ammoBar;
-
     public TMP_Text ammoText;
+
+    public TextMeshProUGUI reloadText;
 
     private void Start()
     {
@@ -30,6 +31,10 @@ public class AnimalShooting : MonoBehaviour
         GameObject textObject = GameObject.FindGameObjectWithTag("AmmoValue");
         ammoText = textObject.GetComponent<TMP_Text>();
         ammoText.text = maxBullets.ToString() + "/" + maxBullets.ToString();
+        GameObject reloadObject = GameObject.FindGameObjectWithTag("ReloadText");
+        reloadText = reloadObject.GetComponent<TextMeshProUGUI>();
+
+        reloadText.enabled = false;
     }
 
     void Update()
@@ -70,6 +75,7 @@ public class AnimalShooting : MonoBehaviour
         canShoot = true;
         canReload = true;
         remainingBullets = maxBullets;
+        reloadText.enabled = false;
     }
 
     void Reload()
@@ -77,6 +83,7 @@ public class AnimalShooting : MonoBehaviour
         if (canReload)
         {
             Debug.Log("Reload");
+            reloadText.enabled = true;
             canShoot = false;
             canReload = false;
             StartCoroutine(EnableShootingAfterCooldown(reloadCooldown));
