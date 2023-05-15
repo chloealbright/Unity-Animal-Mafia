@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5730362514578986590}
   - component: {fileID: 7074114944208665603}
   - component: {fileID: -3164898253414891231}
-  m_Layer: 5
+  m_Layer: 21
   m_Name: Circle
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -396162180, guid: db0bbae00363a4c04afd328c0c110dc5, type: 3}
+  m_Sprite: {fileID: -1225514422, guid: db0bbae00363a4c04afd328c0c110dc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,3 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 4317227068110498398, guid: ebf0b4b8dbf6f594b879b51577b36c8d, type: 3}
+  movementSpeed: 10

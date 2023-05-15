@@ -7,22 +7,22 @@ public class AnimalShooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float bulletForce = 20f;
-    public int maxBullets = 6; // maximum number of bullets the player can shoot
-    public float shootCooldown = 0.5f; // time between shots
-    
-    private int remainingBullets; // current number of remaining bullets
-    private bool canShoot = true; // is the player allowed to shoot?
-    private bool canReload = true; // is the player allowed to reload?
+    public int maxBullets = 6;
+    public float shootCooldown = 0.5f; 
+    public float reloadCooldown = 2f; 
+
+    private int remainingBullets; 
+    private bool canShoot = true;
+    private bool canReload = true;
 
     private void Start()
     {
         remainingBullets = maxBullets;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (canShoot && remainingBullets > 0 && Input.GetButtonDown("Fire1"))
+        if (canShoot && Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
@@ -35,27 +35,37 @@ public class AnimalShooting : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * Quaternion.Euler(0f, 0f, 180f));
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(-firePoint.up * bulletForce, ForceMode2D.Impulse);
-        remainingBullets--;
+        if (remainingBullets > 0)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * Quaternion.Euler(0f, 0f, 180f));
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.AddForce(-firePoint.up * bulletForce, ForceMode2D.Impulse);
+            remainingBullets--;
+        }
 
         if (remainingBullets == 0)
         {
             canShoot = false;
-            StartCoroutine(EnableShootingAfterCooldown());
+            StartCoroutine(EnableShootingAfterCooldown(shootCooldown));
         }
     }
 
-    IEnumerator EnableShootingAfterCooldown()
+    IEnumerator EnableShootingAfterCooldown(float cooldown)
     {
-        yield return new WaitForSeconds(shootCooldown);
+        yield return new WaitForSeconds(cooldown);
         canShoot = true;
+        canReload = true;
         remainingBullets = maxBullets;
     }
 
     void Reload()
     {
-        StartCoroutine(EnableShootingAfterCooldown());
+        if (canReload)
+        {
+            Debug.Log("Reload");
+            canShoot = false;
+            canReload = false;
+            StartCoroutine(EnableShootingAfterCooldown(reloadCooldown));
+        }
     }
 }
