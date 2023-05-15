@@ -24,12 +24,12 @@ public class AnimalHealth : MonoBehaviour
         healthText.text = maxHealth.ToString();
     }
 
-   void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
-            currentHealth -= 25;
-            healthBar.fillAmount = currentHealth/ maxHealth;
+            currentHealth -= 20;
+            healthBar.fillAmount = currentHealth / maxHealth;
             healthText.text = currentHealth.ToString();
             if (currentHealth <= 0)
             {
