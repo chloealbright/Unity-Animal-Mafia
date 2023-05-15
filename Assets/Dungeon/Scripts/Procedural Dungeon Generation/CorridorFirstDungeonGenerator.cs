@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 {
@@ -22,6 +23,7 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     }
     private void Start()
     {
+        PlayerPrefs.SetInt("ScoreValue", 0);
         StartCoroutine(FadeController());
         tilemapVisualizer.Clear();
         CorridorFirstGeneration();
