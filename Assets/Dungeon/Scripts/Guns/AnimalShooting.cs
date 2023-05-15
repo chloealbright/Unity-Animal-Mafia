@@ -1,23 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnimalShooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
     public float bulletForce = 20f;
-    public int maxBullets = 6;
+    public float maxBullets = 8;
     public float shootCooldown = 0.5f; 
     public float reloadCooldown = 2f; 
 
-    private int remainingBullets; 
+    private float remainingBullets; 
     private bool canShoot = true;
     private bool canReload = true;
+
+    public Image ammoBar;
+
+    public TMP_Text ammoText;
 
     private void Start()
     {
         remainingBullets = maxBullets;
+
+        GameObject imageObject = GameObject.FindGameObjectWithTag("AmmoBar");
+        ammoBar = imageObject.GetComponent<Image>();
+        GameObject textObject = GameObject.FindGameObjectWithTag("AmmoValue");
+        ammoText = textObject.GetComponent<TMP_Text>();
+        ammoText.text = maxBullets.ToString() + "/" + maxBullets.ToString();
     }
 
     void Update()
@@ -31,6 +43,8 @@ public class AnimalShooting : MonoBehaviour
         {
             Reload();
         }
+        ammoBar.fillAmount = remainingBullets / maxBullets;
+        ammoText.text = remainingBullets.ToString() + "/" + maxBullets.ToString();
     }
 
     void Shoot()

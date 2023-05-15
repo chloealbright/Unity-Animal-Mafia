@@ -42,10 +42,10 @@ GameObject:
   - component: {fileID: 8994288176697804470}
   - component: {fileID: 5654291879536791888}
   - component: {fileID: 8860077095076203279}
-  - component: {fileID: 8131687434764514693}
-  - component: {fileID: 4399098253254971627}
   - component: {fileID: 8414069286551707835}
   - component: {fileID: 8196563080251191251}
+  - component: {fileID: 8131687434764514693}
+  - component: {fileID: 4399098253254971627}
   - component: {fileID: 173123570770147508}
   m_Layer: 20
   m_Name: Piggy
@@ -152,54 +152,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8131687434764514693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3193090204154038438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd8b2c68f9115b343b8e3e2fcad57eb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  collisionOffset: 0.05
-  movementFilter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  cam: {fileID: 0}
-  cameraFollowSpeed: 5
---- !u!114 &4399098253254971627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3193090204154038438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da8353911b8f84445ad9654777331ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 5723030790295365441}
-  bulletPrefab: {fileID: 5051724278231121863, guid: 974e6183ebfbe464d8247a323e59b412, type: 3}
-  bulletForce: 20
-  maxBullets: 6
-  shootCooldown: 0.5
-  reloadCooldown: 2
 --- !u!50 &8414069286551707835
 Rigidbody2D:
   serializedVersion: 4
@@ -247,6 +199,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.12846278, y: 0.14093097}
   m_EdgeRadius: 0
+--- !u!114 &8131687434764514693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193090204154038438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8b2c68f9115b343b8e3e2fcad57eb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  collisionOffset: 0.05
+  movementFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  cam: {fileID: 0}
+  cameraFollowSpeed: 5
+--- !u!114 &4399098253254971627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193090204154038438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da8353911b8f84445ad9654777331ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 5723030790295365441}
+  bulletPrefab: {fileID: 5051724278231121863, guid: 974e6183ebfbe464d8247a323e59b412, type: 3}
+  bulletForce: 20
+  maxBullets: 8
+  shootCooldown: 0.5
+  reloadCooldown: 2
+  ammoBar: {fileID: 0}
+  ammoText: {fileID: 0}
 --- !u!114 &173123570770147508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d87fb92a80ddc419489f788751213b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 1000
   healthBar: {fileID: 0}
   healthText: {fileID: 0}

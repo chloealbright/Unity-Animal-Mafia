@@ -9,6 +9,10 @@ TagManager:
   - Bullet
   - EnemyBullet
   - Wall
+  - HealthBar
+  - HealthValue
+  - AmmoBar
+  - AmmoValue
   layers:
   - Default
   - TransparentFX
