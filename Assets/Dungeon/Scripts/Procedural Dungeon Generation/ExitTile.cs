@@ -50,13 +50,6 @@ public class ExitTile : MonoBehaviour
         }
         yield return new WaitForSeconds(fadeWait);
     }
-
-    //private void IncrementLevel()
-    //{
-    //    currentLevel++;
-    //    Debug.Log("Current Level: " + currentLevel);
-    //    PlayerPrefs.SetInt("Level", currentLevel);
-    //}
     public int GetCurrentLevel()
     {
         return currentLevel;

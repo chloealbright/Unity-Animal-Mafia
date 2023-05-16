@@ -10,6 +10,8 @@ public class MeleeEnemyMovement : MonoBehaviour
     [SerializeField] private float minimumDistance = 1.5f;
     [SerializeField] private int maxHealth = 6;
     [SerializeField] private int scoreValue = 15;
+    [SerializeField] private float dropChance = 0.5f;
+    [SerializeField] private GameObject cropPrefab;
 
     private Transform player;
     private bool isMoving = false;
@@ -20,7 +22,9 @@ public class MeleeEnemyMovement : MonoBehaviour
 
     private bool isFrozen = true;
     private float freezeDuration = 3f;
-
+    private Renderer objectRenderer;
+    private Color originalColor;
+    public Color collisionColor = Color.red;
     private float moveTime;
     private float timer;
 
@@ -28,7 +32,8 @@ public class MeleeEnemyMovement : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth;
-
+        objectRenderer = GetComponent<Renderer>();
+        originalColor = objectRenderer.material.color;
         scoreManager = FindObjectOfType<ScoreManager>();
         healthBar.SetHealth(currentHealth, maxHealth);
 
@@ -146,11 +151,17 @@ public class MeleeEnemyMovement : MonoBehaviour
     {
         currentHealth -= damageAmount;
         healthBar.SetHealth(currentHealth, maxHealth);
-
+        ChangeColor(collisionColor);
+        StartCoroutine(ResetColor());
         if (currentHealth <= 0)
         {
             Die();
             scoreManager.AddScore(scoreValue);
+            if (Random.value <= dropChance)
+            {
+                Debug.Log(Random.value);
+                Instantiate(cropPrefab, transform.position, Quaternion.identity);
+            }
         }
         else
         {
@@ -158,7 +169,16 @@ public class MeleeEnemyMovement : MonoBehaviour
             StartCoroutine(Knockback(knockbackDirection));
         }
     }
+    private void ChangeColor(Color newColor)
+    {
+        objectRenderer.material.color = newColor;
+    }
 
+    private IEnumerator ResetColor()
+    {
+        yield return new WaitForSeconds(0.2f);
+        objectRenderer.material.color = originalColor;
+    }
     private IEnumerator Knockback(Vector3 direction)
     {
         float knockbackForce = 5f;
@@ -167,10 +187,13 @@ public class MeleeEnemyMovement : MonoBehaviour
 
         canMove = false;
 
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.zero;
+        rb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+
         while (timer < knockbackDuration)
         {
             timer += Time.deltaTime;
-            transform.position += direction * knockbackForce * Time.deltaTime;
             yield return null;
         }
 

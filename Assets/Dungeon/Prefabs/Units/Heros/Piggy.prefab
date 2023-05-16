@@ -265,3 +265,4 @@ MonoBehaviour:
   maxHealth: 1000
   healthBar: {fileID: 0}
   healthText: {fileID: 0}
+  collisionColor: {r: 1, g: 0, b: 0, a: 1}

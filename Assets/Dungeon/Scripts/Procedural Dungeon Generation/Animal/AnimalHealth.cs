@@ -15,11 +15,15 @@ public class AnimalHealth : MonoBehaviour
     private bool isImmune = false;
     private float immuneDuration = 1f;
     private float immuneTimer = 0f;
+    private Renderer objectRenderer;
+    private Color originalColor;
+    public Color collisionColor = Color.red;
 
     private void Start()
     {
         currentHealth = maxHealth;
-
+        objectRenderer = GetComponent<Renderer>();
+        originalColor = objectRenderer.material.color;
         GameObject imageObject = GameObject.FindGameObjectWithTag("HealthBar");
         healthBar = imageObject.GetComponent<Image>();
         GameObject textObject = GameObject.FindGameObjectWithTag("HealthValue");
@@ -41,11 +45,18 @@ public class AnimalHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Enemies"))
+        if (collision.gameObject.CompareTag("Crop"))
         {
-            Debug.Log("Take Damage");
+            Crop crop = collision.gameObject.GetComponent<Crop>();
+            Debug.Log(crop);
+            if (crop != null)
+            {
+                Debug.Log(crop.healthToAdd);
+                Heal(crop.healthToAdd);
+                Destroy(collision.gameObject);
+            }
         }
-        if (!isImmune && (collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemies")))
+        else if (!isImmune && (collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemy")))
         {
             currentHealth -= 25;
             healthBar.fillAmount = currentHealth / maxHealth;
@@ -59,8 +70,20 @@ public class AnimalHealth : MonoBehaviour
             {
                 ApplyKnockback(collision);
                 StartImmunity();
+                ChangeColor(collisionColor);
+                StartCoroutine(ResetColor());
             }
         }
+    }
+    private void ChangeColor(Color newColor)
+    {
+        objectRenderer.material.color = newColor;
+    }
+
+    private IEnumerator ResetColor()
+    {
+        yield return new WaitForSeconds(0.2f);
+        objectRenderer.material.color = originalColor;
     }
 
     private void ApplyKnockback(Collision2D collision)
@@ -80,7 +103,9 @@ public class AnimalHealth : MonoBehaviour
 
     public void Heal(int amount)
     {
-        //currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+        healthBar.fillAmount = currentHealth / maxHealth;
+        healthText.text = currentHealth.ToString();
     }
 
     private void Die()
