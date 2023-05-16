@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5355529420783917815}
   - component: {fileID: 8305798340249914114}
   - component: {fileID: -6184517389734083974}
-  - component: {fileID: -7954027572396981059}
-  m_Layer: 0
+  - component: {fileID: -4719201513756352234}
+  m_Layer: 22
   m_Name: exit_tile
   m_TagString: Exit
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 9119029785525494671, guid: a0d3fbbc155eb404a87f827b40a48dfe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-7954027572396981059
+--- !u!114 &-4719201513756352234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,3 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadf1a3510737e24690789e171c028bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeOutPanel: {fileID: 3570111742325579028, guid: c23c39c78bdc6d946bf269a7eb70f761, type: 3}
+  fadeWait: 0.3

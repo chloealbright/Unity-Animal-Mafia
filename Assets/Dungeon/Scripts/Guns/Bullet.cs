@@ -14,7 +14,6 @@ public class Bullet : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Enemies"))
         {
-            Destroy(collision.gameObject);
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
             Destroy(effect, 5f);
             Destroy(gameObject);

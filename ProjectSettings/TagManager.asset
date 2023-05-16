@@ -7,6 +7,13 @@ TagManager:
   - Enemies
   - Exit
   - Bullet
+  - EnemyBullet
+  - Wall
+  - HealthBar
+  - HealthValue
+  - AmmoBar
+  - AmmoValue
+  - ReloadText
   layers:
   - Default
   - TransparentFX
@@ -29,8 +36,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - EnemyBullet
+  - EXIT
   - 
   - 
   - 

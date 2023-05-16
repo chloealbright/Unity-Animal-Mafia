@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Farm/Prefabs/Inventory/Items/Apple_Plant.prefab.meta
 guid: 88eb160d016ca4c9fb16ca19f2e26451
 PrefabImporter:
+=======
+guid: 214a8825f5c726f4ab05bb3e53bc550e
+folderAsset: yes
+DefaultImporter:
+>>>>>>> origin/master:Assets/Farm/Players/Bubbles.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
