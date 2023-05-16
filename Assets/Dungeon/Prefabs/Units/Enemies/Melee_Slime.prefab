@@ -137,9 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd35ddf8c1fcc449aec823558e70f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 5
   searchRange: 8
   stopDuration: 1
+  minimumDistance: 1.5
   maxHealth: 10
   scoreValue: 15
   healthBar: {fileID: 5549615445640017416}
