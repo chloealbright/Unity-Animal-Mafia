@@ -249,6 +249,7 @@ MonoBehaviour:
   reloadCooldown: 2
   ammoBar: {fileID: 0}
   ammoText: {fileID: 0}
+  reloadText: {fileID: 0}
 --- !u!114 &173123570770147508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d87fb92a80ddc419489f788751213b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1000
   healthBar: {fileID: 0}
   healthText: {fileID: 0}
