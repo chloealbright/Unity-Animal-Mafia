@@ -1248,6 +1248,7 @@ MonoBehaviour:
   roomPercent: 1
   enemyPrefab: {fileID: 1125738474421296676, guid: 33ef1f2f94bf9174f88645b6f33e2d8e, type: 3}
   meleeEnemyPrefab: {fileID: 2053273153080949973, guid: 39a5a05c3c12daf4d9f81989402ff255, type: 3}
+  BossEnemyPrefab: {fileID: 7880164054741473222, guid: 22aefabbb7718814d8f9a37b98b6e9af, type: 3}
   maxEnemiesPerRoom: 3
   enemySpawnRadius: 5
   maxMeleeEnemiesPerRoom: 2
@@ -22692,8 +22693,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemapVisualizer: {fileID: 1431648946}
   startPosition: {x: 0, y: 0}
-  randomWalkParameters: {fileID: 11400000, guid: c28d1daf8e2b3da4abb1efa6e3cd34bf, type: 2}
-  bossRandomWalkParameters: {fileID: 0}
+  randomWalkParameters: {fileID: 11400000, guid: 1e4db8a053c52e548963b5898784693c, type: 2}
+  bossRandomWalkParameters: {fileID: 11400000, guid: 1e4db8a053c52e548963b5898784693c, type: 2}
 --- !u!4 &2072688189
 Transform:
   m_ObjectHideFlags: 0
