@@ -29,6 +29,8 @@ namespace InventoryCont.Model
 
         [field: SerializeField]
         public int Cost { get; set; }
+
+        public int Quantity{get; set;} = 0;
     }
 }
 
