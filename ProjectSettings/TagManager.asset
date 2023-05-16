@@ -17,6 +17,7 @@ TagManager:
   - EnemyHealth
   - Crop
   - Enemy
+  - audioSource
   layers:
   - Default
   - TransparentFX
