@@ -475,7 +475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -870,7 +871,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -1244,6 +1246,7 @@ MonoBehaviour:
   corridorCount: 10
   roomPercent: 1
   enemyPrefab: {fileID: 1125738474421296676, guid: 33ef1f2f94bf9174f88645b6f33e2d8e, type: 3}
+  meleeEnemyPrefab: {fileID: 2053273153080949973, guid: 39a5a05c3c12daf4d9f81989402ff255, type: 3}
   maxEnemiesPerRoom: 3
   enemySpawnRadius: 2
   exitPrefab: {fileID: 8693576432226825196, guid: d2eb13c9823e48344842cb8ac54747fb, type: 3}
@@ -1475,7 +1478,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -1733,7 +1737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -8413,7 +8418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -19556,7 +19562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -19803,7 +19810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -19952,7 +19960,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -20101,7 +20110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -21173,7 +21183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -22039,7 +22050,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
@@ -22723,7 +22735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  range: 5
+  shootingRange: 3
+  searchRange: 5
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
