@@ -8,7 +8,14 @@ TagManager:
   - Exit
   - Bullet
   - EnemyBullet
-  - Item
+  - Wall
+  - HealthBar
+  - HealthValue
+  - AmmoBar
+  - AmmoValue
+  - ReloadText
+  - Crop
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -30,11 +37,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Player
+  - EnemyBullet
   - EXIT
-  - 
-  - 
+  - Bullet
+  - Food
   - 
   - 
   - 

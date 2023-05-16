@@ -19,6 +19,7 @@ namespace InventoryCont
         [SerializeField]
         private BalancePage balancePanel;
 
+        public GameObject player;
         public List<InventoryItemStruct> initialItems = new List<InventoryItemStruct>();
 
         private void Start()
@@ -91,7 +92,7 @@ namespace InventoryCont
         //user pressing I to open inv
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.I))
+            if (Input.GetKeyDown(KeyCode.I) && !DialogueManager.GetInstance().dialogueIsPlaying)
             {
                 if (inventoryUI.isActiveAndEnabled == false)
                 {

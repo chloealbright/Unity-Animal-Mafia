@@ -3,18 +3,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 {
     [SerializeField] private int corridorLength = 14, corridorCount = 5;
-    [SerializeField] [Range(0.1f,1)] private float roomPercent = 0.8f;
+    [SerializeField] [Range(0.1f, 1)] private float roomPercent = 0.8f;
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject meleeEnemyPrefab;
+    [SerializeField] private GameObject BossEnemyPrefab;
     [SerializeField] private int maxEnemiesPerRoom = 3;
     [SerializeField] private float enemySpawnRadius = 2f;
+    [SerializeField] private int maxMeleeEnemiesPerRoom = 2;
+    [SerializeField] private float meleeEnemySpawnRadius = 1.5f;
     [SerializeField] private GameObject exitPrefab;
+    public GameObject fadeInPanel;
+    public float fadeWait;
+    
+
     protected override void RunProceduralGeneration()
     {
         CorridorFirstGeneration();
+    }
+    private void Start()
+    {
+        PlayerPrefs.SetInt("ScoreValue", 0);
+        StartCoroutine(FadeController());
+        tilemapVisualizer.Clear();
+        CorridorFirstGeneration();
+    }
+
+    public IEnumerator FadeController()
+    {
+        if (fadeInPanel != null)
+        {
+            GameObject panel = Instantiate(fadeInPanel, Vector3.zero, Quaternion.identity) as GameObject;
+            Destroy(panel, 1);
+        }
+        yield return new WaitForSeconds(fadeWait);
     }
 
     public void CorridorFirstGeneration()
@@ -35,12 +61,21 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     }
     private void CreateRoomsAtDeadEnd(List<Vector2Int> deadEnds, HashSet<Vector2Int> roomFloors)
     {
+        var Level = PlayerPrefs.GetInt("Level");
         foreach (var position in deadEnds)
         {
             if(roomFloors.Contains(position) == false)
             {
-                var room = RunRandomWalk(randomWalkParameters, position);
-                roomFloors.UnionWith(room);
+                if(Level % 5 == 0)
+                {
+                    var room = RunRandomWalk(bossRandomWalkParameters, position);
+                    roomFloors.UnionWith(room);
+                }
+                else
+                {
+                    var room = RunRandomWalk(randomWalkParameters, position);
+                    roomFloors.UnionWith(room);
+                }
             }
         }
     }
@@ -63,6 +98,7 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 
     private HashSet<Vector2Int> CreateRooms(HashSet<Vector2Int> potentialRoomPositions)
     {
+        var Level = PlayerPrefs.GetInt("Level");
         HashSet<Vector2Int> roomPositions = new HashSet<Vector2Int>();
         Vector2Int lastRoomPosition = new Vector2Int();
         int roomToCreateCount = Mathf.RoundToInt(potentialRoomPositions.Count * roomPercent);
@@ -71,8 +107,17 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 
         foreach (var roomPosition in roomsToCreate)
         {
-            var roomFloor = RunRandomWalk(randomWalkParameters, roomPosition);
-            roomPositions.UnionWith(roomFloor);
+            if (Level % 5 == 0)
+            {
+                var roomFloor = RunRandomWalk(bossRandomWalkParameters, roomPosition);
+                roomPositions.UnionWith(roomFloor);
+            }
+            else
+            {
+                var roomFloor = RunRandomWalk(randomWalkParameters, roomPosition);
+                roomPositions.UnionWith(roomFloor);
+            }
+
             int enemiesToSpawn = UnityEngine.Random.Range(1, maxEnemiesPerRoom + 1);
             for (int i = 0; i < enemiesToSpawn; i++)
             {
@@ -80,12 +125,32 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                 Vector3 enemyPosition = new Vector3(roomPosition.x + randomOffset.x, roomPosition.y + randomOffset.y, 0);
                 Instantiate(enemyPrefab, enemyPosition, Quaternion.identity);
             }
-        lastRoomPosition = roomPosition;
+
+            int meleeEnemiesToSpawn = UnityEngine.Random.Range(0, maxMeleeEnemiesPerRoom + 1);
+            for (int j = 0; j < meleeEnemiesToSpawn; j++)
+            {
+                Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * meleeEnemySpawnRadius;
+                Vector3 meleeEnemyPosition = new Vector3(roomPosition.x + randomOffset.x, roomPosition.y + randomOffset.y, 0);
+                Instantiate(meleeEnemyPrefab, meleeEnemyPosition, Quaternion.identity);
+            }
+
+            lastRoomPosition = roomPosition;
         }
-        Vector3 exitPosition = new Vector3(lastRoomPosition.x, lastRoomPosition.y, 0);
-        Instantiate(exitPrefab, exitPosition, Quaternion.identity);
+        Debug.Log(Level);
+        if(!(Level % 5 == 0))
+        {
+            Vector3 exitPosition = new Vector3(lastRoomPosition.x, lastRoomPosition.y, 0);
+            Instantiate(exitPrefab, exitPosition, Quaternion.identity);
+        }
+        else
+        {
+            Vector3 exitPosition = new Vector3(lastRoomPosition.x, lastRoomPosition.y, 0);
+            Instantiate(BossEnemyPrefab, exitPosition, Quaternion.identity);
+        }
+
         return roomPositions;
     }
+
 
 
     private Vector2Int GetRandomFloorTile(HashSet<Vector2Int> roomFloor)

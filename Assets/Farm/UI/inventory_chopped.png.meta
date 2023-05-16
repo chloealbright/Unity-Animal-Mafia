@@ -243,11 +243,32 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: profile_bg
+      name: panel
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 217
+        width: 6
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe0921a9ff12ce4e89faa18c3f2c164
+      internalID: 1898583786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg
       rect:
         serializedVersion: 2
         x: 68
-        y: 84
+        y: 88
         width: 24
         height: 24
       alignment: 0
@@ -257,29 +278,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c55344b0b2376e44c85184fa5f9414b0
-      internalID: -819434338
+      spriteID: 4eb64f494a258ad4aab007077f028a4d
+      internalID: -877177371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: panel
+      name: setting_gear
       rect:
         serializedVersion: 2
-        x: 86
-        y: 217
-        width: 6
-        height: 80
+        x: 113
+        y: 113
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 1, y: 1, z: 1, w: 1}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddd4b49a16becd34294abbece62edc22
-      internalID: -1475051508
+      spriteID: 26af64137dda5a840937bce1f275fa69
+      internalID: 267156266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 88
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d01c7b94fea76429dea9978371e0f8
+      internalID: -1249605911
       vertices: []
       indices: 
       edges: []
@@ -295,15 +337,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      bg: -877177371
+      bg1: -1249605911
       chest_btn: 188133062
       close_btn: 876793125
       inventory_chopped_content_0: -632795377
       inventory_chopped_content_1: -1616640503
       inventory_chopped_desc: 176447992
       inventory_chopped_desc_bg: -2085170405
-      panel: -1475051508
-      panel_edge: 1199803852
-      profile_bg: -819434338
+      panel: 1898583786
+      setting_gear: 267156266
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -22944,7 +22944,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tiles2_1087
+      name: Tree_Stump
       rect:
         serializedVersion: 2
         x: 544
@@ -35387,6 +35387,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       PlantedTree: 1887185392
+      Tree_Stump: 1508642970
       tiles2_1: 1622939059
       tiles2_10: 897820186
       tiles2_100: 755476245
@@ -35485,7 +35486,6 @@ TextureImporter:
       tiles2_1084: 1482855362
       tiles2_1085: -1776660598
       tiles2_1086: 169081195
-      tiles2_1087: 1508642970
       tiles2_1088: 1867149039
       tiles2_1089: -799817689
       tiles2_109: 575714599

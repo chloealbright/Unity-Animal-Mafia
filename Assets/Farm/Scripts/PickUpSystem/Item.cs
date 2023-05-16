@@ -45,6 +45,7 @@ public class Item : MonoBehaviour
     {
         GetComponent<Collider2D>().enabled = false;
         StartCoroutine(AnimateItemPickup());
+        Destroy(gameObject);
     }
 
     private IEnumerator AnimateItemPickup()

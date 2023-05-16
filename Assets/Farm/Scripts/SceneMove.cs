@@ -31,9 +31,14 @@ public class SceneMove : MonoBehaviour
         if (other.tag == "Player" && !other.isTrigger)
         {
             //player entered, so move level
-            print("Switching scene to" + sceneBuildIndex);
+            Movement movementScript = other.GetComponent<Movement>();
+            //pausing player movement while in transition
+            movementScript.canMove = false;
+
             playerStorage.initialValue = playerPosition;
             StartCoroutine(FadeController());
+
+            movementScript.canMove = true;
             //SceneManager.LoadScene(sceneBuildIndex);
         }
     }
@@ -42,7 +47,8 @@ public class SceneMove : MonoBehaviour
     {
         if(fadeOutPanel != null)
         {
-            Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
+            GameObject panel1 = Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
+            Destroy(panel1, 1);
         }
         yield return new WaitForSeconds(fadeWait);
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneBuildIndex);
