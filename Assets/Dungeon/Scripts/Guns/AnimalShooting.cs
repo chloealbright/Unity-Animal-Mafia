@@ -64,6 +64,7 @@ public class AnimalShooting : MonoBehaviour
 
         if (remainingBullets == 0)
         {
+            reloadText.enabled = true;
             canShoot = false;
             StartCoroutine(EnableShootingAfterCooldown(shootCooldown));
         }

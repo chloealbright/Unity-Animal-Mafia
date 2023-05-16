@@ -7,14 +7,19 @@ public class ExitTile : MonoBehaviour
 {
     private CorridorFirstDungeonGenerator dungeonGenerator;
     private ScoreManager scoreManager;
+    private LevelManager levelManager;
 
     public GameObject fadeOutPanel;
     public float fadeWait;
+
+    private int currentLevel = 1;
 
     private void Start()
     {
         dungeonGenerator = FindObjectOfType<CorridorFirstDungeonGenerator>();
         scoreManager = FindObjectOfType<ScoreManager>();
+        levelManager = FindObjectOfType<LevelManager>();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,8 +34,9 @@ public class ExitTile : MonoBehaviour
                 playerObject.transform.position = new Vector3(0f, 0f, playerObject.transform.position.z);
                 TilemapVisualizer tilemapVisualizer = FindObjectOfType<TilemapVisualizer>();
                 tilemapVisualizer.Clear();
-                dungeonGenerator.CorridorFirstGeneration();
                 scoreManager.AddScore(100);
+                levelManager.AddLevel(1);
+                dungeonGenerator.CorridorFirstGeneration();
             }
         }
     }
@@ -43,5 +49,16 @@ public class ExitTile : MonoBehaviour
             Destroy(panel, 1);
         }
         yield return new WaitForSeconds(fadeWait);
+    }
+
+    //private void IncrementLevel()
+    //{
+    //    currentLevel++;
+    //    Debug.Log("Current Level: " + currentLevel);
+    //    PlayerPrefs.SetInt("Level", currentLevel);
+    //}
+    public int GetCurrentLevel()
+    {
+        return currentLevel;
     }
 }

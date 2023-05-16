@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class BossMovement : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 2f;
     [SerializeField] private float shootingRange = 3f;
     [SerializeField] private float searchRange = 5f;
     [SerializeField] private float minMoveTime = 1f;
     [SerializeField] private float maxMoveTime = 3f;
+    [SerializeField] private GameObject exitPrefab;
 
     private float moveTime;
     private float timer;
@@ -158,7 +159,7 @@ public class EnemyMovement : MonoBehaviour
 
     private IEnumerator Knockback(Vector3 direction)
     {
-        float knockbackForce = 2f;
+        float knockbackForce = 1f;
         float knockbackDuration = 0.2f;
         float timer = 0f;
 
@@ -173,6 +174,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Die()
     {
+        Instantiate(exitPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
