@@ -26,13 +26,13 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 5f);
+            Destroy(effect, 2f);
             Destroy(gameObject);
         }
         else
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 5f);
+            Destroy(effect, 2f);
             Destroy(gameObject);
         }
     }

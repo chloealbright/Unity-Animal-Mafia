@@ -10,6 +10,7 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     [SerializeField] private int corridorLength = 14, corridorCount = 5;
     [SerializeField] [Range(0.1f,1)] private float roomPercent = 0.8f;
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject meleeEnemyPrefab;
     [SerializeField] private int maxEnemiesPerRoom = 3;
     [SerializeField] private float enemySpawnRadius = 2f;
     [SerializeField] private GameObject exitPrefab;
@@ -101,6 +102,7 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                 Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * enemySpawnRadius;
                 Vector3 enemyPosition = new Vector3(roomPosition.x + randomOffset.x, roomPosition.y + randomOffset.y, 0);
                 Instantiate(enemyPrefab, enemyPosition, Quaternion.identity);
+                Instantiate(meleeEnemyPrefab, enemyPosition, Quaternion.identity);
             }
         lastRoomPosition = roomPosition;
         }

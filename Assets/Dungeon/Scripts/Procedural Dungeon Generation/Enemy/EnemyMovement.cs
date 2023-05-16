@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 2f;
-    [SerializeField] private float range = 5f;
+    [SerializeField] private float shootingRange = 3f;
+    [SerializeField] private float searchRange = 5f;
     [SerializeField] private float minMoveTime = 1f;
     [SerializeField] private float maxMoveTime = 3f;
 
@@ -19,47 +20,72 @@ public class EnemyMovement : MonoBehaviour
 
     public HealthBarBehaviour healthBar;
 
+    private GameObject player;
+
+    private bool isFrozen = true;
+    private float freezeDuration = 3f;
+
     private void Start()
     {
-        moveTime = UnityEngine.Random.Range(minMoveTime, maxMoveTime);
+        moveTime = Random.Range(minMoveTime, maxMoveTime);
         timer = moveTime;
         currentHealth = health;
-
         healthBar.SetHealth(currentHealth, health);
+        Debug.Log(healthBar);
 
         scoreManager = FindObjectOfType<ScoreManager>();
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        StartCoroutine(UnfreezeAfterDelay());
+    }
+
+    private IEnumerator UnfreezeAfterDelay()
+    {
+        yield return new WaitForSeconds(freezeDuration);
+        isFrozen = false;
     }
 
     private void Update()
     {
+        if (isFrozen)
+            return;
+
         timer -= Time.deltaTime;
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null && Vector3.Distance(transform.position, player.transform.position) < range)
+        if (player != null)
         {
-            Vector3 directionToPlayer = player.transform.position - transform.position;
-            Vector3 moveDirection = Vector3.Normalize(directionToPlayer);
-            Vector3 targetPosition = player.transform.position + moveDirection * (range * 0.75f);
+            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-        
-            if (!IsOutsidePlayableArea(targetPosition))
+            if (distanceToPlayer <= shootingRange)
             {
+                StopMoving();
+            }
+            else if (distanceToPlayer <= searchRange)
+            {
+                Vector3 directionToPlayer = player.transform.position - transform.position;
+                Vector3 moveDirection = directionToPlayer.normalized;
+                Vector3 targetPosition = player.transform.position;
+
                 if (!isMoving)
                 {
                     StartCoroutine(MoveToPosition(targetPosition));
                 }
             }
-        }
-        else
-        {
-            Vector2 randomDirection = UnityEngine.Random.insideUnitCircle.normalized;
-            Vector3 targetPosition = transform.position + new Vector3(randomDirection.x, randomDirection.y, 0);
-
-            if (!IsOutsidePlayableArea(targetPosition))
+            else
             {
-                if (!isMoving)
+                if (timer <= 0)
                 {
-                    StartCoroutine(MoveToPosition(targetPosition));
+                    timer = Random.Range(minMoveTime, maxMoveTime);
+                    Vector2 randomDirection = Random.insideUnitCircle.normalized;
+                    Vector3 targetPosition = transform.position + new Vector3(randomDirection.x, randomDirection.y, 0);
+
+                    if (!IsOutsidePlayableArea(targetPosition))
+                    {
+                        if (!isMoving)
+                        {
+                            StartCoroutine(MoveToPosition(targetPosition));
+                        }
+                    }
                 }
             }
         }
@@ -98,6 +124,11 @@ public class EnemyMovement : MonoBehaviour
         isMoving = false;
     }
 
+    private void StopMoving()
+    {
+        isMoving = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
@@ -111,7 +142,6 @@ public class EnemyMovement : MonoBehaviour
             StartCoroutine(MoveToPosition(transform.position + oppositeDirection));
         }
     }
-
     private void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
@@ -121,7 +151,27 @@ public class EnemyMovement : MonoBehaviour
             Die();
             scoreManager.AddScore(10);
         }
+        else
+        {
+            Vector3 knockbackDirection = (transform.position - player.transform.position).normalized;
+            StartCoroutine(Knockback(knockbackDirection));
+        }
     }
+
+    private IEnumerator Knockback(Vector3 direction)
+    {
+        float knockbackForce = 2f;
+        float knockbackDuration = 0.2f;
+        float timer = 0f;
+
+        while (timer < knockbackDuration)
+        {
+            timer += Time.deltaTime;
+            transform.position += direction * knockbackForce * Time.deltaTime;
+            yield return null;
+        }
+    }
+
 
     private void Die()
     {
