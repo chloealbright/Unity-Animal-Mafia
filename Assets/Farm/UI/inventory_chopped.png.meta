@@ -293,7 +293,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,6 +301,27 @@ TextureImporter:
       bones: []
       spriteID: 26af64137dda5a840937bce1f275fa69
       internalID: 267156266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 88
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d01c7b94fea76429dea9978371e0f8
+      internalID: -1249605911
       vertices: []
       indices: 
       edges: []
@@ -317,6 +338,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       bg: -877177371
+      bg1: -1249605911
       chest_btn: 188133062
       close_btn: 876793125
       inventory_chopped_content_0: -632795377
