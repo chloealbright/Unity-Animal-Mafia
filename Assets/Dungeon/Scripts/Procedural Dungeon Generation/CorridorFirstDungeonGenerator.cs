@@ -8,11 +8,13 @@ using UnityEngine.SocialPlatforms.Impl;
 public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 {
     [SerializeField] private int corridorLength = 14, corridorCount = 5;
-    [SerializeField] [Range(0.1f,1)] private float roomPercent = 0.8f;
+    [SerializeField] [Range(0.1f, 1)] private float roomPercent = 0.8f;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject meleeEnemyPrefab;
     [SerializeField] private int maxEnemiesPerRoom = 3;
     [SerializeField] private float enemySpawnRadius = 2f;
+    [SerializeField] private int maxMeleeEnemiesPerRoom = 2;
+    [SerializeField] private float meleeEnemySpawnRadius = 1.5f;
     [SerializeField] private GameObject exitPrefab;
 
     public GameObject fadeInPanel;
@@ -96,18 +98,29 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         {
             var roomFloor = RunRandomWalk(randomWalkParameters, roomPosition);
             roomPositions.UnionWith(roomFloor);
+
             int enemiesToSpawn = UnityEngine.Random.Range(1, maxEnemiesPerRoom + 1);
             for (int i = 0; i < enemiesToSpawn; i++)
             {
                 Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * enemySpawnRadius;
                 Vector3 enemyPosition = new Vector3(roomPosition.x + randomOffset.x, roomPosition.y + randomOffset.y, 0);
                 Instantiate(enemyPrefab, enemyPosition, Quaternion.identity);
-                Instantiate(meleeEnemyPrefab, enemyPosition, Quaternion.identity);
             }
-        lastRoomPosition = roomPosition;
+
+            int meleeEnemiesToSpawn = UnityEngine.Random.Range(0, maxMeleeEnemiesPerRoom + 1);
+            for (int j = 0; j < meleeEnemiesToSpawn; j++)
+            {
+                Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * meleeEnemySpawnRadius;
+                Vector3 meleeEnemyPosition = new Vector3(roomPosition.x + randomOffset.x, roomPosition.y + randomOffset.y, 0);
+                Instantiate(meleeEnemyPrefab, meleeEnemyPosition, Quaternion.identity);
+            }
+
+            lastRoomPosition = roomPosition;
         }
+
         Vector3 exitPosition = new Vector3(lastRoomPosition.x, lastRoomPosition.y, 0);
         Instantiate(exitPrefab, exitPosition, Quaternion.identity);
+
         return roomPositions;
     }
 

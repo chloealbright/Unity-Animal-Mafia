@@ -41,6 +41,10 @@ public class AnimalHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.CompareTag("Enemies"))
+        {
+            Debug.Log("Take Damage");
+        }
         if (!isImmune && (collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemies")))
         {
             Debug.Log("Damage Taken");

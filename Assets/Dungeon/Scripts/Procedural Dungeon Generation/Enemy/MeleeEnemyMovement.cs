@@ -21,6 +21,9 @@ public class MeleeEnemyMovement : MonoBehaviour
     private bool isFrozen = true;
     private float freezeDuration = 3f;
 
+    private float moveTime;
+    private float timer;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -30,6 +33,13 @@ public class MeleeEnemyMovement : MonoBehaviour
         healthBar.SetHealth(currentHealth, maxHealth);
 
         StartCoroutine(UnfreezeAfterDelay());
+        SetRandomMoveTime();
+    }
+
+    private void SetRandomMoveTime()
+    {
+        moveTime = Random.Range(1f, 3f);
+        timer = moveTime;
     }
 
     private IEnumerator UnfreezeAfterDelay()
@@ -42,6 +52,8 @@ public class MeleeEnemyMovement : MonoBehaviour
     {
         if (isFrozen)
             return;
+
+        timer -= Time.deltaTime;
 
         if (player != null)
         {
@@ -56,7 +68,37 @@ public class MeleeEnemyMovement : MonoBehaviour
                     StartCoroutine(MoveToPosition(targetPosition));
                 }
             }
+            else
+            {
+                if (timer <= 0)
+                {
+                    timer = Random.Range(1f, 3f);
+                    Vector2 randomDirection = Random.insideUnitCircle.normalized;
+                    Vector3 targetPosition = transform.position + new Vector3(randomDirection.x, randomDirection.y, 0);
+
+                    if (!IsOutsidePlayableArea(targetPosition))
+                    {
+                        if (!isMoving)
+                        {
+                            StartCoroutine(MoveToPosition(targetPosition));
+                        }
+                    }
+                }
+            }
         }
+    }
+
+    private bool IsOutsidePlayableArea(Vector3 position)
+    {
+        Collider2D[] colliders = Physics2D.OverlapPointAll(position);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Wall"))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     private IEnumerator MoveToPosition(Vector3 targetPosition)
@@ -94,7 +136,6 @@ public class MeleeEnemyMovement : MonoBehaviour
         isMoving = false;
         canMove = false;
     }
-
     private IEnumerator ResumeMovementAfterDelay()
     {
         yield return new WaitForSeconds(stopDuration);

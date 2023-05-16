@@ -1248,7 +1248,9 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1125738474421296676, guid: 33ef1f2f94bf9174f88645b6f33e2d8e, type: 3}
   meleeEnemyPrefab: {fileID: 2053273153080949973, guid: 39a5a05c3c12daf4d9f81989402ff255, type: 3}
   maxEnemiesPerRoom: 3
-  enemySpawnRadius: 2
+  enemySpawnRadius: 5
+  maxMeleeEnemiesPerRoom: 2
+  meleeEnemySpawnRadius: 5
   exitPrefab: {fileID: 8693576432226825196, guid: d2eb13c9823e48344842cb8ac54747fb, type: 3}
   fadeInPanel: {fileID: 3570111742325579028, guid: c23c39c78bdc6d946bf269a7eb70f761, type: 3}
   fadeWait: 0
