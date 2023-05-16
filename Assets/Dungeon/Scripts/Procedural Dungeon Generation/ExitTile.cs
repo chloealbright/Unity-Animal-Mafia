@@ -11,6 +11,8 @@ public class ExitTile : MonoBehaviour
     public GameObject fadeOutPanel;
     public float fadeWait;
 
+    private int currentLevel = 3;
+
     private void Start()
     {
         dungeonGenerator = FindObjectOfType<CorridorFirstDungeonGenerator>();
@@ -29,8 +31,9 @@ public class ExitTile : MonoBehaviour
                 playerObject.transform.position = new Vector3(0f, 0f, playerObject.transform.position.z);
                 TilemapVisualizer tilemapVisualizer = FindObjectOfType<TilemapVisualizer>();
                 tilemapVisualizer.Clear();
-                dungeonGenerator.CorridorFirstGeneration();
                 scoreManager.AddScore(100);
+                IncrementLevel();
+                dungeonGenerator.CorridorFirstGeneration();
             }
         }
     }
@@ -43,5 +46,16 @@ public class ExitTile : MonoBehaviour
             Destroy(panel, 1);
         }
         yield return new WaitForSeconds(fadeWait);
+    }
+
+    private void IncrementLevel()
+    {
+        currentLevel++;
+        Debug.Log("Current Level: " + currentLevel);
+        PlayerPrefs.SetInt("Level", currentLevel);
+    }
+    public int GetCurrentLevel()
+    {
+        return currentLevel;
     }
 }

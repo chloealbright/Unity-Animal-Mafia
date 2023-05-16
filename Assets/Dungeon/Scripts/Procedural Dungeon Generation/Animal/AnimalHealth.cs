@@ -47,7 +47,6 @@ public class AnimalHealth : MonoBehaviour
         }
         if (!isImmune && (collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemies")))
         {
-            Debug.Log("Damage Taken");
             currentHealth -= 25;
             healthBar.fillAmount = currentHealth / maxHealth;
             healthText.text = currentHealth.ToString();
