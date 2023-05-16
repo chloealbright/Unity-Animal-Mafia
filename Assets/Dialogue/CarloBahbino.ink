@@ -17,7 +17,7 @@ Wonderful, do you need me to explain the dungeons?
 
 === NotReady ===
 You're off to a baaa-d start if you're trying to impress the Don.
-Oh wells, whatever floats you goat.
+Oh well, whatever floats you goat.
 Come back to me when you're ready. I'll explain the dungeon run.
 -> END
 
