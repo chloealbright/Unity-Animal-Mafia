@@ -16,6 +16,7 @@ TagManager:
   - ReloadText
   - Crop
   - Enemy
+  - DatabaseAccess
   layers:
   - Default
   - TransparentFX

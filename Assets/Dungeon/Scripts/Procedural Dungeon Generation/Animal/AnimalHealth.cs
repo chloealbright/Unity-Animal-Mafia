@@ -110,6 +110,7 @@ public class AnimalHealth : MonoBehaviour
 
     private void Die()
     {
+
         Destroy(gameObject);
     }
 }
