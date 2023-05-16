@@ -267,7 +267,7 @@ MonoBehaviour:
   firePoint: {fileID: 1683223378994983952}
   fireRate: 0.8
   bulletForce: 2
-  range: 5
+  range: 7
 --- !u!50 &6553054180802558940
 Rigidbody2D:
   serializedVersion: 4
