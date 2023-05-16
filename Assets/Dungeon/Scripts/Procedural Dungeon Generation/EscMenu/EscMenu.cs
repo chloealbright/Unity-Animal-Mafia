@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ public class EscMenu : MonoBehaviour
     public GameObject resumeBtn;
     public GameObject exitBtn;
     public GameObject escConfPanel;
+    public TMP_Text pauseText;
 
     public bool isPaused;
     // Start is called before the first frame update
@@ -18,6 +20,7 @@ public class EscMenu : MonoBehaviour
         gearBtn.SetActive(true);
         escPanel.SetActive(false);
         escConfPanel.SetActive(false);
+        pauseText.enabled = false;
     }
 
     // Update is called once per frame
@@ -51,12 +54,14 @@ public class EscMenu : MonoBehaviour
 
     public void ExitBtn()
     {
+        pauseText.enabled = false;
         escPanel.SetActive(false);
         escConfPanel.SetActive(true);
     }
 
     public void PauseGame()
     {
+        pauseText.enabled = true;
         escPanel.SetActive(true);
         gearBtn.SetActive(false);
         Time.timeScale = 0f;
@@ -65,6 +70,7 @@ public class EscMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        pauseText.enabled = false;
         escPanel.SetActive(false);
         gearBtn.SetActive(true);
         Time.timeScale = 1f;
@@ -82,6 +88,7 @@ public class EscMenu : MonoBehaviour
     }
     public void Refuse()
     {
+        pauseText.enabled = false;
         escConfPanel.SetActive(false);
         gearBtn.SetActive(true);
         Time.timeScale = 1f;
