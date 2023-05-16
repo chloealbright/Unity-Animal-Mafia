@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83662e2e1ffd41a43a2014ee35760b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 200
   healthBar: {fileID: 0}
   healthText: {fileID: 0}
   collisionColor: {r: 1, g: 0, b: 0, a: 1}
