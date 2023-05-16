@@ -14,7 +14,6 @@ TagManager:
   - AmmoBar
   - AmmoValue
   - ReloadText
-  - EnemyHealth
   - Crop
   - Enemy
   layers:
@@ -41,13 +40,13 @@ TagManager:
   - Player
   - EnemyBullet
   - EXIT
-  - Enemy
-  - Plant
   - Bullet
+  - Food
   - 
   - 
   - 
-  - EscMenu
+  - 
+  - 
   - 
   - 
   m_SortingLayers:
