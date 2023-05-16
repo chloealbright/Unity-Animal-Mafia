@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 48186352}
   - component: {fileID: 48186354}
   - component: {fileID: 48186353}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 189855532}
   - component: {fileID: 189855534}
   - component: {fileID: 189855533}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: EscConfPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 341878758}
   - component: {fileID: 341878760}
   - component: {fileID: 341878759}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Question
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 379285122}
   - component: {fileID: 379285124}
   - component: {fileID: 379285123}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1275,7 +1275,7 @@ GameObject:
   - component: {fileID: 695721673}
   - component: {fileID: 695721675}
   - component: {fileID: 695721674}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19425,7 +19425,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1008344988}
   - component: {fileID: 1008344987}
-  - component: {fileID: 1008344989}
   m_Layer: 0
   m_Name: EscMenuManager
   m_TagString: Untagged
@@ -19450,6 +19449,7 @@ MonoBehaviour:
   resumeBtn: {fileID: 1851091681}
   exitBtn: {fileID: 1961785357}
   escConfPanel: {fileID: 189855531}
+  isPaused: 0
 --- !u!4 &1008344988
 Transform:
   m_ObjectHideFlags: 0
@@ -19465,21 +19465,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1008344989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1008344986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e71c6ab03c871947b5a41db44ebe247, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  escConfPanel: {fileID: 189855531}
-  escPanel: {fileID: 1980166232}
-  exitBtn: {fileID: 1961785357}
 --- !u!1 &1021393357
 GameObject:
   m_ObjectHideFlags: 0
@@ -19641,7 +19626,7 @@ GameObject:
   - component: {fileID: 1033895402}
   - component: {fileID: 1033895401}
   - component: {fileID: 1033895400}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20216,7 +20201,7 @@ GameObject:
   - component: {fileID: 1185568973}
   - component: {fileID: 1185568975}
   - component: {fileID: 1185568974}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Scarecrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20293,7 +20278,7 @@ GameObject:
   - component: {fileID: 1188006342}
   - component: {fileID: 1188006341}
   - component: {fileID: 1188006340}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: YesBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20365,8 +20350,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1008344989}
-        m_TargetAssemblyTypeName: EscConf, Assembly-CSharp
+      - m_Target: {fileID: 1008344987}
+        m_TargetAssemblyTypeName: EscMenu, Assembly-CSharp
         m_MethodName: Confirm
         m_Mode: 1
         m_Arguments:
@@ -20427,7 +20412,7 @@ GameObject:
   - component: {fileID: 1339700487}
   - component: {fileID: 1339700486}
   - component: {fileID: 1339700485}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Esc Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20493,7 +20478,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &1339700488
 RectTransform:
@@ -20618,7 +20603,7 @@ GameObject:
   - component: {fileID: 1432413110}
   - component: {fileID: 1432413112}
   - component: {fileID: 1432413111}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21392,7 +21377,7 @@ GameObject:
   - component: {fileID: 1656745269}
   - component: {fileID: 1656745271}
   - component: {fileID: 1656745270}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21574,7 +21559,7 @@ GameObject:
   - component: {fileID: 1667580092}
   - component: {fileID: 1667580091}
   - component: {fileID: 1667580090}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21708,7 +21693,7 @@ GameObject:
   - component: {fileID: 1851091685}
   - component: {fileID: 1851091684}
   - component: {fileID: 1851091683}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Resume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22125,7 +22110,7 @@ GameObject:
   - component: {fileID: 1961785362}
   - component: {fileID: 1961785361}
   - component: {fileID: 1961785360}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22285,7 +22270,7 @@ GameObject:
   - component: {fileID: 1980166235}
   - component: {fileID: 1980166234}
   - component: {fileID: 1980166236}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: EscMenuPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22807,7 +22792,7 @@ GameObject:
   - component: {fileID: 2106145734}
   - component: {fileID: 2106145736}
   - component: {fileID: 2106145735}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22887,7 +22872,7 @@ GameObject:
   - component: {fileID: 2112873182}
   - component: {fileID: 2112873181}
   - component: {fileID: 2112873180}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: NoBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22959,8 +22944,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1008344989}
-        m_TargetAssemblyTypeName: EscConf, Assembly-CSharp
+      - m_Target: {fileID: 1008344987}
+        m_TargetAssemblyTypeName: EscMenu, Assembly-CSharp
         m_MethodName: Refuse
         m_Mode: 1
         m_Arguments:
@@ -23049,7 +23034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2118850611}
-  m_Layer: 5
+  m_Layer: 29
   m_Name: Images
   m_TagString: Untagged
   m_Icon: {fileID: 0}
