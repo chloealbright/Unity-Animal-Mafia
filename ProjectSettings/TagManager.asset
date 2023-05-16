@@ -17,6 +17,7 @@ TagManager:
   - EnemyHealth
   - Crop
   - Enemy
+  - DatabaseAccess
   layers:
   - Default
   - TransparentFX

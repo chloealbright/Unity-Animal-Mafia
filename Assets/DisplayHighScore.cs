@@ -20,6 +20,9 @@ public class DisplayHighScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // var task = databaseAccess.SaveScoreToDataBase("User", PlayerPrefs.GetInt("ScoreValue"));
+        // //list of high score objects
+        // var result = await task;
         
     }
 
@@ -34,6 +37,7 @@ public class DisplayHighScore : MonoBehaviour
             output += score.UserName + "Score: " + score.Score;
         }
         highScoreOutPut.text = output;
+    
  
     }
 }

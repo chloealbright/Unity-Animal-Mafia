@@ -18,15 +18,18 @@ public class DatabaseAccess : MonoBehaviour
   // Start is called before the first frame update
   void Start()
     {
-        database = client.GetDatabase("GoldDB");
-        collection = database.GetCollection<BsonDocument>("GoldCollection");
+        database = client.GetDatabase("HighScoreDB");
+        collection = database.GetCollection<BsonDocument>("HighScoreCollection");
 
-        //Test statement
+        // Test statement
         // var document = new BsonDocument{{"username", 100}};
         // collection.InsertOne(document);
 
         //Testing statement: Call the database and get all the data. 
         GetScoresFromDataBase();
+
+        SaveScoreToDataBase("MrPineApple", PlayerPrefs.GetInt("ScoreValue"));
+     
     }
 
     // Update is called once per frame
