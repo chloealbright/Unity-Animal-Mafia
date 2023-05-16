@@ -479,6 +479,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &251572226
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -873,6 +874,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &406745625
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1477,6 +1479,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &731396046
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1734,6 +1737,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &806014735
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8413,6 +8417,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &902601191
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19555,6 +19560,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &1021393361
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19801,6 +19807,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &1065382677
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19949,6 +19956,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &1125922540
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20097,6 +20105,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &1166821148
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21168,6 +21177,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &1651145589
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22033,6 +22043,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &1951135940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22716,6 +22727,7 @@ MonoBehaviour:
   minMoveTime: 2
   maxMoveTime: 3
   health: 3
+  healthBar: {fileID: 0}
 --- !u!212 &2086490011
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -11,17 +11,21 @@ public class EnemyMovement : MonoBehaviour
 
     private float moveTime;
     private float timer;
-    public int health = 3;
-    private int currentHealth;
+    public float health = 3;
+    private float currentHealth;
     private bool isMoving = false;
 
     private ScoreManager scoreManager;
+
+    public HealthBarBehaviour healthBar;
 
     private void Start()
     {
         moveTime = UnityEngine.Random.Range(minMoveTime, maxMoveTime);
         timer = moveTime;
         currentHealth = health;
+
+        healthBar.SetHealth(currentHealth, health);
 
         scoreManager = FindObjectOfType<ScoreManager>();
     }
@@ -99,6 +103,7 @@ public class EnemyMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             TakeDamage(1);
+            healthBar.SetHealth(currentHealth, health);
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
         {
