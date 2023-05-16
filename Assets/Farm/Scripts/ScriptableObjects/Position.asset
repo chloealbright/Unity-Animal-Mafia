@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4348e840317109b48889eddfaff2b1a6, type: 3}
   m_Name: Position
   m_EditorClassIdentifier: 
-  initialValue: {x: 3, y: -3}
+  initialValue: {x: -9.5, y: 7.5}
   defaultValue: {x: 3, y: -3}

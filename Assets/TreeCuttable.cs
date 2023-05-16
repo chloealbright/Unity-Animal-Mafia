@@ -20,7 +20,20 @@ public class TreeCuttable : ToolHit
 
     private SpriteRenderer rend;
 
-   
+    private BoxCollider2D boxCollider;
+
+    private void Awake()
+    {
+        // Get the BoxCollider2D component attached to the game object
+        boxCollider = GetComponent<BoxCollider2D>();
+
+        if (boxCollider == null)
+        {
+            Debug.LogError("BoxCollider2D component not found!");
+        }
+    }
+
+
     private void GenerateRandomNumber()
     {
         plant_regrow_time = Random.Range(ttl_min, ttl_max + 1);
@@ -35,7 +48,7 @@ public class TreeCuttable : ToolHit
 
     public override void Hit()
     {
-        while(dropCount > 0)
+        while (dropCount >= 0 && (plant_regrow_time <= 0)) //checks if the object has items to drop and rend.sprite == grownPlant
         {
             dropCount -= 1;
             Vector3 position = transform.position;
@@ -44,26 +57,39 @@ public class TreeCuttable : ToolHit
 
             GameObject go = Instantiate(pickUpDrop);
             go.transform.position = position;
-        }
 
-        //Destroy(gameObject);
+            if (dropCount == 0)
+                Destroy(gameObject);
+        }
     }
 
     private void Update()
     {
-        if (dropCount == 0)
+        if (plant_regrow_time > 0)
         {
             plant_regrow_time -= Time.deltaTime; //start deprecating time
-            time_to_sprout = plant_regrow_time;
+            time_to_sprout = plant_regrow_time; //checks the time left for plant to regrow
 
             rend.sprite = babyPlant;
-
-            if (plant_regrow_time < 0)
-            {
-                rend.sprite = grownPlant;
-                dropCount = 5; //reset the ammount of objects within the tree
-                plant_regrow_time = 60; //1 min for tree to regrow
-            }
         }
+
+        if (plant_regrow_time < 0)
+        {
+            plant_regrow_time = 0;
+        }
+
+        if (plant_regrow_time == 0)
+        {
+            rend.sprite = grownPlant;
+            //dropCount = 5; //reset the ammount of objects within the tree
+            //plant_regrow_time = 60; //1 min for tree to regrow
+        }
+
+        if (rend.sprite == babyPlant)
+        {
+            boxCollider.enabled = false;
+        }
+        else
+            boxCollider.enabled = true;
     }
 }
