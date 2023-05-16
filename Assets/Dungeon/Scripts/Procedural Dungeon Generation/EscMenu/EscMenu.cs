@@ -7,6 +7,8 @@ public class EscMenu : MonoBehaviour
     public GameObject gearBtn;
     public GameObject escPanel;
     public GameObject resumeBtn;
+    public GameObject exitBtn;
+    public GameObject escConfPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +47,11 @@ public class EscMenu : MonoBehaviour
     {
         escPanel.SetActive(false);
         gearBtn.SetActive(true);
+    }
+
+    public void ExitBtn()
+    {
+        escPanel.SetActive(false);
+        escConfPanel.SetActive(true);
     }
 }
