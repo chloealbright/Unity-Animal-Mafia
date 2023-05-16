@@ -428,8 +428,9 @@ MonoBehaviour:
   minMoveTime: 1
   maxMoveTime: 3
   exitPrefab: {fileID: 8693576432226825196, guid: d2eb13c9823e48344842cb8ac54747fb, type: 3}
-  health: 1
+  health: 25
   healthBar: {fileID: 5341334633085571287}
+  collisionColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!61 &-2498231240707240856
 BoxCollider2D:
   m_ObjectHideFlags: 0

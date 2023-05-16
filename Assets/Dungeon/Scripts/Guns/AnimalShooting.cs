@@ -69,7 +69,6 @@ public class AnimalShooting : MonoBehaviour
             StartCoroutine(EnableShootingAfterCooldown(shootCooldown));
         }
     }
-
     IEnumerator EnableShootingAfterCooldown(float cooldown)
     {
         yield return new WaitForSeconds(cooldown);

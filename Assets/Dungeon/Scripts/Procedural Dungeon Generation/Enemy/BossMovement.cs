@@ -25,6 +25,9 @@ public class BossMovement : MonoBehaviour
 
     private bool isFrozen = true;
     private float freezeDuration = 3f;
+    private Renderer objectRenderer;
+    private Color originalColor;
+    public Color collisionColor = Color.red;
 
     private void Start()
     {
@@ -32,7 +35,8 @@ public class BossMovement : MonoBehaviour
         timer = moveTime;
         currentHealth = health;
         healthBar.SetHealth(currentHealth, health);
-
+        objectRenderer = GetComponent<Renderer>();
+        originalColor = objectRenderer.material.color;
         scoreManager = FindObjectOfType<ScoreManager>();
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -145,10 +149,12 @@ public class BossMovement : MonoBehaviour
     private void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
+        ChangeColor(collisionColor);
+        StartCoroutine(ResetColor());
         if (currentHealth <= 0)
         {
             Die();
-            scoreManager.AddScore(10);
+            scoreManager.AddScore(250);
         }
         else
         {
@@ -156,7 +162,16 @@ public class BossMovement : MonoBehaviour
             StartCoroutine(Knockback(knockbackDirection));
         }
     }
+    private void ChangeColor(Color newColor)
+    {
+        objectRenderer.material.color = newColor;
+    }
 
+    private IEnumerator ResetColor()
+    {
+        yield return new WaitForSeconds(0.2f);
+        objectRenderer.material.color = originalColor;
+    }
     private IEnumerator Knockback(Vector3 direction)
     {
         float knockbackForce = 1f;

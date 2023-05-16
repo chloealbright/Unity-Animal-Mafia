@@ -9,6 +9,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float searchRange = 5f;
     [SerializeField] private float minMoveTime = 1f;
     [SerializeField] private float maxMoveTime = 3f;
+    [SerializeField] private float dropChance = 0.5f;
+    [SerializeField] private GameObject cropPrefab;
 
     private float moveTime;
     private float timer;
@@ -24,6 +26,9 @@ public class EnemyMovement : MonoBehaviour
 
     private bool isFrozen = true;
     private float freezeDuration = 3f;
+    private Renderer objectRenderer;
+    private Color originalColor;
+    public Color collisionColor = Color.red;
 
     private void Start()
     {
@@ -31,7 +36,8 @@ public class EnemyMovement : MonoBehaviour
         timer = moveTime;
         currentHealth = health;
         healthBar.SetHealth(currentHealth, health);
-
+        objectRenderer = GetComponent<Renderer>();
+        originalColor = objectRenderer.material.color;
         scoreManager = FindObjectOfType<ScoreManager>();
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -144,10 +150,17 @@ public class EnemyMovement : MonoBehaviour
     private void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
+        ChangeColor(collisionColor);
+        StartCoroutine(ResetColor());
         if (currentHealth <= 0)
         {
             Die();
             scoreManager.AddScore(10);
+            if (Random.value <= dropChance)
+            {
+                Debug.Log(Random.value);
+                Instantiate(cropPrefab, transform.position, Quaternion.identity);
+            }
         }
         else
         {
@@ -155,7 +168,16 @@ public class EnemyMovement : MonoBehaviour
             StartCoroutine(Knockback(knockbackDirection));
         }
     }
+    private void ChangeColor(Color newColor)
+    {
+        objectRenderer.material.color = newColor;
+    }
 
+    private IEnumerator ResetColor()
+    {
+        yield return new WaitForSeconds(0.2f);
+        objectRenderer.material.color = originalColor;
+    }
     private IEnumerator Knockback(Vector3 direction)
     {
         float knockbackForce = 2f;

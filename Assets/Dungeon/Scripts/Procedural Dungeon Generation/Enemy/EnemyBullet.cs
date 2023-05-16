@@ -6,7 +6,8 @@ public class EnemyBullet : MonoBehaviour
 {
     public GameObject hitEffect;
     public float movementSpeed = 10f;
-
+    public float lifespan = 3f;
+    private float timer;
     private Transform player;
     private Vector3 direction;
 
@@ -14,11 +15,16 @@ public class EnemyBullet : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         direction = (player.position - transform.position).normalized;
+        timer = 0f;
     }
 
     private void Update()
     {
         transform.position += direction * movementSpeed * Time.deltaTime;
+        if (timer >= lifespan)
+        {
+            DestroyBullet();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -26,14 +32,18 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 2f);
+            Destroy(effect, 1f);
             Destroy(gameObject);
         }
         else
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 2f);
+            Destroy(effect, 1f);
             Destroy(gameObject);
         }
+    }
+    private void DestroyBullet()
+    {
+        Destroy(gameObject);
     }
 }
