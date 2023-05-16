@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5100035649845602229}
   - component: {fileID: 6386706011903141975}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 6635354536505993610}
   - component: {fileID: 4432415232254944381}
   - component: {fileID: 571388289218951377}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 5219887807129590294}
   - component: {fileID: 3916014233488816911}
   - component: {fileID: 2137737732652747408}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Melee_Slime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -275,6 +275,7 @@ MonoBehaviour:
   dropChance: 0.5
   cropPrefab: {fileID: 3396669777157974043, guid: 724cb397a52ddfd40bc597817e144381, type: 3}
   healthBar: {fileID: 826815997971741360}
+  collisionColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!50 &3916014233488816911
 Rigidbody2D:
   serializedVersion: 4
@@ -325,7 +326,7 @@ GameObject:
   - component: {fileID: 2125721581012595560}
   - component: {fileID: 5540668600764877459}
   - component: {fileID: 826815997971741360}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -439,7 +440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6598552125193006167}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +479,7 @@ GameObject:
   - component: {fileID: 3455942514396166353}
   - component: {fileID: 4317897460666831395}
   - component: {fileID: 9161740018348880708}
-  m_Layer: 23
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

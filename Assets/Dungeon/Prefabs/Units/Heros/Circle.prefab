@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7250678870917728785}
   - component: {fileID: 5730362514578986590}
   - component: {fileID: 7074114944208665603}
-  m_Layer: 25
+  m_Layer: 23
   m_Name: Circle
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8327c8f32c8ff5f4aa6a9fec831c7b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifespan: 3
+  health: 3
   hitEffect: {fileID: 4317227068110498398, guid: ebf0b4b8dbf6f594b879b51577b36c8d, type: 3}
 --- !u!50 &5730362514578986590
 Rigidbody2D:
