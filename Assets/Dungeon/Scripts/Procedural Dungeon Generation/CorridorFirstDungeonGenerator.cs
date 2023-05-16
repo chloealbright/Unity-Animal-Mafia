@@ -11,11 +11,14 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     [SerializeField] [Range(0.1f, 1)] private float roomPercent = 0.8f;
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private GameObject meleeEnemyPrefab;
+    [SerializeField] private GameObject StrongEnemyPrefab;
     [SerializeField] private GameObject BossEnemyPrefab;
     [SerializeField] private int maxEnemiesPerRoom = 3;
     [SerializeField] private float enemySpawnRadius = 2f;
     [SerializeField] private int maxMeleeEnemiesPerRoom = 2;
+    [SerializeField] private int maxStrongEnemiesPerRoom = 2;
     [SerializeField] private float meleeEnemySpawnRadius = 1.5f;
+    [SerializeField] private float StrongEnemySpawnRadius = 1.5f;
     [SerializeField] private GameObject exitPrefab;
     public GameObject fadeInPanel;
     public float fadeWait;
@@ -132,6 +135,13 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                 Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * meleeEnemySpawnRadius;
                 Vector3 meleeEnemyPosition = new Vector3(roomPosition.x + randomOffset.x, roomPosition.y + randomOffset.y, 0);
                 Instantiate(meleeEnemyPrefab, meleeEnemyPosition, Quaternion.identity);
+            }
+            int StrongEnemiesToSpawn = UnityEngine.Random.Range(0, maxStrongEnemiesPerRoom + 1);
+            for (int j = 0; j < meleeEnemiesToSpawn; j++)
+            {
+                Vector2 randomOffset = UnityEngine.Random.insideUnitCircle * StrongEnemySpawnRadius;
+                Vector3 StrongEnemyPosition = new Vector3(roomPosition.x + randomOffset.x, roomPosition.y + randomOffset.y, 0);
+                Instantiate(StrongEnemyPrefab, StrongEnemyPosition, Quaternion.identity);
             }
 
             lastRoomPosition = roomPosition;

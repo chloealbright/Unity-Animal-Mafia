@@ -22,6 +22,9 @@ public class AnimalShooting : MonoBehaviour
 
     public TextMeshProUGUI reloadText;
 
+    [SerializeField]
+    private AudioSource audioSource;
+
     private void Start()
     {
         remainingBullets = maxBullets;
@@ -33,6 +36,9 @@ public class AnimalShooting : MonoBehaviour
         ammoText.text = maxBullets.ToString() + "/" + maxBullets.ToString();
         GameObject reloadObject = GameObject.FindGameObjectWithTag("ReloadText");
         reloadText = reloadObject.GetComponent<TextMeshProUGUI>();
+
+        GameObject audioObject = GameObject.FindGameObjectWithTag("audioSource");
+        audioSource = audioObject.GetComponent<AudioSource>();
 
         reloadText.enabled = false;
     }
@@ -54,6 +60,7 @@ public class AnimalShooting : MonoBehaviour
 
     void Shoot()
     {
+        audioSource.Play();
         if (remainingBullets > 0)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation * Quaternion.Euler(0f, 0f, 180f));

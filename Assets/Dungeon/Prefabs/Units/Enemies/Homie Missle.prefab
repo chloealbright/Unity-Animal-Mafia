@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2712323378764728394}
   - component: {fileID: 5730362514578986590}
   - component: {fileID: 7074114944208665603}
-  - component: {fileID: 165749223406158685}
+  - component: {fileID: 1161944176135877565}
   m_Layer: 21
-  m_Name: BossBullet
+  m_Name: Homie Missle
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5051724278231121863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 31
-  m_Sprite: {fileID: -2052856475, guid: e03e74df794377e4781f39d8a77ea8db, type: 3}
+  m_Sprite: {fileID: 1367077473, guid: db0bbae00363a4c04afd328c0c110dc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: -0.023992471, y: -0.010282472}
   serializedVersion: 2
   m_Radius: 0.32862484
---- !u!114 &165749223406158685
+--- !u!114 &1161944176135877565
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,9 +133,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5051724278231121863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dc76bbb30e51e949bdaedd44ff8491b, type: 3}
+  m_Script: {fileID: 11500000, guid: 78dbf06465c9f8342905709afbc561a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 4317227068110498398, guid: 30d3ac92874533d4da1423672b560129, type: 3}
-  movementSpeed: 5
+  hitEffect: {fileID: 4317227068110498398, guid: ebf0b4b8dbf6f594b879b51577b36c8d, type: 3}
+  movementSpeed: 8
   lifespan: 3
