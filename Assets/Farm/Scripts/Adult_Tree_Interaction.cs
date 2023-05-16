@@ -10,18 +10,45 @@ public class Adult_Tree_Interaction : ToolHit
 
     [SerializeField] Sprite grownPlant;
     [SerializeField] Sprite babyPlant;
-    [SerializeField] float ttl = 60f; //time to leave, 1 min for tree to regrow
+
+    [SerializeField] private float ttl_min = 0f; //minimum time for the plant to regrow
+    [SerializeField] private float ttl_max = 0f; //maximum time for the plant to regrow
+
+    private float plant_regrow_time; //regrow time of each plant
+
+    [SerializeField] private float time_to_sprout;
 
     private SpriteRenderer rend;
 
-    private void Start()
+    private BoxCollider2D boxCollider;
+
+    private void Awake()
     {
+        // Get the BoxCollider2D component attached to the game object
+        boxCollider = GetComponent<BoxCollider2D>();
+
+        if (boxCollider == null)
+        {
+            Debug.LogError("BoxCollider2D component not found!");
+        }
+    }
+
+
+    private void GenerateRandomNumber()
+    {
+        plant_regrow_time = Random.Range(ttl_min, ttl_max + 1);
+    }
+
+    private void Start() //start of the game
+    {
+        GenerateRandomNumber();
         rend = GetComponent<SpriteRenderer>(); //get the value of the current sprite, idk im just assuming
+        time_to_sprout = plant_regrow_time;
     }
 
     public override void Hit()
     {
-        while (dropCount > 0)
+        while (dropCount >= 0 && (plant_regrow_time <= 0)) //checks if the object has items to drop and rend.sprite == grownPlant
         {
             dropCount -= 1;
             Vector3 position = transform.position;
@@ -30,25 +57,49 @@ public class Adult_Tree_Interaction : ToolHit
 
             GameObject go = Instantiate(pickUpDrop);
             go.transform.position = position;
-        }
 
-        //Destroy(gameObject);
+            if (dropCount == 0)
+            {
+                ResetPlant();
+            }
+        }
+    }
+
+    private void ResetPlant()
+    {
+        GenerateRandomNumber();
+        rend.sprite = babyPlant;
+        dropCount = 5;
     }
 
     private void Update()
     {
-        if (dropCount == 0)
+        if (plant_regrow_time > 0)
         {
-            ttl -= Time.deltaTime; //start deprecating time
+            plant_regrow_time -= Time.deltaTime; //start deprecating time
+            time_to_sprout = plant_regrow_time; //checks the time left for plant to regrow
 
             rend.sprite = babyPlant;
-
-            if (ttl < 0)
-            {
-                rend.sprite = grownPlant;
-                dropCount = 5; //reset the ammount of objects within the tree
-                ttl = 60; //1 min for tree to regrow
-            }
         }
+
+        if (plant_regrow_time < 0)
+        {
+            plant_regrow_time = 0;
+        }
+
+        if (plant_regrow_time == 0)
+        {
+            rend.sprite = grownPlant;
+            //dropCount = 5; //reset the ammount of objects within the tree
+            //plant_regrow_time = 60; //1 min for tree to regrow
+        }
+
+
+        if (rend.sprite == babyPlant)
+        {
+            boxCollider.enabled = false;
+        }
+        else
+            boxCollider.enabled = true;
     }
 }

@@ -20,6 +20,19 @@ public class TreeCuttable : ToolHit
 
     private SpriteRenderer rend;
 
+    private BoxCollider2D boxCollider;
+
+    private void Awake()
+    {
+        // Get the BoxCollider2D component attached to the game object
+        boxCollider = GetComponent<BoxCollider2D>();
+
+        if (boxCollider == null)
+        {
+            Debug.LogError("BoxCollider2D component not found!");
+        }
+    }
+
 
     private void GenerateRandomNumber()
     {
@@ -71,5 +84,12 @@ public class TreeCuttable : ToolHit
             //dropCount = 5; //reset the ammount of objects within the tree
             //plant_regrow_time = 60; //1 min for tree to regrow
         }
+
+        if (rend.sprite == babyPlant)
+        {
+            boxCollider.enabled = false;
+        }
+        else
+            boxCollider.enabled = true;
     }
 }

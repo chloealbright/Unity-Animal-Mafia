@@ -14972,8 +14972,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: Adult_Tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8580541498460319802, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+      propertyPath: spread
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580541498460319802, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+      propertyPath: ttl_max
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580541498460319802, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+      propertyPath: ttl_min
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580541498460319802, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+      propertyPath: babyPlant
+      value: 
+      objectReference: {fileID: 1508642970, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
+    - target: {fileID: 8580541498460319802, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+      propertyPath: pickUpDrop
+      value: 
+      objectReference: {fileID: 8144409463422601441, guid: 88eb160d016ca4c9fb16ca19f2e26451, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+--- !u!1 &434884056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6489174928373459714, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+  m_PrefabInstance: {fileID: 375614232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &434884061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434884056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8541af71b72e4584968f864f4c7e5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &507737132
 GameObject:
   m_ObjectHideFlags: 0
@@ -32294,10 +32331,10 @@ MonoBehaviour:
   pumkin_patch_x_max: 12
   pumkin_patch_y_min: -5
   pumkin_patch_y_max: 4.5
-  wheat_patch_x_min: 0
-  wheat_patch_x_max: 0
-  wheat_patch_y_min: 0
-  wheat_patch_y_max: 0
+  wheat_patch_x_min: 19
+  wheat_patch_x_max: 24
+  wheat_patch_y_min: -5
+  wheat_patch_y_max: 4.5
   inventoryData: {fileID: 11400000, guid: 7386e9b60c791ba4a88edb44ded05451, type: 2}
 --- !u!114 &1150583852
 MonoBehaviour:
@@ -32496,6 +32533,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 359800e119467d543aefdfcc3f84457c, type: 3}
+--- !u!1 &1232210483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6489174928373459714, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+  m_PrefabInstance: {fileID: 2045314832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1232210488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232210483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8541af71b72e4584968f864f4c7e5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1487644282
 GameObject:
   m_ObjectHideFlags: 0
@@ -41711,5 +41765,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Adult_Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 8580541498460319802, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+      propertyPath: spread
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580541498460319802, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+      propertyPath: ttl_max
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580541498460319802, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+      propertyPath: ttl_min
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580541498460319802, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+      propertyPath: babyPlant
+      value: 
+      objectReference: {fileID: 1508642970, guid: 8d6fc3b3b3010264ca7606b0c146db68, type: 3}
+    - target: {fileID: 8580541498460319802, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
+      propertyPath: pickUpDrop
+      value: 
+      objectReference: {fileID: 8144409463422601441, guid: 88eb160d016ca4c9fb16ca19f2e26451, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3acef05df5cef4bfd94931557db4b4ba, type: 3}
