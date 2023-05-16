@@ -10,6 +10,7 @@ public class VectorValue : ScriptableObject, ISerializationCallbackReceiver
 
     public void OnAfterDeserialize()
     {
+        Debug.Log("RESET");
         initialValue = defaultValue;
     }
 
