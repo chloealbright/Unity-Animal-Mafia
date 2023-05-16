@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 8196563080251191251}
   - component: {fileID: 8131687434764514693}
   - component: {fileID: 4399098253254971627}
-  - component: {fileID: 173123570770147508}
+  - component: {fileID: 866986726218409871}
   m_Layer: 20
   m_Name: Piggy
   m_TagString: Player
@@ -186,7 +186,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004033843, y: -0.009534515}
+  m_Offset: {x: -0.03232792, y: -0.117052056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -197,7 +197,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12846278, y: 0.14093097}
+  m_Size: {x: 0.8097845, y: 0.7317117}
   m_EdgeRadius: 0
 --- !u!114 &8131687434764514693
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   ammoBar: {fileID: 0}
   ammoText: {fileID: 0}
   reloadText: {fileID: 0}
---- !u!114 &173123570770147508
+--- !u!114 &866986726218409871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,9 +259,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3193090204154038438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d87fb92a80ddc419489f788751213b, type: 3}
+  m_Script: {fileID: 11500000, guid: 83662e2e1ffd41a43a2014ee35760b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1000
+  maxHealth: 100
   healthBar: {fileID: 0}
   healthText: {fileID: 0}

@@ -15,13 +15,13 @@ public class Bullet : MonoBehaviour
         else if (collision.gameObject.CompareTag("Enemies"))
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 5f);
+            Destroy(effect, 2f);
             Destroy(gameObject);
         }
         else
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 5f);
+            Destroy(effect, 2f);
             Destroy(gameObject);
         }
     }

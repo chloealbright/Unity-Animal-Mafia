@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyFire : MonoBehaviour
 {
-    public GameObject bulletPrefab; 
+    public GameObject bulletPrefab;
     public Transform firePoint;
     [SerializeField] private float fireRate = 1f;
     [SerializeField] private float bulletForce = 5f;
@@ -13,13 +13,27 @@ public class EnemyFire : MonoBehaviour
     private GameObject player;
     private bool canFire = true;
 
+    private bool isFrozen = true;
+    private float freezeDuration = 3f;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        StartCoroutine(UnfreezeAfterDelay());
+    }
+
+    private IEnumerator UnfreezeAfterDelay()
+    {
+        yield return new WaitForSeconds(freezeDuration);
+        isFrozen = false;
     }
 
     private void Update()
     {
+        if (isFrozen)
+            return;
+
         player = GameObject.FindGameObjectWithTag("Player");
         if (player != null && Vector3.Distance(transform.position, player.transform.position) < range && canFire)
         {
@@ -29,7 +43,7 @@ public class EnemyFire : MonoBehaviour
 
     private IEnumerator Fire()
     {
-         canFire = false;
+        canFire = false;
 
         Vector2 direction = (player.transform.position - firePoint.position).normalized;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
