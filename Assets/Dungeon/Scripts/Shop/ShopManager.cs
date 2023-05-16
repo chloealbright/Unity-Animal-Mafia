@@ -74,7 +74,7 @@ namespace ShopCont.UI{
                 //Next task: Unlock item to set to inventory 
                 Debug.Log("Purchase item: " + shopItemsSO[btnNo].Name);
             
-                inventoryData.AddItem(shopItemsSO[btnNo], 1);
+                inventoryData.AddItem(shopItemsSO[btnNo], shopItemsSO[btnNo].ID, 1);
                 
             }
         }

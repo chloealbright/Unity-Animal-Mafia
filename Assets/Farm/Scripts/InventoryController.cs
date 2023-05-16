@@ -22,6 +22,21 @@ namespace InventoryCont
         {
             PrepareUI();
             PrepareInventoryData();
+            // Load inventory data from player preferences
+            // string inventoryDataString = PlayerPrefs.GetString("InventoryData", "");
+            // if (!string.IsNullOrEmpty(inventoryDataString))
+            // {
+            //     inventoryData.DeserializeInventoryData(inventoryDataString);
+            //     UpdateInventoryUI(inventoryData.GetCurrentInventoryState());
+            // }
+        }
+
+        private void OnApplicationQuit() //included in the Mono class
+        {
+            // Save inventory data to player preferences
+            inventoryData.Save();
+            // string inventoryDataString = inventoryData.SerializeInventoryData();
+            // PlayerPrefs.SetString("InventoryData", inventoryDataString);
         }
 
         private void PrepareInventoryData()
@@ -34,6 +49,14 @@ namespace InventoryCont
                     continue;
                 inventoryData.AddItem(item);
             }
+            // if(inventoryData.DatabaseExists() == true){
+            //     //restore items
+            // }
+            // else{
+                
+
+            // }
+            
         }
 
         //updates inventory when performing change
@@ -92,7 +115,9 @@ namespace InventoryCont
             {
                 if (inventoryUI.isActiveAndEnabled == false)
                 {
-                    inventoryUI.Show();
+                    inventoryUI.Show(); //InventoryPage type
+                    //Load inventory items from database
+                    inventoryData.Load(); //InventorySO type 
                     foreach (var item in inventoryData.GetCurrentInventoryState())
                     {
                         inventoryUI.UpdateData(item.Key,
@@ -101,11 +126,15 @@ namespace InventoryCont
                     }
                 }
                 else
-                {
+                {   //Save inventory items to database
+                    inventoryData.Save();
                     inventoryUI.Hide();
                 }
-            }
+            }// savePath /inventory.Save
 
         }
     }
+
+
+    
 }

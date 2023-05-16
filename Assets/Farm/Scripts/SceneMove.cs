@@ -26,13 +26,13 @@ public class SceneMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print("Trigger Entered");
+        Debug.Log("SceneMove.cs: Trigger Entered");
         //can use other.GetComponent<Player>() to see if the game object has a player component
         //tags work too
         if (other.tag == "Player" && !other.isTrigger)
         {
             //player entered, so move level
-            print("Switching scene to" + sceneBuildIndex);
+            print("SceneMove.cs: Switching scene to" + sceneBuildIndex);
             playerStorage.initialValue = playerPosition;
             triggered = true;
             StartCoroutine(FadeController());

@@ -140,6 +140,10 @@ namespace InventoryCont.UI
             ResetDraggedItem();
         }
 
+        public void ClearInventory(InventoryPage page){
+            page.ResetAllItems();
+        }
+
         internal void ResetAllItems()
         {
             foreach (var item in listOfItems)

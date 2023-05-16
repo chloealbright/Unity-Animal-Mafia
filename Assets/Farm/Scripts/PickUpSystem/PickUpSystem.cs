@@ -2,6 +2,8 @@ using InventoryCont.Model;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class PickUpSystem : MonoBehaviour
 {
@@ -13,9 +15,9 @@ public class PickUpSystem : MonoBehaviour
         Item item = collision.GetComponent<Item>();
         if (item != null)
         {
-            int reminder = inventoryData.AddItem(item.InventoryItem, item.Quantity);
+            int reminder = inventoryData.AddItem(item.InventoryItem, item.ID, item.Quantity); //Modified for data persistency
             if (reminder == 0)
-                item.DestroyItem();
+                item.DestroyItem(); //sets game object to false 
             else
                 item.Quantity = reminder;
         }

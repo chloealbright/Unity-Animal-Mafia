@@ -3,7 +3,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class Item : MonoBehaviour
 {
@@ -11,7 +12,13 @@ public class Item : MonoBehaviour
     public ItemSO InventoryItem { get; private set; }
 
     [field: SerializeField]
+    public int ID { get; set; }
+
+    [field: SerializeField]
     public int Quantity { get; set; } = 1;
+
+    [field: SerializeField]
+    bool pickedUp = false;
 
     [SerializeField]
     private AudioSource audioSource;
@@ -19,27 +26,15 @@ public class Item : MonoBehaviour
     [SerializeField]
     private float duration = 0.3f;
 
-    private GameObject[] items;
-    
+    private Scene originalScene;
+
     private void Start()
     {
-        items = GameObject.FindGameObjectsWithTag("Item");
         GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
+        // Store the original scene when the game object is created
+        originalScene = gameObject.scene;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
-
-
-    
-
-    //void OnEnable() => collectedItems = new List<Item>();
-    /*
-    void On Awake() => itemCollection.Changed += updateData();
-    void On Destroy() => itemCollection.Changed -= updateData();
-    void On enable scene change update the collected items
-    void OnEnable() => updateData();
-    void onn Validate() => data = GetComponent<SpriteRenderer>().sprite; 
-
-    */
-    
 
     public void DestroyItem()
     {
@@ -61,47 +56,42 @@ public class Item : MonoBehaviour
             yield return null;
         }
         gameObject.SetActive(false);
-        // REFERENCE foreach(GameObject item in items){
-        // item.SetActive(true);
-        // Item resetItem = item.GetComponent<Item>();
-        // resetItem.Quantity = 1;
-        // resetItem.GetComponent<Collider2D>().enabled = true;
+        pickedUp = true;
+
+        //Destroy(gameObject);
+        Debug.Log("Item.cs: gameObject destroyed on AnimatePickup");
     }
 
-    public void ResetItems(GameObject[] items){ 
-        foreach(GameObject item in items){
-            item.SetActive(true);
-            Item resetItem = item.GetComponent<Item>();
-            resetItem.Quantity = 1;
-            resetItem.GetComponent<Collider2D>().enabled = true;
+    void OnSceneUnloaded(Scene scene){
+        //if item was picked up previously, keep it disabled 
+        if(scene.buildIndex == originalScene.buildIndex && pickedUp == true){
+            gameObject.SetActive(false);
+            Debug.Log("Item.cs: buildIndex == originalScene && pickedUp == true, gameObject = false");
+
+        }
+
+    }
+
+    private void OnApplicationQuit(){
+        if(EditorApplication.isPlaying && EditorApplication.isPlayingOrWillChangePlaymode){ //if player is is in play mode or about to switch to it
+            Debug.Log("Item.cs: Game is about to exit play mode reset gameObj");
+            ResetItem(gameObject);
+
         }
     }
-
     
 
-
-
-    // public void ResetItems(GameObject[] items)
-    //  { 
-
-    //     // foreach(GameObject item in items){
-    //     //     item.SetActive(true);
-    //     //     item.Quantity = 1;
-    //     //     //GetComponent<Collider2D>().enabled = true;
-    //     // }
-
-    //     for(int i = 0; i < items.Length; i++){
-    //         //Item quantity = new Item();
-    //         items[i].gameObject.SetActive(true);
-    //         Item resetItem = items[i].GetComponent<Item>();
-    //         resetItem.Quantity=1;
-    //         resetItem.GetComponent<Collider2D>().enabled = true;
-    //         // Item reset = item[i].GetComponent<Item>();
-    //         // if (itemComponent != null){
-    //         //     itemComponent.Quantity = 1;
-    //         // }
-    //         //may need to set collider to active
-    //     }
+    private void ResetItem(GameObject item){ 
         
-    //  }
+        item.SetActive(true);
+        item.GetComponent<SpriteRenderer>().enabled = true;
+        item.GetComponent<Collider2D>().enabled = true;
+        pickedUp = false;
+        
+        // Item resetItem = item.GetComponent<Item>();
+        // resetItem.Quantity = 1;
+        // item.SetActive(true);
+        // resetItem.GetComponent<Collider2D>().enabled = true;
+        Debug.Log("Item.cs: ResetItem on OnApplicationQuit");
+    }
 }

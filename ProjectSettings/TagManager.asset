@@ -7,6 +7,7 @@ TagManager:
   - Enemies
   - Exit
   - Bullet
+  - Item
   layers:
   - Default
   - TransparentFX
