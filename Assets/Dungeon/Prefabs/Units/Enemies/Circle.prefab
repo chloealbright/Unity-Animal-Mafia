@@ -137,4 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 4317227068110498398, guid: ebf0b4b8dbf6f594b879b51577b36c8d, type: 3}
-  movementSpeed: 6
+  movementSpeed: 5
+  lifespan: 3
