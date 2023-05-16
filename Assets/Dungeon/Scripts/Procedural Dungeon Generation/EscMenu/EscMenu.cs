@@ -79,6 +79,7 @@ public class EscMenu : MonoBehaviour
 
     public void LoadFarm()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Farm");
     }
 
