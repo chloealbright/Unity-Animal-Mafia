@@ -31,7 +31,6 @@ public class CorridorFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         StartCoroutine(FadeController());
         tilemapVisualizer.Clear();
         CorridorFirstGeneration();
-        PlayerPrefs.SetInt("Level" , 3);
     }
 
     public IEnumerator FadeController()
