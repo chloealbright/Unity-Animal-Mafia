@@ -14,7 +14,7 @@ using InventoryCont.Model;
 namespace ShopCont.UI{
     public class ShopManager : MonoBehaviour
     {
-        public BalancePage playerBalance;
+        private BalancePage playerBalance;
         public int gold;
         public TMP_Text goldUI; // gold amount
         public ItemSO[] shopItemsSO; // Prefab shopItems. CHANGED INSTANTIATION FROM ShopItemSO[]
@@ -33,32 +33,47 @@ namespace ShopCont.UI{
 
 
 
-        public void Awake(){
+        // public void Awake(){
+        //     //MouseFollower.Toggle(false)
+        //     for(int i =0; i< shopItemsSO.Length; i++){
+        //         shopPanelsGO[i].SetActive(true);
+        //     }
+        //     //gold = playerBalance.GetPlayerBalance();
+        //     // goldUI.text = "Gold: " + gold.ToString();
+        //     // LoadPanels();
+        //     // CheckPurchaseable();
+        // }
+
+        public void Start(){
             //MouseFollower.Toggle(false)
             for(int i =0; i< shopItemsSO.Length; i++){
                 shopPanelsGO[i].SetActive(true);
             }
-            gold = playerBalance.gold;
-            goldUI.text = "Gold: " + gold.ToString();
+            playerBalance = BalancePage.balanceInstance;
+            // gold = playerBalance.GetPlayerBalance();
+            // goldUI.text = "Gold: " + gold.ToString();
             LoadPanels();
-            CheckPurchaseable();
+            // CheckPurchaseable();
         }
 
+        public void LoadBalance(){
+            if(playerBalance != null){
+                Debug.Log("ShopMan: LoadBalance");
+                //gold+=20;
+                gold = playerBalance.GetPlayerBalance();
+                goldUI.text = "Gold: " + gold.ToString();
+                CheckPurchaseable();
+            }
+            else
+                goldUI.text = "Balance unreachable";
 
-
-        public void GenerateGold(){
-            //MouseFollower.Toggle(true)
-            Debug.Log("Generate Gold");
-            //gold+=20;
-            gold = playerBalance.gold;
-            goldUI.text = "Gold: " + gold.ToString();
-            CheckPurchaseable();
+                  
         }
 
         public void CheckPurchaseable(){
             //MouseFollower.Toggle(true);
             Debug.Log("shopContent.activeInHierarchy");
-            gold = playerBalance.gold;
+            gold = playerBalance.GetPlayerBalance();
             for(int i=0; i< shopItemsSO.Length; i++){
                 if(gold >= shopItemsSO[i].Cost)
                     purchaseBtn[i].interactable = true;
@@ -69,12 +84,12 @@ namespace ShopCont.UI{
 
 
         public void PurchaseItem(int btnNo){
-            gold = playerBalance.gold;
+            gold = playerBalance.GetPlayerBalance();
             if(gold >= shopItemsSO[btnNo].Cost){
                 Debug.Log("Purchase item: " + shopItemsSO[btnNo].Name + " Cost: "+  shopItemsSO[btnNo].Cost);
                 
                 playerBalance.Purchase(shopItemsSO[btnNo].Cost);
-                gold = playerBalance.gold;
+                gold = playerBalance.GetPlayerBalance();
                 //gold -= shopItemsSO[btnNo].Cost;
 
                 goldUI.text = "Gold: "+ gold.ToString();
