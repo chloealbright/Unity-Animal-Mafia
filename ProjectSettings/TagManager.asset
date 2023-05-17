@@ -16,6 +16,7 @@ TagManager:
   - ReloadText
   - Crop
   - Enemy
+  - audioSource
   layers:
   - Default
   - TransparentFX

@@ -45,18 +45,7 @@ public class AnimalHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Crop"))
-        {
-            Crop crop = collision.gameObject.GetComponent<Crop>();
-            Debug.Log(crop);
-            if (crop != null)
-            {
-                Debug.Log(crop.healthToAdd);
-                Heal(crop.healthToAdd);
-                Destroy(collision.gameObject);
-            }
-        }
-        else if (!isImmune && (collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemy")))
+        if (!isImmune && (collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemy")))
         {
             currentHealth -= 25;
             healthBar.fillAmount = currentHealth / maxHealth;
@@ -72,6 +61,20 @@ public class AnimalHealth : MonoBehaviour
                 StartImmunity();
                 ChangeColor(collisionColor);
                 StartCoroutine(ResetColor());
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Crop"))
+        {
+            Crop crop = collision.gameObject.GetComponent<Crop>();
+            Debug.Log(crop);
+            if (crop != null)
+            {
+                Debug.Log(crop.healthToAdd);
+                Heal(crop.healthToAdd);
+                Destroy(collision.gameObject);
             }
         }
     }
