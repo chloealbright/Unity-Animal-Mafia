@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2921931787006911020}
   m_Layer: 0
   m_Name: Pumkin
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,3 +131,4 @@ MonoBehaviour:
   babyPlant: {fileID: -2052135433, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
   ttl_min: 120
   ttl_max: 180
+  time_to_sprout: 0

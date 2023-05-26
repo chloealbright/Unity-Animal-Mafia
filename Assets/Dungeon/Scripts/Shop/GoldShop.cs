@@ -76,7 +76,7 @@ namespace ShopCont.UI{//
                 ItemsLeft = RemoveItem(sellItemsSO[btnNo].Name, 1);
 
                 if(ItemsLeft == 0){
-                    playerBalance.Purchase(sellItemsSO[btnNo].Cost);
+                    playerBalance.Sell(sellItemsSO[btnNo].Cost);
                     gold = playerBalance.GetPlayerBalance();
                     // gold += sellItemsSO[btnNo].Cost;
                     goldUI.text = "Gold: "+ gold.ToString();
