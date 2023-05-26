@@ -20,39 +20,43 @@ namespace ShopCont.UI{//
         public Button[] sellBtn; // check if purchaseable
         public RectTransform contentPanel;
         public ShopTemplate sellTemplate;
+        private BalancePage playerBalance; // Used for gold balance
         public TMP_Text goldUI; // gold amount
         public int gold;
         
-        //public ShopController shopController;
 
         InventorySO inventoryItem;
-        
-        
-
-        
-
-        //private sellMouseFollower MouseFollower;
 
 
+        // public void Awake(){
+        //     for(int i =0; i< sellItemsSO.Length; i++){
+        //         sellPanelsGO[i].SetActive(true);
+        //     }
+        // }
 
-        public void Awake(){
-            //MouseFollower.Toggle(false)
+        public void Start(){
             for(int i =0; i< sellItemsSO.Length; i++){
                 sellPanelsGO[i].SetActive(true);
             }
-            goldUI.text = "Gold: " + gold.ToString();
+            playerBalance = BalancePage.balanceInstance;
+            // gold = playerBalance.GetPlayerBalance(); // Loads player balance from inventory/ balance script
+            // goldUI.text = "Gold: " + gold.ToString();
             LoadPanels();
-            CheckSellable();
+            // CheckSellable();
         }
 
 
 
-        public void AddGold(){
-            //MouseFollower.Toggle(true)
-            Debug.Log("Generate Gold");
-            gold+=20;
-            goldUI.text = "Gold: " + gold.ToString();
-            CheckSellable();
+        public void LoadBalance(){
+            if(playerBalance != null){
+                Debug.Log("GoldShop: LoadBalance");
+                //gold+=20;
+                gold = playerBalance.GetPlayerBalance();
+                goldUI.text = "Gold: " + gold.ToString();
+                CheckSellable();
+            }
+            else
+                goldUI.text = "Balance unreachable";
         }
 
         public void CheckSellable(){
@@ -72,7 +76,9 @@ namespace ShopCont.UI{//
                 ItemsLeft = RemoveItem(sellItemsSO[btnNo].Name, 1);
 
                 if(ItemsLeft == 0){
-                    gold += sellItemsSO[btnNo].Cost;
+                    playerBalance.Purchase(sellItemsSO[btnNo].Cost);
+                    gold = playerBalance.GetPlayerBalance();
+                    // gold += sellItemsSO[btnNo].Cost;
                     goldUI.text = "Gold: "+ gold.ToString();
                     CheckSellable();
                 }
@@ -138,11 +144,7 @@ namespace ShopCont.UI{//
             return current_Quantity;
         }
 
-        // public void BuySeeds(){
-        //     shopController.BuySeeds();
-        // }
-
-        public void BuySeeds(){
+        public void BuySeeds(){ // move between ShopUI and GoldShopUI
             shopUI.gameObject.SetActive(true);
             gameObject.SetActive(false);
                 
