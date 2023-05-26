@@ -48,7 +48,7 @@ public class SceneMove : MonoBehaviour
         if(fadeOutPanel != null)
         {
             GameObject panel1 = Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
-            Destroy(panel1, 1);
+            //Destroy(panel1, 1);
         }
         yield return new WaitForSeconds(fadeWait);
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneBuildIndex);

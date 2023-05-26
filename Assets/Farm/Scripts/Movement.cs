@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        startingPosition.initialValue = startingPosition.defaultValue;
+        //startingPosition.initialValue = startingPosition.defaultValue;
         transform.position = startingPosition.initialValue;
     }
 
