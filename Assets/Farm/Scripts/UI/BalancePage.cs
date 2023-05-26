@@ -78,7 +78,7 @@ namespace InventoryCont.Model
         }
 
         public void Sell(int price){
-            gold.Balance -= price;
+            gold.Balance += price;
             UpdateBalance(gold.Balance);
         }
 
