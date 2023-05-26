@@ -119,9 +119,6 @@ MonoBehaviour:
   <Quantity>k__BackingField: 1
   audioSource: {fileID: 8144409463422601442}
   duration: 0.3
-  speed: 5
-  pickUpDistance: 1.5
-  ttl: 10
 --- !u!82 &8144409463422601442
 AudioSource:
   m_ObjectHideFlags: 0

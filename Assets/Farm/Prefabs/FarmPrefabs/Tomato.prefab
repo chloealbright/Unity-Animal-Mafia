@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 759720678326837797}
   m_Layer: 0
   m_Name: Tomato
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,3 +131,4 @@ MonoBehaviour:
   babyPlant: {fileID: -116078899, guid: ea496d724a1524b7a9afb8543c597ccc, type: 3}
   ttl_min: 45
   ttl_max: 75
+  time_to_sprout: 0

@@ -23,7 +23,7 @@ public class Item : MonoBehaviour
     
     private void Start()
     {
-        items = GameObject.FindGameObjectsWithTag("Item");
+        //items = GameObject.FindGameObjectsWithTag("Item");
         GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
     }
 
