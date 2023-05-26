@@ -73,15 +73,14 @@ namespace ShopCont.UI{//
             int ItemsLeft;
             if(HasItem(sellItemsSO[btnNo].Name) == true){
                 Debug.Log("Sell item: " + sellItemsSO[btnNo].Name);
+                
+                playerBalance.Sell(sellItemsSO[btnNo].Cost);
+                gold = playerBalance.GetPlayerBalance();
                 ItemsLeft = RemoveItem(sellItemsSO[btnNo].Name, 1);
-
-                if(ItemsLeft == 0){
-                    playerBalance.Sell(sellItemsSO[btnNo].Cost);
-                    gold = playerBalance.GetPlayerBalance();
-                    // gold += sellItemsSO[btnNo].Cost;
-                    goldUI.text = "Gold: "+ gold.ToString();
-                    CheckSellable();
-                }
+                // gold += sellItemsSO[btnNo].Cost;
+                goldUI.text = "Gold: "+ gold.ToString();
+                CheckSellable();
+                
             }            
         }
 
