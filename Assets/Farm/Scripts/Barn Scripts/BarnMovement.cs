@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ShopCont.UI;
 
-public class Movement : MonoBehaviour
+public class BarnMovement : MonoBehaviour
 {
     public float speed;
 
@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        //startingPosition.initialValue = startingPosition.defaultValue;
+        startingPosition.initialValue = startingPosition.defaultValue;
         transform.position = startingPosition.initialValue;
     }
 
@@ -36,16 +36,9 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         //move the player
-        //this.transform.position += direction * speed * Time.deltaTime;
-        if(DialogueManager.GetInstance().dialogueIsPlaying)
-        {
-            this.transform.position += direction * 0 * Time.deltaTime;
-        }
-        else
-        {
-            this.transform.position += direction * speed * Time.deltaTime;
-        }
+        this.transform.position += direction * speed * Time.deltaTime;
     }
+
 
     //this function handles talking with the animator
     void AnimateMovement(Vector3 direction)

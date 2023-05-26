@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace InventoryCont
 {
-    public class InventoryController : MonoBehaviour
+    public class BarnInventoryController : MonoBehaviour
     {
         //dependency to inv page
         [SerializeField]
@@ -92,7 +92,7 @@ namespace InventoryCont
         //user pressing I to open inv
         public void Update()
         {
-            if (Input.GetKeyDown(KeyCode.I) && !DialogueManager.GetInstance().dialogueIsPlaying)
+            if(Input.GetKeyDown(KeyCode.I))
             {
                 if (inventoryUI.isActiveAndEnabled == false)
                 {

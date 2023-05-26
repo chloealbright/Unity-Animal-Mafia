@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneMove : MonoBehaviour
+public class BarnSceneMove : MonoBehaviour
 {
     public int sceneBuildIndex;
     public Vector2 playerPosition;
@@ -31,7 +31,7 @@ public class SceneMove : MonoBehaviour
         if (other.tag == "Player" && !other.isTrigger)
         {
             //player entered, so move level
-            Movement movementScript = other.GetComponent<Movement>();
+            BarnMovement movementScript = other.GetComponent<BarnMovement>();
             //pausing player movement while in transition
             movementScript.canMove = false;
 
@@ -48,7 +48,7 @@ public class SceneMove : MonoBehaviour
         if(fadeOutPanel != null)
         {
             GameObject panel1 = Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
-            //Destroy(panel1, 1);
+            Destroy(panel1, 1);
         }
         yield return new WaitForSeconds(fadeWait);
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneBuildIndex);
