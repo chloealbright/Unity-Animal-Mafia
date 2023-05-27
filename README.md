@@ -7,19 +7,20 @@ Test Repo for Animal Mafia Game Play
 * Dungeon (Entrance) View
 * Dungeon Level 1 View
 * Dungeon Level 2 View
+* Garden view
 * Animal Mafia Character Animations
 * Enemy Attacks & Defeat
 
 ## Features
-* Set player animations between idle, walking, sword attack, left / right directions.
-* Set enemy animations for idle and player attacks / defeat.
-* Collisions set for logs.
-* Tilemapping and tilesets.
+* 🌱 Shop seeds to harvest at the Seed shop in the barn (balance view available on Load Balance)
+* 🍅 Plant seeds/harvest crops on keypress 'P' in the garden
+* 🪙 Sell crops for gold at the Crops shop in the barn
+* 📈 Track player balance and inventory on keypress 'I'
+* Dungeon run game play/ defeat a 🐷 boss to level up
+* Character Dialogue- get an intro to the game with 🐮 Cow Capone and 🐏 Carlo Bahbino
 
-## Preview Video
-### Work In Progress 👾🔊 APRIL 2023 UPDATE (https://www.loom.com/share/60eddec2714a4d2182d0af7176454b9e)
-#### Dungeon Level 1 Preview
-https://user-images.githubusercontent.com/57193454/230723968-da42d03e-6483-47d7-ad10-05597e0bc520.mp4
+## 🐣🐔 [Animal Mafia Full Game Runthrough](https://www.loom.com/share/60eddec2714a4d2182d0af7176454b9e) 🎮🔊
+
 
 
 
