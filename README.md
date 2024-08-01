@@ -19,7 +19,7 @@ Test Repo for Animal Mafia Game Play
 * Dungeon run game play/ defeat a 🐷 boss to level up
 * Character Dialogue- get an intro to the game with 🐮 Cow Capone and 🐏 Carlo Bahbino
 
-## 🐣🐔 [Animal Mafia Full Game Runthrough](https://www.loom.com/share/60eddec2714a4d2182d0af7176454b9e) 🎮🔊
+## 🐣🐔 [Animal Mafia Full Game Runthrough](https://www.loom.com/share/94b4940afb064d09b089e4d32f06cdab?sid=85013430-9b6e-4c84-a5a3-07d94e290f69) 🎮🔊
 
 
 
